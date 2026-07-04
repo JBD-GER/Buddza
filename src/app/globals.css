@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fbf8f4;
+  --foreground: #262c36;
+  --brand-ink: #262c36;
+  --brand-accent: #f0917b;
+  --brand-accent-dark: #d97863;
+  --brand-cream: #fbf8f4;
+  --brand-soft: #fff1ed;
 }
 
 @theme inline {
@@ -12,15 +17,43 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-padding-top: 5rem;
+  overflow-x: hidden;
+}
+
+button,
+a,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img,
+video {
+  max-width: 100%;
+}
+
+::selection {
+  background: var(--brand-accent);
+  color: var(--brand-ink);
+}
+
+.maplibregl-popup-content {
+  border-radius: 8px;
+  border: 1px solid rgba(38, 44, 54, 0.12);
+  box-shadow: 0 20px 45px rgba(38, 44, 54, 0.18);
+  padding: 0;
+}
+
+.maplibregl-popup-tip {
+  border-top-color: white;
 }
