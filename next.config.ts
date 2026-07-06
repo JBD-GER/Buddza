@@ -9,7 +9,6 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       { source: "/dashboard", destination: "/uebersicht", permanent: true },
-      { source: "/übersicht", destination: "/uebersicht", permanent: true },
       { source: "/listings/new/request", destination: "/inserieren/gesuch", permanent: true },
       { source: "/listings/new", destination: "/inserieren", permanent: true },
       { source: "/listings/:id", destination: "/inserate/:id", permanent: true },
@@ -23,10 +22,8 @@ const nextConfig: NextConfig = {
       { source: "/forgot-password", destination: "/passwort-vergessen", permanent: true },
       { source: "/update-password", destination: "/passwort-aktualisieren", permanent: true },
       { source: "/about", destination: "/ueber-uns", permanent: true },
-      { source: "/über-uns", destination: "/ueber-uns", permanent: true },
       { source: "/pricing", destination: "/preise", permanent: true },
       { source: "/auth/callback", destination: "/authentifizierung/rueckruf", permanent: false },
-      { source: "/authentifizierung/rückruf", destination: "/authentifizierung/rueckruf", permanent: true },
     ];
   },
 };

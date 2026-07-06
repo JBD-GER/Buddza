@@ -1,18 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BadgeEuro, HandHeart, HeartHandshake, ListChecks, Mail, MapPin } from "lucide-react";
+import { BadgeEuro, BookOpen, HandHeart, HeartHandshake, ListChecks, Mail, MapPin } from "lucide-react";
+import { guideTopics } from "@/lib/ratgeber";
 
 const footerLinks = [
   { href: "/inserate", label: "Inserate", icon: ListChecks },
   { href: "/tierbetreuer", label: "Tierbetreuer", icon: HandHeart },
+  { href: "/ratgeber", label: "Ratgeber", icon: BookOpen },
   { href: "/ueber-uns", label: "Über uns", icon: HeartHandshake },
   { href: "/preise", label: "Preis", icon: BadgeEuro },
 ];
 
 export function AppFooter() {
+  const footerGuideTopics = guideTopics.slice(0, 4);
+
   return (
     <footer className="border-t border-[#262C36]/10 bg-[#202833] text-white">
-      <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.1fr_0.9fr_0.9fr]">
+      <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.1fr_0.75fr_0.95fr_0.9fr]">
         <div>
           <Link href="/" className="relative block h-10 w-36 overflow-hidden" aria-label="Buddza Startseite">
             <Image
@@ -45,6 +49,22 @@ export function AppFooter() {
               </Link>
             );
           })}
+        </nav>
+
+        <nav aria-label="Ratgeber im Footer" className="grid content-start gap-2">
+          <p className="text-sm font-black uppercase tracking-normal text-[#F0917B]">Ratgeber</p>
+          {footerGuideTopics.map((topic) => (
+            <Link
+              key={topic.slug}
+              href={`/ratgeber/${topic.slug}`}
+              className="text-sm font-bold leading-6 text-white/78 hover:text-white"
+            >
+              {topic.title}
+            </Link>
+          ))}
+          <Link href="/ratgeber" className="mt-1 text-sm font-black text-[#F0917B] hover:text-white">
+            Alle Ratgeber öffnen
+          </Link>
         </nav>
 
         <div>

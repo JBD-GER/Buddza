@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "sonner";
 import { AppFooter } from "@/components/app/app-footer";
 import { AppHeader } from "@/components/app/app-header";
+import { absoluteUrl, defaultSeoImage, siteName } from "@/lib/seo";
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./globals.css";
 
@@ -17,8 +18,51 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Buddza - Tierbetreuung in deiner Nähe",
-  description: "Buddza ist eine lokale Plattform für Tierbetreuung mit PLZ-basierter Suche, aktuellen Inseraten und klarem Nutzer-Dashboard.",
+  metadataBase: new URL(absoluteUrl("/")),
+  title: {
+    default: "Buddza - Tierbetreuung in deiner Nähe",
+    template: `%s | ${siteName}`,
+  },
+  description:
+    "Buddza ist eine lokale Plattform für Tierbetreuung mit PLZ-basierter Suche, aktuellen Inseraten, Tierbetreuer-Profilen und Ratgeber.",
+  applicationName: siteName,
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    siteName,
+    title: "Buddza - Tierbetreuung in deiner Nähe",
+    description:
+      "Tierbetreuung lokal per PLZ finden oder anbieten: Inserate, Tierbetreuer, Anfragen und Ratgeber.",
+    url: "/",
+    images: [
+      {
+        url: defaultSeoImage,
+        width: 1200,
+        height: 800,
+        alt: "Hunde zuhause als Symbol für Tierbetreuung",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Buddza - Tierbetreuung in deiner Nähe",
+    description: "Lokale Tierbetreuung per PLZ finden oder anbieten.",
+    images: [defaultSeoImage],
+  },
   icons: {
     icon: "/images/Buddza_Favicon.png",
     shortcut: "/images/Buddza_Favicon.png",

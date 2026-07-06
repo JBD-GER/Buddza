@@ -9,6 +9,7 @@ import { getUser } from "@/lib/supabase/server";
 
 const publicLinks = [
   { href: "/inserate", label: "Inserate" },
+  { href: "/ratgeber", label: "Ratgeber" },
   { href: "/ueber-uns", label: "Über uns" },
   { href: "/preise", label: "Preis" },
 ];
@@ -19,6 +20,7 @@ const signedInLinks = [
   { href: "/inserate", label: "Inserate" },
   { href: "/tierbetreuer", label: "Tierbetreuer" },
   { href: "/anfragen", label: "Anfragen" },
+  { href: "/ratgeber", label: "Ratgeber" },
 ];
 
 export async function AppHeader() {

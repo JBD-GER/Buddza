@@ -5,10 +5,10 @@ import { env, isSupabaseConfigured } from "@/lib/config";
 const protectedPrefixes = ["/uebersicht", "/inserieren", "/tierbetreuer/neu", "/anfragen"];
 const authPrefixes = ["/einloggen", "/registrieren", "/passwort-vergessen", "/passwort-aktualisieren"];
 
-const umlautPathRedirects: Record<string, string> = {
-  "/übersicht": "/uebersicht",
-  "/über-uns": "/ueber-uns",
-  "/authentifizierung/rückruf": "/authentifizierung/rueckruf",
+const encodedPathRedirects: Record<string, string> = {
+  "/%c3%bcbersicht": "/uebersicht",
+  "/%c3%bcber-uns": "/ueber-uns",
+  "/authentifizierung/r%c3%bcckruf": "/authentifizierung/rueckruf",
 };
 
 function decodePathname(pathname: string) {
@@ -19,9 +19,12 @@ function decodePathname(pathname: string) {
   }
 }
 
+function encodedPathKey(pathname: string) {
+  return encodeURI(decodePathname(pathname)).toLowerCase();
+}
+
 export async function updateSession(request: NextRequest) {
-  const decodedPathname = decodePathname(request.nextUrl.pathname);
-  const redirectPath = umlautPathRedirects[decodedPathname];
+  const redirectPath = encodedPathRedirects[encodedPathKey(request.nextUrl.pathname)];
 
   if (redirectPath) {
     const redirectUrl = request.nextUrl.clone();
@@ -54,7 +57,7 @@ export async function updateSession(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const pathname = decodedPathname;
+  const pathname = request.nextUrl.pathname;
   const isProtected = protectedPrefixes.some((prefix) => pathname.startsWith(prefix));
   const isAuthPage = authPrefixes.some((prefix) => pathname.startsWith(prefix));
 

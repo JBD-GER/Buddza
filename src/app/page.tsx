@@ -4,6 +4,7 @@ import {
   ArrowRight,
   BadgeCheck,
   BadgeEuro,
+  BookOpen,
   Clock,
   HandHeart,
   HeartHandshake,
@@ -18,6 +19,8 @@ import { AnimalCareCategories } from "@/components/marketing/animal-care-categor
 import { ListingMap } from "@/components/marketing/listing-map";
 import { Button } from "@/components/ui/button";
 import { getMapPoints } from "@/lib/inserate";
+import { guideTopics } from "@/lib/ratgeber";
+import { absoluteUrl, jsonLdScript, siteName } from "@/lib/seo";
 import { getUser } from "@/lib/supabase/server";
 
 const trustItems = [
@@ -74,9 +77,33 @@ const workflow = [
 export default async function HomePage() {
   const [points, user] = await Promise.all([getMapPoints(), getUser()]);
   const createListingHref = user ? "/inserieren" : "/registrieren?next=/inserieren";
+  const featuredGuideTopics = guideTopics.slice(0, 3);
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      name: siteName,
+      url: absoluteUrl("/"),
+      logo: absoluteUrl("/images/Buddza_Logo.png"),
+      foundingDate: "2026",
+      areaServed: "Deutschland",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: siteName,
+      url: absoluteUrl("/"),
+      potentialAction: {
+        "@type": "SearchAction",
+        target: `${absoluteUrl("/inserate")}?postalCode={search_term_string}`,
+        "query-input": "required name=search_term_string",
+      },
+    },
+  ];
 
   return (
     <main className="flex-1 bg-[#FAF7F2] text-[#262C36]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(structuredData)} />
       <section className="relative isolate min-h-[calc(86svh-4rem)] overflow-hidden bg-[#202833] text-white">
         <Image
           src="/images/generated/dogs-ages-hero.jpg"
@@ -306,6 +333,39 @@ export default async function HomePage() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-12 sm:py-16">
+        <div className="mx-auto w-full max-w-6xl px-4 sm:px-6">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm font-black uppercase tracking-normal text-[#2F7A68]">Ratgeber</p>
+              <h2 className="mt-2 text-3xl font-black leading-tight tracking-normal text-[#262C36] sm:text-4xl">
+                Gute Betreuung beginnt mit guten Fragen.
+              </h2>
+            </div>
+            <Button asChild variant="secondary">
+              <Link href="/ratgeber">
+                Ratgeber öffnen
+                <ArrowRight />
+              </Link>
+            </Button>
+          </div>
+
+          <div className="mt-7 grid gap-3 md:grid-cols-3">
+            {featuredGuideTopics.map((topic) => (
+              <Link
+                key={topic.slug}
+                href={`/ratgeber/${topic.slug}`}
+                className="rounded-lg border border-[#262C36]/10 bg-[#FAF7F2] p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-[#F0917B]/45"
+              >
+                <BookOpen className="size-5 text-[#D97863]" />
+                <h3 className="mt-3 text-lg font-black leading-tight text-[#262C36]">{topic.title}</h3>
+                <p className="mt-2 text-sm leading-6 text-[#262C36]/66">{topic.excerpt}</p>
+              </Link>
+            ))}
           </div>
         </div>
       </section>

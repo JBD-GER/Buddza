@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   BadgeEuro,
+  BookOpen,
   HeartHandshake,
   HandHeart,
   LayoutDashboard,
@@ -22,6 +23,7 @@ import { Button } from "@/components/ui/button";
 
 const publicLinks = [
   { href: "/inserate", label: "Inserate", icon: ListChecks },
+  { href: "/ratgeber", label: "Ratgeber", icon: BookOpen },
   { href: "/ueber-uns", label: "Über uns", icon: HeartHandshake },
   { href: "/preise", label: "Preis", icon: BadgeEuro },
 ];
@@ -32,6 +34,7 @@ const signedInLinks = [
   { href: "/inserate", label: "Inserate", icon: ListChecks },
   { href: "/tierbetreuer", label: "Tierbetreuer", icon: HandHeart },
   { href: "/anfragen", label: "Anfragen", icon: MessageCircle },
+  { href: "/ratgeber", label: "Ratgeber", icon: BookOpen },
 ];
 
 type MobileMenuProps = {
