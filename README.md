@@ -16,9 +16,13 @@ In `.env.local` setzen:
 NEXT_PUBLIC_SUPABASE_URL=...
 NEXT_PUBLIC_SUPABASE_ANON_KEY=...
 NEXT_PUBLIC_SITE_URL=http://localhost:3000
+NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT=ca-pub-...
+NEXT_PUBLIC_GOOGLE_ADSENSE_LISTINGS_SLOT=...
+NEXT_PUBLIC_GOOGLE_ADSENSE_DETAIL_SLOT=...
 ```
 
 Ohne Supabase-Credentials rendert die App Demo-Daten und blockiert Schreibaktionen sauber.
+Ohne Google-AdSense-Variablen werden keine Anzeigenplaetze gerendert.
 
 ## Supabase
 
@@ -49,6 +53,16 @@ Das Schema enthaelt:
 - Storage Buckets `listing-media` und `chat-media` mit passenden Policies
 - Realtime-Publication fuer `messages`
 
+## Google Anzeigen
+
+Die Inseratsliste und die Detailansicht unterstuetzen dezente manuelle Google-AdSense-Anzeigenbloecke. Lege in AdSense zwei Display-Anzeigenbloecke an und setze:
+
+- `NEXT_PUBLIC_GOOGLE_ADSENSE_CLIENT`: Publisher-ID, zum Beispiel `ca-pub-1234567890123456`
+- `NEXT_PUBLIC_GOOGLE_ADSENSE_LISTINGS_SLOT`: Slot-ID fuer den horizontalen Anzeigenplatz in der Inseratsliste
+- `NEXT_PUBLIC_GOOGLE_ADSENSE_DETAIL_SLOT`: Slot-ID fuer den rechteckigen Anzeigenplatz in der Detailansicht
+
+Die App betreibt kein eigenes Werbe-Tracking und keine eigenen Anzeigen-Tabellen. Impressionen, Klicks und Ausspielung laufen ueber Google AdSense.
+
 ## Scripts
 
 ```bash
@@ -59,4 +73,4 @@ npm run build
 
 ## Deployment
 
-Auf Vercel deployen und dieselben `NEXT_PUBLIC_*` Variablen im Projekt setzen. Die App nutzt nur Supabase Client/Auth/Storage/Realtime und benoetigt keine weiteren Server-Services.
+Auf Vercel deployen und dieselben `NEXT_PUBLIC_*` Variablen im Projekt setzen. Die App nutzt Supabase Client/Auth/Storage/Realtime und optional Google AdSense, benoetigt aber kein eigenes Werbe-Backend.

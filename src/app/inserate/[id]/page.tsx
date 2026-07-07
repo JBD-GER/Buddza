@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { cache } from "react";
 import { CalendarClock, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
-import { AdCard } from "@/components/ads/ad-card";
+import { GoogleAdSenseUnit } from "@/components/ads/google-adsense";
 import { AuthMessage } from "@/components/auth/auth-message";
 import { ListingOwnerActions } from "@/components/inserate/listing-owner-actions";
 import { Badge } from "@/components/ui/badge";
@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { startChatAction } from "@/app/inserate/actions";
-import { getAdsForPlacement } from "@/lib/ads";
+import { getGoogleAdSenseSlot } from "@/lib/google-adsense";
 import { careFrequencyLabels, careLocationLabels, durationUnitLabels } from "@/lib/labels";
 import { getListingById } from "@/lib/inserate";
 import { absoluteUrl, createNoIndexMetadata, createSeoMetadata, jsonLdScript, siteName, toAbsoluteUrl } from "@/lib/seo";
@@ -71,11 +71,10 @@ export async function generateMetadata({ params }: ListingDetailPageProps): Prom
 }
 
 export default async function ListingDetailPage({ params, searchParams }: ListingDetailPageProps) {
-  const [{ id }, query, user, detailAds] = await Promise.all([
+  const [{ id }, query, user] = await Promise.all([
     params,
     searchParams,
     getUser(),
-    getAdsForPlacement("listing_detail", 1),
   ]);
   const listing = await getCachedListingById(id);
 
@@ -85,7 +84,7 @@ export default async function ListingDetailPage({ params, searchParams }: Listin
 
   const isOwner = user?.id === listing.owner_id;
   const location = getLocationLabel(listing);
-  const detailAd = detailAds[0];
+  const detailAdSlot = getGoogleAdSenseSlot("listingDetail");
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -211,7 +210,13 @@ export default async function ListingDetailPage({ params, searchParams }: Listin
             )}
           </CardContent>
         </Card>
-        {detailAd ? <AdCard ad={detailAd} listingId={listing.id} variant="sidebar" /> : null}
+        {detailAdSlot ? (
+          <GoogleAdSenseUnit
+            client={detailAdSlot.client}
+            slot={detailAdSlot.slot}
+            variant="sidebar"
+          />
+        ) : null}
       </aside>
     </main>
   );

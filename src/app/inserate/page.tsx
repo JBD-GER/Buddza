@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { Fragment } from "react";
 import { Plus } from "lucide-react";
-import { AdCard } from "@/components/ads/ad-card";
+import { GoogleAdSenseUnit } from "@/components/ads/google-adsense";
 import { EmptyListings } from "@/components/inserate/empty-listings";
 import { ListingCard } from "@/components/inserate/listing-card";
 import { SearchPanel } from "@/components/inserate/search-panel";
 import { Button } from "@/components/ui/button";
-import { getAdsForPlacement } from "@/lib/ads";
+import { getGoogleAdSenseSlot } from "@/lib/google-adsense";
 import { careLocationLabels } from "@/lib/labels";
 import { getCategories, getListings } from "@/lib/inserate";
 import { absoluteUrl, createSeoMetadata, jsonLdScript, toAbsoluteUrl } from "@/lib/seo";
@@ -46,13 +46,13 @@ export default async function ListingsPage({ searchParams }: ListingsPageProps) 
   const category = params.category || undefined;
   const careLocation = parseCareLocation(params.careLocation);
 
-  const [user, categories, listings, feedAds] = await Promise.all([
+  const [user, categories, listings] = await Promise.all([
     getUser(),
     getCategories(),
     getListings({ postalCode, radiusKm: radius, categorySlug: category, careLocation }),
-    getAdsForPlacement("listings_feed", 1),
   ]);
-  const feedAd = feedAds[0];
+  const feedAdSlot = getGoogleAdSenseSlot("listingsFeed");
+  const feedAdIndex = listings.length >= 6 ? 5 : listings.length >= 3 ? listings.length - 1 : -1;
   const activeFilterLabel = careLocation ? ` · ${careLocationLabels[careLocation]}` : "";
   const structuredData = {
     "@context": "https://schema.org",
@@ -134,21 +134,20 @@ export default async function ListingsPage({ searchParams }: ListingsPageProps) 
             {listings.map((listing, index) => (
               <Fragment key={listing.id}>
                 <ListingCard listing={listing} />
-                {feedAd && index === Math.min(2, listings.length - 1) ? (
-                  <AdCard ad={feedAd} />
+                {feedAdSlot && index === feedAdIndex ? (
+                  <div className="sm:col-span-2 lg:col-span-3">
+                    <GoogleAdSenseUnit
+                      client={feedAdSlot.client}
+                      slot={feedAdSlot.slot}
+                      variant="feed"
+                    />
+                  </div>
                 ) : null}
               </Fragment>
             ))}
           </div>
         ) : (
-          <>
-            <EmptyListings />
-            {feedAd ? (
-              <div className="mx-auto mt-6 max-w-md">
-                <AdCard ad={feedAd} />
-              </div>
-            ) : null}
-          </>
+          <EmptyListings />
         )}
       </section>
     </main>
