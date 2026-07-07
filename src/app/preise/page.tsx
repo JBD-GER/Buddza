@@ -3,6 +3,15 @@ import Link from "next/link";
 import { ArrowRight, BadgeEuro, Bell, Check, ShieldCheck } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { absoluteUrl, createSeoMetadata, jsonLdScript, siteName } from "@/lib/seo";
+
+export const metadata = createSeoMetadata({
+  title: "Preise",
+  description:
+    "Buddza ist aktuell kostenlos im Early Access: Tierbetreuung suchen, Inserate erstellen, Nachrichten nutzen und Profile ansehen ohne Zahlungsdaten.",
+  path: "/preise",
+  keywords: ["Buddza Preise", "Tierbetreuung kostenlos", "Early Access", "Haustierbetreuung Kosten"],
+});
 
 const included = [
   "Inserate ansehen",
@@ -14,8 +23,30 @@ const included = [
 ];
 
 export default function PricingPage() {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Offer",
+    name: "Buddza Early Access",
+    url: absoluteUrl("/preise"),
+    price: "0.00",
+    priceCurrency: "EUR",
+    category: "Tierbetreuung",
+    availability: "https://schema.org/InStock",
+    seller: {
+      "@type": "Organization",
+      name: siteName,
+      url: absoluteUrl("/"),
+    },
+    itemOffered: {
+      "@type": "Service",
+      name: "Lokale Tierbetreuung per PLZ suchen und anbieten",
+      areaServed: "Deutschland",
+    },
+  };
+
   return (
     <main className="flex-1 bg-[#FAF7F2] text-[#262C36]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(structuredData)} />
       <section className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[0.92fr_1.08fr] lg:items-center lg:py-16">
         <div>
           <div className="inline-flex items-center gap-2 rounded-md bg-[#F0917B]/16 px-3 py-1.5 text-xs font-black uppercase tracking-normal text-[#262C36]">

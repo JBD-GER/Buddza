@@ -2,7 +2,7 @@ import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
 import { env, isSupabaseConfigured } from "@/lib/config";
 
-const protectedPrefixes = ["/uebersicht", "/inserieren", "/tierbetreuer/neu", "/anfragen"];
+const protectedPrefixes = ["/uebersicht", "/inserieren/gesuch", "/tierbetreuer/neu", "/anfragen"];
 const authPrefixes = ["/einloggen", "/registrieren", "/passwort-vergessen", "/passwort-aktualisieren"];
 
 const encodedPathRedirects: Record<string, string> = {

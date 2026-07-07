@@ -9,6 +9,7 @@ type ListingSearchParams = {
   postalCode?: string;
   radiusKm?: number;
   categorySlug?: string;
+  careLocation?: Listing["care_location"];
 };
 
 function getPublicUrl(
@@ -130,7 +131,7 @@ export async function getListings(params: ListingSearchParams = {}): Promise<Lis
   const radiusKm = params.radiusKm ?? 50;
 
   if (!isSupabaseConfigured) {
-    return searchDemoListings(params.postalCode, radiusKm, params.categorySlug);
+    return searchDemoListings(params.postalCode, radiusKm, params.categorySlug, params.careLocation);
   }
 
   const supabase = await createClient();
@@ -148,7 +149,9 @@ export async function getListings(params: ListingSearchParams = {}): Promise<Lis
       return [];
     }
 
-    return (data ?? []).map((row: SupabaseRow) => normalizeListing(row, supabase));
+    return (data ?? [])
+      .map((row: SupabaseRow) => normalizeListing(row, supabase))
+      .filter((listing: Listing) => !params.careLocation || listing.care_location === params.careLocation);
   }
 
   let query = supabase
@@ -180,6 +183,10 @@ export async function getListings(params: ListingSearchParams = {}): Promise<Lis
 
   if (params.categorySlug) {
     query = query.eq("pet_categories.slug", params.categorySlug);
+  }
+
+  if (params.careLocation) {
+    query = query.eq("care_location", params.careLocation);
   }
 
   const { data, error } = await query;

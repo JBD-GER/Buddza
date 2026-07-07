@@ -7,7 +7,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { getChat, getChatContext, getMessages, markChatRead } from "@/lib/anfragen";
+import { createNoIndexMetadata } from "@/lib/seo";
 import { getUser } from "@/lib/supabase/server";
+
+export const metadata = createNoIndexMetadata("Anfrage");
 
 type ChatDetailPageProps = {
   params: Promise<{ chatId: string }>;

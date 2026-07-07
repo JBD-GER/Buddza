@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { categoryPages, getCategoryPage } from "@/lib/category-pages";
 import { getListings } from "@/lib/inserate";
 import { getGuideTopicsByCareCategory } from "@/lib/ratgeber";
-import { absoluteUrl, buildTitle, jsonLdScript } from "@/lib/seo";
+import { absoluteUrl, createSeoMetadata, jsonLdScript } from "@/lib/seo";
 
 type CategoryCarePageProps = {
   params: Promise<{ slug: string }>;
@@ -27,19 +27,12 @@ export async function generateMetadata({ params }: CategoryCarePageProps): Promi
     return {};
   }
 
-  return {
-    title: buildTitle(`${page.title} finden`),
+  return createSeoMetadata({
+    title: `${page.title} finden`,
     description: `${page.title}: Betreuung per PLZ suchen, Inserate finden und passende Hilfe für ${page.categoryName.toLowerCase()} organisieren. ${page.intro}`,
-    alternates: {
-      canonical: `/tierbetreuung/${page.slug}`,
-    },
-    openGraph: {
-      title: `${page.title} finden`,
-      description: page.intro,
-      url: `/tierbetreuung/${page.slug}`,
-      type: "website",
-    },
-  };
+    path: `/tierbetreuung/${page.slug}`,
+    keywords: [page.title, `${page.categoryName} Betreuung`, "Tierbetreuung finden", "PLZ Suche", "Buddza"],
+  });
 }
 
 export default async function CategoryCarePage({ params }: CategoryCarePageProps) {

@@ -11,7 +11,7 @@ import {
   getGuideTopicsByCategory,
   guideCategories,
 } from "@/lib/ratgeber";
-import { absoluteUrl, buildTitle, jsonLdScript } from "@/lib/seo";
+import { absoluteUrl, createSeoMetadata, jsonLdScript } from "@/lib/seo";
 
 type GuideCategoryPageProps = {
   params: Promise<{ slug: string }>;
@@ -27,19 +27,12 @@ export async function generateMetadata({ params }: GuideCategoryPageProps): Prom
 
   if (!category) return {};
 
-  return {
-    title: buildTitle(`${category.name} Ratgeber`),
+  return createSeoMetadata({
+    title: `${category.name} Ratgeber`,
     description: `${category.name} Ratgeber für Tierbetreuung: ${category.description}`,
-    alternates: {
-      canonical: `/ratgeber/kategorie/${category.slug}`,
-    },
-    openGraph: {
-      title: `${category.name} Ratgeber`,
-      description: category.description,
-      url: `/ratgeber/kategorie/${category.slug}`,
-      type: "website",
-    },
-  };
+    path: `/ratgeber/kategorie/${category.slug}`,
+    keywords: [`${category.name} Tierbetreuung`, `${category.name} Ratgeber`, "Tierbetreuung", "Buddza"],
+  });
 }
 
 export default async function GuideCategoryPage({ params }: GuideCategoryPageProps) {

@@ -10,9 +10,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { getChatContext, getChatSummaries } from "@/lib/anfragen";
 import { isSupabaseConfigured } from "@/lib/config";
 import { getUserListings } from "@/lib/inserate";
+import { createNoIndexMetadata } from "@/lib/seo";
 import { formatAvailability, formatHourlyRate, getUserSitterProfile } from "@/lib/tierbetreuer";
 import { getUser } from "@/lib/supabase/server";
 import { formatDateTime } from "@/lib/utils";
+
+export const metadata = createNoIndexMetadata("Übersicht");
 
 type DashboardPageProps = {
   searchParams: Promise<{ error?: string; inserat?: string; tierbetreuer?: string }>;

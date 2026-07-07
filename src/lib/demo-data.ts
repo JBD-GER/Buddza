@@ -1,5 +1,5 @@
 import { distanceKm } from "@/lib/geo";
-import type { Listing, MapPoint, PetCategory, SitterProfile } from "@/lib/types";
+import type { CareLocation, Listing, MapPoint, PetCategory, SitterProfile } from "@/lib/types";
 
 export const demoCategories: PetCategory[] = [
   { id: "cat-hund", slug: "hund", name: "Hund", emoji: null, sort_order: 10 },
@@ -191,11 +191,17 @@ export function getDemoMapPoints(): MapPoint[] {
   }));
 }
 
-export function searchDemoListings(postalCode?: string, radiusKm = 50, categorySlug?: string) {
+export function searchDemoListings(
+  postalCode?: string,
+  radiusKm = 50,
+  categorySlug?: string,
+  careLocation?: CareLocation,
+) {
   const center = demoPostalCodes.find((item) => item.postal_code === postalCode);
 
   return demoListings
     .filter((listing) => !categorySlug || listing.category_slug === categorySlug)
+    .filter((listing) => !careLocation || listing.care_location === careLocation)
     .map((listing) => {
       if (!center || !listing.latitude || !listing.longitude) {
         return { ...listing, distance_km: null };

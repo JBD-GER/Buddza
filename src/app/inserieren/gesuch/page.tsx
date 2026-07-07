@@ -6,7 +6,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { isSupabaseConfigured } from "@/lib/config";
 import { getCategories } from "@/lib/inserate";
+import { createNoIndexMetadata } from "@/lib/seo";
 import { getUser } from "@/lib/supabase/server";
+
+export const metadata = createNoIndexMetadata("Betreuungsgesuch erstellen");
 
 type NewListingRequestPageProps = {
   searchParams: Promise<{ error?: string }>;

@@ -2,36 +2,47 @@ import Link from "next/link";
 import { HandHeart, Search, Sparkles } from "lucide-react";
 import { ConfigNotice } from "@/components/app/config-notice";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { isSupabaseConfigured } from "@/lib/config";
+import { absoluteUrl, createSeoMetadata, jsonLdScript } from "@/lib/seo";
 import { getUser } from "@/lib/supabase/server";
+
+export const metadata = createSeoMetadata({
+  title: "Tierbetreuung inserieren",
+  description:
+    "Auf Buddza kostenlos ein Betreuungsgesuch erstellen oder ein Tierbetreuer-Profil anlegen. Lokal per PLZ, klar beschrieben und ohne öffentliche Adresse.",
+  path: "/inserieren",
+  keywords: ["Tierbetreuung inserieren", "Betreuungsgesuch erstellen", "Tierbetreuer Profil", "Haustierbetreuung anbieten"],
+});
 
 export default async function NewListingPage() {
   const user = await getUser();
-
-  if (!user && isSupabaseConfigured) {
-    return (
-      <main className="mx-auto flex w-full max-w-2xl flex-1 items-center px-4 py-10 sm:px-6">
-        <Card>
-          <CardHeader>
-            <CardTitle>Anmeldung erforderlich</CardTitle>
-            <CardDescription>Du brauchst ein Konto, um ein Inserat zu erstellen.</CardDescription>
-          </CardHeader>
-          <CardContent className="flex flex-col gap-3 sm:flex-row">
-            <Button asChild>
-              <Link href="/einloggen?next=/inserieren">Einloggen</Link>
-            </Button>
-            <Button asChild variant="secondary">
-              <Link href="/registrieren?next=/inserieren">Registrieren</Link>
-            </Button>
-          </CardContent>
-        </Card>
-      </main>
-    );
-  }
+  const createRequestHref = user ? "/inserieren/gesuch" : "/registrieren?next=/inserieren/gesuch";
+  const createSitterHref = user ? "/tierbetreuer/neu" : "/registrieren?next=/tierbetreuer/neu";
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Tierbetreuung inserieren",
+    url: absoluteUrl("/inserieren"),
+    description:
+      "Buddza hilft dabei, ein Betreuungsgesuch für Tiere zu erstellen oder ein eigenes Tierbetreuer-Profil anzulegen.",
+    potentialAction: [
+      {
+        "@type": "CreateAction",
+        name: "Betreuungsgesuch erstellen",
+        target: absoluteUrl("/inserieren/gesuch"),
+      },
+      {
+        "@type": "CreateAction",
+        name: "Tierbetreuer-Profil erstellen",
+        target: absoluteUrl("/tierbetreuer/neu"),
+      },
+    ],
+  };
 
   return (
     <main className="flex-1 bg-[#F5FBF8] px-4 py-8 sm:px-6">
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(structuredData)} />
       <div className="mx-auto w-full max-w-5xl">
         <div className="mb-6 max-w-2xl space-y-3">
           <div className="inline-flex items-center gap-2 rounded-md bg-white px-3 py-1.5 text-xs font-black uppercase tracking-normal text-[#2F7A68] shadow-sm">
@@ -49,7 +60,7 @@ export default async function NewListingPage() {
         </div>
 
         <div className="grid gap-4 lg:grid-cols-2">
-          <Link href="/inserieren/gesuch" className="group block h-full">
+          <Link href={createRequestHref} className="group block h-full">
             <Card className="h-full overflow-hidden border-[#262C36]/10 bg-white transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md">
               <CardContent className="grid h-full gap-5 p-5 sm:p-6">
                 <span className="flex size-12 items-center justify-center rounded-md bg-[#F0917B]/16 text-[#D97863]">
@@ -72,7 +83,7 @@ export default async function NewListingPage() {
             </Card>
           </Link>
 
-          <Link href="/tierbetreuer/neu" className="group block h-full">
+          <Link href={createSitterHref} className="group block h-full">
             <Card className="h-full overflow-hidden border-[#262C36]/10 bg-white transition-transform duration-200 hover:-translate-y-0.5 hover:shadow-md">
               <CardContent className="grid h-full gap-5 p-5 sm:p-6">
                 <span className="flex size-12 items-center justify-center rounded-md bg-[#2F7A68]/14 text-[#2F7A68]">

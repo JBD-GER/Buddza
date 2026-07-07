@@ -43,6 +43,8 @@ export async function generateMetadata({ params }: GuideArticlePageProps): Promi
       title: topic.title,
       description: topic.excerpt,
       url: `/ratgeber/${topic.slug}`,
+      siteName,
+      locale: "de_DE",
       type: "article",
       publishedTime: topic.publishedAt,
       tags: topic.tags,

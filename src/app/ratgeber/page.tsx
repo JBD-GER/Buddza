@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, BookOpen, Clock, FolderOpen, Search } from "lucide-react";
@@ -6,23 +5,15 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { guideCategories, guideTopics } from "@/lib/ratgeber";
-import { absoluteUrl, buildTitle, jsonLdScript } from "@/lib/seo";
+import { absoluteUrl, createSeoMetadata, jsonLdScript } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: buildTitle("Ratgeber für Tierbetreuung"),
+export const metadata = createSeoMetadata({
+  title: "Ratgeber für Tierbetreuung",
   description:
     "Buddza Ratgeber für Tierbetreuung: Checklisten, Tipps und Planung für Hund, Katze, Kleintiere, Aquarium, Pferd, Hof und Exoten.",
-  alternates: {
-    canonical: "/ratgeber",
-  },
-  openGraph: {
-    title: "Ratgeber für Tierbetreuung",
-    description:
-      "Praktische Tipps und Checklisten für Betreuung, Übergabe, PLZ-Suche, Tierarten und sichere Absprachen.",
-    url: "/ratgeber",
-    type: "website",
-  },
-};
+  path: "/ratgeber",
+  keywords: ["Tierbetreuung Ratgeber", "Hundebetreuung Tipps", "Katzenbetreuung", "Betreuungsübergabe", "PLZ Suche"],
+});
 
 export default function GuideIndexPage() {
   const featuredTopics = guideTopics.slice(0, 8);

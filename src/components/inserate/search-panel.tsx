@@ -3,7 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select } from "@/components/ui/select";
-import type { PetCategory } from "@/lib/types";
+import { careLocationLabels } from "@/lib/labels";
+import type { CareLocation, PetCategory } from "@/lib/types";
+
+const careLocationOptions: CareLocation[] = ["owner_home", "sitter_home", "outdoor", "flexible"];
 
 type SearchPanelProps = {
   categories: PetCategory[];
@@ -11,13 +14,14 @@ type SearchPanelProps = {
     postalCode?: string;
     radius?: string;
     category?: string;
+    careLocation?: string;
   };
   action?: string;
 };
 
 export function SearchPanel({ categories, defaults, action = "/inserate" }: SearchPanelProps) {
   return (
-    <form action={action} className="grid gap-3 rounded-lg border border-[#262C36]/10 bg-white p-3 shadow-sm md:grid-cols-[1fr_150px_180px_auto] md:items-end">
+    <form action={action} className="grid gap-3 rounded-lg border border-[#262C36]/10 bg-white p-3 shadow-sm md:grid-cols-2 lg:grid-cols-[1fr_9rem_11rem_11rem_auto] lg:items-end">
       <div className="space-y-1.5">
         <Label htmlFor="postalCode">PLZ</Label>
         <Input
@@ -47,6 +51,17 @@ export function SearchPanel({ categories, defaults, action = "/inserate" }: Sear
           {categories.map((category) => (
             <option key={category.id} value={category.slug}>
               {category.name}
+            </option>
+          ))}
+        </Select>
+      </div>
+      <div className="space-y-1.5">
+        <Label htmlFor="careLocation">Betreuungsort</Label>
+        <Select id="careLocation" name="careLocation" defaultValue={defaults.careLocation ?? ""}>
+          <option value="">Alle Orte</option>
+          {careLocationOptions.map((careLocation) => (
+            <option key={careLocation} value={careLocation}>
+              {careLocationLabels[careLocation]}
             </option>
           ))}
         </Select>

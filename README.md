@@ -25,9 +25,19 @@ Ohne Supabase-Credentials rendert die App Demo-Daten und blockiert Schreibaktion
 1. Neues Supabase-Projekt erstellen.
 2. `supabase/schema.sql` im SQL Editor ausfuehren.
 3. Auth Redirect URLs setzen:
-   - `http://localhost:3000/auth/callback`
-   - `https://deine-domain.vercel.app/auth/callback`
+   - `http://localhost:3000/authentifizierung/rueckruf`
+   - `https://deine-domain.vercel.app/authentifizierung/rueckruf`
 4. Fuer echte Umkreissuche eine vollstaendige deutsche PLZ-Centroid-Datei in `public.postal_codes` importieren.
+
+### Auth-E-Mail-Vorlagen
+
+Die Supabase Auth-Vorlagen liegen in `supabase/email-templates/`:
+
+- Registrierung bestaetigen: Betreff aus `confirm-signup.subject.txt`, HTML aus `confirm-signup.html`
+- Passwort zuruecksetzen: Betreff aus `reset-password.subject.txt`, HTML aus `reset-password.html`
+
+Auf Vercel muss `NEXT_PUBLIC_SITE_URL` auf die oeffentliche Domain zeigen, zum Beispiel
+`https://deine-domain.vercel.app`.
 
 Das Schema enthaelt:
 

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <meta name="supported-color-schemes" content="light" />
+    <title>E-Mail-Adresse bestätigen</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        background: #fbf8f4;
+        color: #262c36;
+        font-family: Arial, Helvetica, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      table {
+        border-collapse: collapse;
+      }
+
+      a {
+        color: #262c36;
+      }
+
+      .preheader {
+        display: none;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        color: transparent;
+        line-height: 1px;
+      }
+
+      .shell {
+        width: 100%;
+        background: #fbf8f4;
+        padding: 32px 16px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 600px;
+      }
+
+      .brand {
+        padding: 0 0 18px;
+        font-size: 28px;
+        font-weight: 800;
+        letter-spacing: 0;
+        color: #262c36;
+      }
+
+      .card {
+        background: #ffffff;
+        border: 1px solid rgba(38, 44, 54, 0.1);
+        border-radius: 8px;
+        box-shadow: 0 18px 44px rgba(38, 44, 54, 0.08);
+        overflow: hidden;
+      }
+
+      .accent {
+        height: 6px;
+        background: #f0917b;
+        line-height: 6px;
+      }
+
+      .content {
+        padding: 34px 32px 30px;
+      }
+
+      h1 {
+        margin: 0 0 14px;
+        font-size: 28px;
+        line-height: 1.2;
+        color: #262c36;
+      }
+
+      p {
+        margin: 0 0 18px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: rgba(38, 44, 54, 0.78);
+      }
+
+      .button-wrap {
+        padding: 8px 0 24px;
+      }
+
+      .button {
+        display: inline-block;
+        border-radius: 6px;
+        background: #f0917b;
+        color: #262c36 !important;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1;
+        padding: 15px 22px;
+        text-decoration: none;
+      }
+
+      .note {
+        border-top: 1px solid rgba(38, 44, 54, 0.1);
+        padding-top: 20px;
+        font-size: 13px;
+        line-height: 1.55;
+        color: rgba(38, 44, 54, 0.62);
+      }
+
+      .url {
+        word-break: break-all;
+        color: #262c36;
+      }
+
+      .footer {
+        padding: 22px 8px 0;
+        font-size: 12px;
+        line-height: 1.5;
+        color: rgba(38, 44, 54, 0.58);
+        text-align: center;
+      }
+
+      @media screen and (max-width: 520px) {
+        .shell {
+          padding: 20px 12px;
+        }
+
+        .content {
+          padding: 28px 22px 24px;
+        }
+
+        h1 {
+          font-size: 24px;
+        }
+
+        .button {
+          display: block;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="preheader">
+      Bestätige deine E-Mail-Adresse und schließe deine Registrierung bei Buddza ab.
+    </div>
+
+    <table role="presentation" class="shell" width="100%" cellpadding="0" cellspacing="0">
+      <tr>
+        <td align="center">
+          <table role="presentation" class="container" width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td class="brand" align="left">Buddza</td>
+            </tr>
+            <tr>
+              <td class="card">
+                <div class="accent">&nbsp;</div>
+                <div class="content">
+                  <h1>E-Mail-Adresse bestätigen</h1>
+                  <p>
+                    Willkommen bei Buddza. Bitte bestätige deine E-Mail-Adresse, damit du deine
+                    Registrierung abschließen kannst.
+                  </p>
+                  <div class="button-wrap">
+                    <a class="button" href="{{ .ConfirmationURL }}">E-Mail bestätigen</a>
+                  </div>
+                  <p>
+                    Danach kannst du dich anmelden und Buddza nutzen.
+                  </p>
+                  <p class="note">
+                    Falls der Button nicht funktioniert, kopiere diesen Link in deinen Browser:<br />
+                    <a class="url" href="{{ .ConfirmationURL }}">{{ .ConfirmationURL }}</a><br /><br />
+                    Wenn du dich nicht bei Buddza registriert hast, kannst du diese E-Mail einfach ignorieren.
+                  </p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="footer">
+                Buddza - Tierbetreuung in deiner Nähe<br />
+                Diese E-Mail wurde automatisch versendet.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

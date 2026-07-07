@@ -3,6 +3,15 @@ import Link from "next/link";
 import { ArrowRight, HeartHandshake, MapPin, ShieldCheck, Sparkles } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { absoluteUrl, createSeoMetadata, jsonLdScript, siteName } from "@/lib/seo";
+
+export const metadata = createSeoMetadata({
+  title: "Über uns",
+  description:
+    "Buddza wurde 2026 gegründet, um lokale Tierbetreuung einfacher, persönlicher und datensparsam über PLZ-Regionen zu organisieren.",
+  path: "/ueber-uns",
+  keywords: ["Buddza", "Tierbetreuung Plattform", "lokale Tierbetreuung", "Haustierbetreuung Deutschland"],
+});
 
 const values = [
   {
@@ -26,8 +35,46 @@ const values = [
 ];
 
 export default function AboutPage() {
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      name: "Über Buddza",
+      url: absoluteUrl("/ueber-uns"),
+      description:
+        "Buddza ist eine lokale Plattform für Tierbetreuung in Deutschland mit PLZ-basierter Suche und datensparsamer Kontaktaufnahme.",
+      mainEntity: {
+        "@type": "Organization",
+        name: siteName,
+        url: absoluteUrl("/"),
+        logo: absoluteUrl("/images/Buddza_Logo.png"),
+        foundingDate: "2026",
+        areaServed: "Deutschland",
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Startseite",
+          item: absoluteUrl("/"),
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Über uns",
+          item: absoluteUrl("/ueber-uns"),
+        },
+      ],
+    },
+  ];
+
   return (
     <main className="flex-1 bg-[#FAF7F2] text-[#262C36]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(structuredData)} />
       <section className="bg-[#202833] text-white">
         <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:items-center lg:py-16">
           <div>

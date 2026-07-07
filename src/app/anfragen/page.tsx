@@ -7,8 +7,11 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { isSupabaseConfigured } from "@/lib/config";
 import { getChatContext, getChatSummaries } from "@/lib/anfragen";
+import { createNoIndexMetadata } from "@/lib/seo";
 import { getUser } from "@/lib/supabase/server";
 import { formatDateTime } from "@/lib/utils";
+
+export const metadata = createNoIndexMetadata("Anfragen");
 
 export default async function ChatsPage() {
   const user = await getUser();

@@ -1,7 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { cache } from "react";
 import { CalendarClock, MapPin, MessageCircle, ShieldCheck } from "lucide-react";
+import { AdCard } from "@/components/ads/ad-card";
 import { AuthMessage } from "@/components/auth/auth-message";
 import { ListingOwnerActions } from "@/components/inserate/listing-owner-actions";
 import { Badge } from "@/components/ui/badge";
@@ -9,8 +12,10 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { startChatAction } from "@/app/inserate/actions";
+import { getAdsForPlacement } from "@/lib/ads";
 import { careFrequencyLabels, careLocationLabels, durationUnitLabels } from "@/lib/labels";
 import { getListingById } from "@/lib/inserate";
+import { absoluteUrl, createNoIndexMetadata, createSeoMetadata, jsonLdScript, siteName, toAbsoluteUrl } from "@/lib/seo";
 import { getUser } from "@/lib/supabase/server";
 
 type ListingDetailPageProps = {
@@ -24,15 +29,103 @@ const listingStatusLabels = {
   closed: "Gelöscht",
 };
 
+const getCachedListingById = cache(getListingById);
+
+function truncateSeoDescription(text: string, maxLength = 150) {
+  const normalized = text.replace(/\s+/g, " ").trim();
+
+  if (normalized.length <= maxLength) return normalized;
+
+  return `${normalized.slice(0, maxLength - 1).trim()}…`;
+}
+
+function getLocationLabel(listing: Awaited<ReturnType<typeof getListingById>>) {
+  if (!listing) return "Deutschland";
+
+  return listing.city ? `${listing.postal_code} ${listing.city}` : listing.postal_code;
+}
+
+export async function generateMetadata({ params }: ListingDetailPageProps): Promise<Metadata> {
+  const { id } = await params;
+  const listing = await getCachedListingById(id);
+
+  if (!listing) {
+    return createNoIndexMetadata("Inserat nicht gefunden");
+  }
+
+  if (listing.status !== "active") {
+    return createNoIndexMetadata(listing.title);
+  }
+
+  const location = getLocationLabel(listing);
+  const category = listing.category_name || "Tierbetreuung";
+
+  return createSeoMetadata({
+    title: listing.title,
+    description: `${category} in ${location}: ${truncateSeoDescription(listing.description)}`,
+    path: `/inserate/${listing.id}`,
+    image: listing.main_image_url ?? undefined,
+    imageAlt: `${listing.title} auf ${siteName}`,
+    keywords: [category, "Betreuungsgesuch", "Tierbetreuung", location, siteName],
+  });
+}
+
 export default async function ListingDetailPage({ params, searchParams }: ListingDetailPageProps) {
-  const [{ id }, query, user] = await Promise.all([params, searchParams, getUser()]);
-  const listing = await getListingById(id);
+  const [{ id }, query, user, detailAds] = await Promise.all([
+    params,
+    searchParams,
+    getUser(),
+    getAdsForPlacement("listing_detail", 1),
+  ]);
+  const listing = await getCachedListingById(id);
 
   if (!listing) {
     notFound();
   }
 
   const isOwner = user?.id === listing.owner_id;
+  const location = getLocationLabel(listing);
+  const detailAd = detailAds[0];
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: listing.title,
+      url: absoluteUrl(`/inserate/${listing.id}`),
+      description: listing.description,
+      image: toAbsoluteUrl(listing.main_image_url),
+      datePublished: listing.created_at,
+      isPartOf: {
+        "@type": "WebSite",
+        name: siteName,
+        url: absoluteUrl("/"),
+      },
+      about: {
+        "@type": "Service",
+        name: listing.category_name || "Tierbetreuung",
+        serviceType: "Tierbetreuung",
+        areaServed: location,
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Inserate",
+          item: absoluteUrl("/inserate"),
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: listing.title,
+          item: absoluteUrl(`/inserate/${listing.id}`),
+        },
+      ],
+    },
+  ];
 
   if (!isOwner && listing.status !== "active") {
     notFound();
@@ -40,6 +133,7 @@ export default async function ListingDetailPage({ params, searchParams }: Listin
 
   return (
     <main className="mx-auto grid w-full max-w-6xl flex-1 gap-6 px-4 py-8 sm:px-6 lg:grid-cols-[1.1fr_0.9fr]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(structuredData)} />
       <div className="space-y-4">
         <div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm">
           <div className="aspect-[4/3] bg-slate-200">
@@ -117,6 +211,7 @@ export default async function ListingDetailPage({ params, searchParams }: Listin
             )}
           </CardContent>
         </Card>
+        {detailAd ? <AdCard ad={detailAd} listingId={listing.id} variant="sidebar" /> : null}
       </aside>
     </main>
   );

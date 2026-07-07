@@ -6,8 +6,17 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
 import { getCategories } from "@/lib/inserate";
+import { absoluteUrl, createSeoMetadata, jsonLdScript, toAbsoluteUrl } from "@/lib/seo";
 import { getSitters } from "@/lib/tierbetreuer";
 import { getUser } from "@/lib/supabase/server";
+
+export const metadata = createSeoMetadata({
+  title: "Tierbetreuer finden",
+  description:
+    "Tierbetreuer in deiner Nähe finden: Profile nach PLZ, Radius und Tierart suchen, Verfügbarkeit prüfen und passende Betreuung kontaktieren.",
+  path: "/tierbetreuer",
+  keywords: ["Tierbetreuer finden", "Tierbetreuung anbieten", "Haustiersitter", "Hundesitter", "Katzensitter", "PLZ Suche"],
+});
 
 type SittersPageProps = {
   searchParams: Promise<{
@@ -33,9 +42,43 @@ export default async function SittersPage({ searchParams }: SittersPageProps) {
     getCategories(),
     getSitters({ postalCode, radiusKm: radius, categorySlug: category }),
   ]);
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Tierbetreuer finden",
+    url: absoluteUrl("/tierbetreuer"),
+    description:
+      "Aktive Tierbetreuer-Profile mit PLZ-Region, Radius, Tierkategorien, Verfügbarkeit und Stundensatz.",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: sitters.slice(0, 24).map((sitter, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        item: {
+          "@type": "Service",
+          name: sitter.headline,
+          description: sitter.description,
+          image: toAbsoluteUrl(sitter.profile_image_url),
+          serviceType: "Tierbetreuung",
+          areaServed: sitter.city ? `${sitter.postal_code} ${sitter.city}` : sitter.postal_code,
+          offers: {
+            "@type": "Offer",
+            price: (sitter.hourly_rate_cents / 100).toFixed(2),
+            priceCurrency: "EUR",
+            unitText: "Stunde",
+          },
+          provider: {
+            "@type": "Person",
+            name: sitter.profile?.full_name ?? "Buddza Tierbetreuer",
+          },
+        },
+      })),
+    },
+  };
 
   return (
     <main className="flex-1 bg-[#fbf8f4]">
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(structuredData)} />
       <section className="relative isolate overflow-hidden bg-[#202833] text-white">
         <Image
           src="/images/generated/dogs-ages-hero.jpg"

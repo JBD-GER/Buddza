@@ -3,7 +3,14 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Toaster } from "sonner";
 import { AppFooter } from "@/components/app/app-footer";
 import { AppHeader } from "@/components/app/app-header";
-import { absoluteUrl, defaultSeoImage, siteName } from "@/lib/seo";
+import {
+  absoluteUrl,
+  defaultDescription,
+  defaultKeywords,
+  defaultSeoImage,
+  defaultSeoImageAlt,
+  siteName,
+} from "@/lib/seo";
 import "maplibre-gl/dist/maplibre-gl.css";
 import "./globals.css";
 
@@ -23,9 +30,13 @@ export const metadata: Metadata = {
     default: "Buddza - Tierbetreuung in deiner Nähe",
     template: `%s | ${siteName}`,
   },
-  description:
-    "Buddza ist eine lokale Plattform für Tierbetreuung mit PLZ-basierter Suche, aktuellen Inseraten, Tierbetreuer-Profilen und Ratgeber.",
+  description: defaultDescription,
+  keywords: defaultKeywords,
   applicationName: siteName,
+  authors: [{ name: siteName }],
+  creator: siteName,
+  publisher: siteName,
+  category: "Tierbetreuung",
   alternates: {
     canonical: "/",
   },
@@ -53,7 +64,7 @@ export const metadata: Metadata = {
         url: defaultSeoImage,
         width: 1200,
         height: 800,
-        alt: "Hunde zuhause als Symbol für Tierbetreuung",
+        alt: defaultSeoImageAlt,
       },
     ],
   },

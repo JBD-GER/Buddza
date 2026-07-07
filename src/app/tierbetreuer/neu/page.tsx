@@ -26,8 +26,11 @@ import { Textarea } from "@/components/ui/textarea";
 import { createSitterProfileAction } from "@/app/tierbetreuer/actions";
 import { isSupabaseConfigured } from "@/lib/config";
 import { getCategories } from "@/lib/inserate";
+import { createNoIndexMetadata } from "@/lib/seo";
 import { getUserSitterProfile, weekdayOptions } from "@/lib/tierbetreuer";
 import { getUser } from "@/lib/supabase/server";
+
+export const metadata = createNoIndexMetadata("Tierbetreuer-Profil erstellen");
 
 type NewSitterPageProps = {
   searchParams: Promise<{ error?: string }>;
