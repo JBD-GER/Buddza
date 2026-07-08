@@ -86,6 +86,284 @@ export const guideCategories: GuideCategory[] = [
 
 export const guideTopics: GuideTopic[] = [
   {
+    slug: "hundebetreuung-silvester",
+    title: "Hundebetreuung an Silvester: ruhig planen, sicher übergeben",
+    categorySlug: "hund",
+    careCategorySlug: "hund",
+    excerpt: "So bereitest du Hundebetreuung an Silvester vor: ruhiger Ort, kurze Wege, sichere Spaziergänge, Futter, Rückzug und klare Updates.",
+    tags: ["Hundebetreuung Silvester", "Hundesitter", "Angsthund", "Feuerwerk"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-hundebetreuung-silvester.jpg",
+      alt: "Ruhiger Hund liegt an Silvester auf einer Decke neben Wassernapf, Leine, Spielzeug und Checkliste in einem warm beleuchteten Wohnzimmer",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum Silvester besondere Hundebetreuung braucht",
+        intro:
+          "Silvester ist für viele Hunde kein normaler Abend. Geräusche, Gerüche, Besuch, ungewohnte Zeiten und Feuerwerk können auch Hunde stressen, die sonst entspannt wirken.",
+        paragraphs: [
+          "Wenn du an Silvester nicht selbst zu Hause bist, sollte die Betreuung früher geplant werden als ein gewöhnlicher Gassi-Termin. Der Betreuer braucht nicht nur Uhrzeit und Adresse, sondern ein gutes Bild davon, wie dein Hund auf Knallen, Menschen, Dunkelheit und Unruhe reagiert.",
+          "Eine gute Silvesterbetreuung ist ruhig und vorhersehbar. Ziel ist nicht, den Hund abzulenken um jeden Preis, sondern ihn sicher durch den Abend zu bringen: mit kurzen Wegen, vertrautem Zubehör, klaren Regeln und einem Betreuer, der nicht experimentieren muss.",
+        ],
+        items: [
+          "Beschreibe ehrlich, wie dein Hund auf Feuerwerk, laute Musik und Besuch reagiert.",
+          "Plane die Betreuung früh, weil Silvestertermine schnell gefragt sind.",
+          "Kläre, ob dein Hund zu Hause bleibt oder beim Betreuer betreut wird.",
+          "Vereinbare vorher ein Kennenlernen, wenn der Betreuer deinen Hund noch nicht kennt.",
+        ],
+      },
+      {
+        title: "Der richtige Ort für einen ruhigen Abend",
+        intro:
+          "Für viele Hunde ist die eigene Wohnung an Silvester am einfachsten, weil Gerüche, Schlafplatz und Wege vertraut sind. Das gilt aber nicht für jeden Hund.",
+        paragraphs: [
+          "Wenn dein Hund beim Betreuer bleibt, sollte der Ort möglichst ruhig sein. Wichtig sind geschlossene Fenster, ein sicherer Rückzugsplatz, keine offene Haustür und keine spontanen Partys im selben Raum. Auch Treppenhaus, Balkon und Garten müssen bedacht werden.",
+          "Schreibe klar auf, wo dein Hund liegen darf und wo er sich sicher fühlt. Manche Hunde suchen Nähe, andere wollen Abstand. Ein guter Betreuer respektiert beides und drängt den Hund nicht zu Kontakt.",
+        ],
+        items: [
+          "Ruhigen Raum, Schlafplatz, Decke und bekannte Gerüche vorbereiten.",
+          "Fenster, Balkon, Garten und Haustür als Sicherheitsbereiche erklären.",
+          "Besuch, Musik und häufiges Rein-und-raus möglichst vermeiden.",
+          "Rückzugsorte nennen, an denen der Hund nicht gestört werden soll.",
+        ],
+      },
+      {
+        title: "Spaziergänge sicher planen",
+        intro:
+          "An Silvester sind Spaziergänge oft der heikelste Teil. Selbst ruhige Hunde können erschrecken, wenn es früher knallt als erwartet.",
+        paragraphs: [
+          "Plane die letzte größere Runde möglichst vor der lauten Zeit. Abends sind kurze Löserunden in vertrauter Umgebung oft besser als lange Strecken. Der Betreuer sollte wissen, welches Geschirr sicher sitzt und welche Wege vermieden werden.",
+          "Wenn dein Hund bei Knallgeräuschen zieht, einfriert oder flüchten möchte, gehört das in die Übergabe. Es ist keine Schwäche, sondern eine wichtige Sicherheitsinformation.",
+        ],
+        items: [
+          "Letzte größere Runde vor der Hauptknallzeit einplanen.",
+          "Sicher sitzendes Geschirr, Halsband und Leine genau zeigen.",
+          "Keine Freilauf-Experimente und keine neuen Strecken an Silvester.",
+          "Bei unsicheren Hunden lieber kürzer raus und schneller wieder in den ruhigen Bereich.",
+        ],
+      },
+      {
+        title: "Futter, Wasser und Beschäftigung vorbereiten",
+        intro:
+          "Ein klarer Abendablauf hilft dem Betreuer, ruhig zu bleiben. Futter, Wasser und einfache Beschäftigung sollten griffbereit sein.",
+        paragraphs: [
+          "Bereite Futterportionen vor und notiere, ob dein Hund bei Stress frisst oder eher nicht. Kauartikel, Schleckmatte oder vertrautes Spielzeug können helfen, sollten aber nur gegeben werden, wenn dein Hund sie gut verträgt.",
+          "Beruhigungsmittel oder Medikamente gehören nicht in spontane Silvesterentscheidungen. Wenn so etwas vorgesehen ist, sollte es vorher tierärztlich geklärt und exakt übergeben sein.",
+        ],
+        items: [
+          "Futter, Wasser, Leckerlis und Kauartikel klar vorbereiten.",
+          "Erklären, was dein Hund bei Stress annimmt und was nicht.",
+          "Keine neuen Snacks oder Experimente am Silvesterabend.",
+          "Medikamente nur nach klarer Vorgabe und mit genauer Dosierung übergeben.",
+        ],
+      },
+      {
+        title: "Updates und Notfallplan ohne Panik",
+        intro:
+          "Viele Halter möchten an Silvester mehr Rückmeldung. Das ist verständlich, sollte aber einfach bleiben.",
+        paragraphs: [
+          "Vereinbare wenige feste Updates: nach Ankunft, nach der letzten Runde und gegen späteren Abend. Wenn dein Hund stark gestresst wirkt, nicht zur Ruhe kommt oder etwas Ungewöhnliches passiert, soll der Betreuer natürlich sofort schreiben oder anrufen.",
+          "Lege außerdem fest, wer erreichbar ist, falls du selbst nicht ans Telefon gehen kannst. Ein Ersatzkontakt gibt dem Betreuer Sicherheit, ohne dass er allein entscheiden muss.",
+        ],
+        items: [
+          "Update-Zeiten vorab vereinbaren, statt ständig nachzufragen.",
+          "Tierarztkontakt, Ersatzkontakt und Adresse griffbereit hinterlegen.",
+          "Klare Schwelle setzen, wann der Betreuer sofort anrufen soll.",
+          "Nach Silvester kurz auswerten, was für das nächste Jahr besser vorbereitet werden kann.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "katzenbetreuung-bei-umzug-renovierung",
+    title: "Katzenbetreuung bei Umzug oder Renovierung: Stress ruhig abfedern",
+    categorySlug: "katze",
+    careCategorySlug: "katze",
+    excerpt: "Wie du Katzenbetreuung bei Umzug, Renovierung oder Handwerkerterminen planst: sicherer Raum, Routine, Futter, Rückzug und Updates.",
+    tags: ["Katzenbetreuung Umzug", "Katzenbetreuung Renovierung", "Katzensitter", "Stress vermeiden"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-katzenbetreuung-umzug-renovierung.jpg",
+      alt: "Ruhige Katze liegt in einem sicheren Zimmer neben Transportbox, Futter, Wasser, Decke und Umzugskartons",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum Umzug und Renovierung für Katzen heikel sind",
+        intro:
+          "Katzen mögen vertraute Abläufe. Kartons, fremde Menschen, offene Türen, Bohrgeräusche und neue Gerüche können schnell zu viel werden.",
+        paragraphs: [
+          "Eine Katzenbetreuung bei Umzug oder Renovierung ist deshalb mehr als Futter hinstellen. Der Betreuer soll Ruhe in einen unruhigen Tag bringen, Fluchtwege verhindern und beobachten, ob deine Katze frisst, trinkt und sich normal verhält.",
+          "Besonders wichtig ist eine klare Entscheidung: Bleibt die Katze in einem sicheren Raum, wird sie für ein paar Stunden betreut oder zieht sie vorübergehend an einen ruhigeren Ort? Jede Variante braucht andere Vorbereitung.",
+        ],
+        items: [
+          "Art des Termins beschreiben: Umzugstag, Renovierung, Handwerker oder Möbelaufbau.",
+          "Klären, ob die Katze zu Hause bleibt oder vorübergehend woanders betreut wird.",
+          "Offene Türen, Lärm, Staub und fremde Personen als Stressfaktoren mitdenken.",
+          "Betreuer früh einweisen, wenn mehrere Personen gleichzeitig in der Wohnung sind.",
+        ],
+      },
+      {
+        title: "Einen sicheren Katzenraum vorbereiten",
+        intro:
+          "Ein geschlossener, ruhiger Raum kann an Umzugs- oder Renovierungstagen Gold wert sein. Er gibt der Katze Grenzen und dem Betreuer eine klare Aufgabe.",
+        paragraphs: [
+          "In diesen Raum gehören Wasser, Futter, Katzenklo, Decke, Versteck, Kratzmöglichkeit und die Transportbox. Der Raum sollte nicht ständig betreten werden und keine Werkzeuge, offenen Fenster oder gefährlichen Materialien enthalten.",
+          "Wichtig ist, dass alle Beteiligten wissen: Diese Tür bleibt zu. Ein kurzer Hinweis an Umzugshelfer oder Handwerker kann verhindern, dass die Katze versehentlich entwischt.",
+        ],
+        items: [
+          "Futter, Wasser, Katzenklo, Versteck und vertraute Decke in einem Raum bündeln.",
+          "Fenster, Balkon, Kabel, Farbeimer und Werkzeuge ausschließen.",
+          "Tür klar markieren oder allen Beteiligten mündlich erklären.",
+          "Betreuer bitten, ruhig zu kontrollieren und die Katze nicht unnötig hervorzulocken.",
+        ],
+      },
+      {
+        title: "Routine trotz Chaos erhalten",
+        intro:
+          "Je normaler Futter, Wasser und Katzenklo laufen, desto leichter kommt die Katze durch den Tag.",
+        paragraphs: [
+          "Notiere, wann gefüttert wird, welche Menge normal ist und ob deine Katze bei Stress eher wartet. Der Betreuer sollte wissen, ob ein voller Napf normal ist oder ob das ein Warnzeichen sein kann.",
+          "Auch das Katzenklo ist wichtig. Gerade bei Stress können Veränderungen auffallen. Der Betreuer muss keine Diagnose stellen, aber er sollte wissen, wann du informiert werden möchtest.",
+        ],
+        items: [
+          "Futtermenge, Futterzeit und Lieblingsplatz klar beschreiben.",
+          "Wasser und Katzenklo leicht erreichbar platzieren.",
+          "Normales Versteckverhalten von echten Warnzeichen unterscheiden.",
+          "Updates zu Futter, Wasser, Klo und Verhalten vereinbaren.",
+        ],
+      },
+      {
+        title: "Transportbox und Übergabe ohne Hektik",
+        intro:
+          "Wenn die Katze den Ort wechseln muss, sollte die Transportbox nicht erst im letzten Moment auftauchen.",
+        paragraphs: [
+          "Stelle die Box rechtzeitig bereit und lege eine vertraute Decke hinein. Der Betreuer sollte wissen, ob die Katze leicht hineingeht, ob sie gesichert getragen werden muss und welche Wege im Haus ruhig sind.",
+          "Bei sehr ängstlichen Katzen kann es sinnvoll sein, die Betreuung so zu planen, dass ein Transport vermieden wird. Nicht jede Lösung, die für Menschen praktisch wirkt, ist für die Katze die ruhigste.",
+        ],
+        items: [
+          "Transportbox, Decke und wichtige Unterlagen sichtbar bereitlegen.",
+          "Erklären, ob und wie die Katze in die Box gesetzt werden darf.",
+          "Treppenhaus, Auto, Türen und Wartezeiten möglichst ruhig planen.",
+          "Bei Unsicherheit lieber einen sicheren Raum statt unnötigen Ortswechsel wählen.",
+        ],
+      },
+      {
+        title: "Nach dem Trubel wieder ankommen",
+        intro:
+          "Nach Umzug oder Renovierung braucht die Katze oft länger als der Mensch, um wieder normal zu wirken.",
+        paragraphs: [
+          "Lass den Betreuer kurz zurückmelden, wie der Tag lief: Hat die Katze gefressen? War sie versteckt? Gab es offene Türen, Lärmspitzen oder ungewöhnliches Verhalten? Diese Infos helfen dir, den Abend ruhiger zu gestalten.",
+          "Wenn die Wohnung verändert ist, kann es sinnvoll sein, die Katze Schritt für Schritt wieder mehr Räume erkunden zu lassen. Vertraute Gerüche, leise Stimmen und feste Futterzeiten helfen beim Ankommen.",
+        ],
+        items: [
+          "Nach dem Termin Rückmeldung zu Futter, Klo, Verhalten und Sicherheit einholen.",
+          "Neue Räume langsam öffnen, wenn die Katze unsicher wirkt.",
+          "Vertraute Decken, Kratzplätze und Futterroutinen beibehalten.",
+          "Bei wiederkehrenden Renovierungstagen denselben Betreuer einplanen, wenn es gut funktioniert hat.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "haussitting-mit-tierbetreuung",
+    title: "Haussitting mit Tierbetreuung: Wohnung, Schlüssel und Tiere gut übergeben",
+    categorySlug: "organisation",
+    excerpt: "So planst du Haussitting mit Tierbetreuung: Aufgaben abgrenzen, Tiere versorgen, Pflanzen, Post, Schlüssel, Updates und Vertrauen klären.",
+    tags: ["Haussitting mit Tierbetreuung", "Tiersitter", "Schlüsselübergabe", "Urlaubsbetreuung"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-haussitting-mit-tierbetreuung.jpg",
+      alt: "Haussitting Übergabe mit Hund, Katze, Leine, Futternäpfen, Schlüsseln, Post, Pflanze, Gießkanne und Checkliste",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Was Haussitting mit Tierbetreuung bedeutet",
+        intro:
+          "Haussitting mit Tierbetreuung verbindet zwei Aufgaben: Jemand schaut nach deiner Wohnung oder deinem Haus und kümmert sich gleichzeitig um deine Tiere.",
+        paragraphs: [
+          "Das kann sehr praktisch sein, wenn du im Urlaub bist, mehrere Tiere hast oder deine Tiere in ihrer vertrauten Umgebung bleiben sollen. Gleichzeitig braucht diese Form der Betreuung besonders klare Absprachen, weil private Räume, Schlüssel, Haushalt und Tierverantwortung zusammenkommen.",
+          "Ein gutes Inserat trennt deshalb sauber: Was ist Tierbetreuung, was ist Haussitting und was ist ausdrücklich nicht Teil der Aufgabe? Je klarer die Grenze, desto entspannter läuft die Betreuung.",
+        ],
+        items: [
+          "Beschreibe Tiere, Zeitraum, Besuchshäufigkeit und gewünschte Anwesenheit.",
+          "Trenne Aufgaben für Tiere, Wohnung, Pflanzen, Post und Müll.",
+          "Kläre, ob der Betreuer nur vorbeikommt oder zeitweise vor Ort bleibt.",
+          "Private Bereiche und Dinge, die nicht genutzt werden sollen, deutlich nennen.",
+        ],
+      },
+      {
+        title: "Tiere bleiben die wichtigste Aufgabe",
+        intro:
+          "Auch wenn Pflanzen, Post und Wohnung wichtig sind: Bei Haussitting mit Tierbetreuung stehen die Tiere im Mittelpunkt.",
+        paragraphs: [
+          "Der Betreuer sollte zuerst wissen, was Hund, Katze oder andere Tiere täglich brauchen. Futter, Wasser, Reinigung, Gassi, Medikamente, Rückzug und Beobachtung gehören in die Übergabe, bevor Haushaltsdetails dazukommen.",
+          "Wenn mehrere Tiere im Haushalt leben, lohnt sich eine klare Reihenfolge. Wer bekommt welches Futter? Welche Tür bleibt zu? Wer darf raus? Solche Details verhindern Fehler, besonders wenn der Betreuer längere Zeit allein vor Ort ist.",
+        ],
+        items: [
+          "Tieraufgaben zuerst erklären und schriftlich festhalten.",
+          "Futter, Wasser, Gassi, Katzenklo, Gehege oder Aquarium getrennt aufführen.",
+          "Besonderheiten je Tier notieren, statt alles zusammenzufassen.",
+          "Notfallkontakt und Tierarztkontakt sichtbar hinterlegen.",
+        ],
+      },
+      {
+        title: "Wohnung und Schlüssel sicher übergeben",
+        intro:
+          "Haussitting braucht Vertrauen. Schlüssel, Zugang, Alarm, Nachbarn und private Räume sollten deshalb nicht nebenbei geklärt werden.",
+        paragraphs: [
+          "Lege fest, wann und wo der Schlüssel übergeben wird, wie er zurückkommt und was passiert, wenn der Betreuer sich verspätet. Wenn es Alarmanlage, Haustürcode oder besondere Regeln im Haus gibt, gehören diese Informationen in eine ruhige Einweisung.",
+          "Private Unterlagen, Wertsachen und Dinge ohne Bezug zur Betreuung sollten vorher weggeräumt werden. Das schützt beide Seiten und macht den Aufenthalt klarer.",
+        ],
+        items: [
+          "Schlüsselübergabe, Rückgabe und Ersatzkontakt festlegen.",
+          "Zugang, Klingel, Briefkasten, Keller, Müllraum oder Garten erklären.",
+          "Private Räume und sensible Bereiche eindeutig abgrenzen.",
+          "Nachbarn oder Hausverwaltung nur einbeziehen, wenn das vorher abgesprochen ist.",
+        ],
+      },
+      {
+        title: "Pflanzen, Post und kleine Haushaltsaufgaben",
+        intro:
+          "Kleine Aufgaben können Haussitting sinnvoll machen, sollten aber nicht ausufern. Eine kurze Liste reicht meistens völlig.",
+        paragraphs: [
+          "Schreibe auf, welche Pflanzen wie oft Wasser brauchen, ob Post reingeholt werden soll und wann Müll oder Pakete relevant sind. Wenn etwas nicht dringend ist, sollte der Betreuer das wissen.",
+          "Vermeide Aufgaben, die Fachwissen oder Risiko brauchen. Ein Tiersitter ist nicht automatisch Handwerker, Gärtner oder Haushaltshilfe. Je einfacher die Haushaltsliste, desto besser kann der Betreuer sich auf die Tiere konzentrieren.",
+        ],
+        items: [
+          "Pflanzen nach Raum oder Standort zusammenfassen.",
+          "Post, Pakete, Müll und Lüften nur bei Bedarf aufnehmen.",
+          "Keine riskanten Reparaturen oder unklaren Sonderaufgaben erwarten.",
+          "Haushaltsaufgaben zeitlich realistisch neben der Tierbetreuung planen.",
+        ],
+      },
+      {
+        title: "Updates und Abschluss sauber regeln",
+        intro:
+          "Bei Haussitting möchtest du wissen, dass zu Hause alles ruhig läuft. Gleichzeitig soll der Betreuer nicht jeden Schritt dokumentieren müssen.",
+        paragraphs: [
+          "Vereinbare feste kurze Updates: zum Beispiel nach dem ersten Besuch, alle ein bis zwei Tage und am letzten Tag. Fotos von Tieren, Napf, Pflanzen oder Briefkasten können helfen, wenn sie ohne Stress entstehen.",
+          "Am Ende sollte klar sein, wie Schlüssel zurückgegeben werden, ob etwas aufgefallen ist und ob Vorräte nachgefüllt werden müssen. Ein guter Abschluss macht die nächste Betreuung deutlich einfacher.",
+        ],
+        items: [
+          "Update-Rhythmus vorab vereinbaren.",
+          "Dringende Themen von normalen Rückmeldungen unterscheiden.",
+          "Schlüsselrückgabe und letzten Wohnungscheck festlegen.",
+          "Nach der Rückkehr kurz Feedback geben und die Checkliste für das nächste Mal verbessern.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "tiersitter-in-der-naehe-finden",
     title: "Tiersitter in der Nähe finden: so vergleichst du lokale Betreuung richtig",
     categorySlug: "organisation",
