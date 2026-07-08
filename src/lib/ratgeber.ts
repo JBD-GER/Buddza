@@ -86,6 +86,284 @@ export const guideCategories: GuideCategory[] = [
 
 export const guideTopics: GuideTopic[] = [
   {
+    slug: "tiersitter-in-der-naehe-finden",
+    title: "Tiersitter in der Nähe finden: so vergleichst du lokale Betreuung richtig",
+    categorySlug: "organisation",
+    excerpt: "Wie du passende Tiersitter in deiner Nähe findest, Inserate vergleichst und vor dem ersten Termin die wichtigsten Fragen klärst.",
+    tags: ["Tiersitter in der Nähe", "Tierbetreuung", "Lokale Suche", "Inserat"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-tiersitter-in-der-naehe-finden.jpg",
+      alt: "Ruhige Übergabe für Tierbetreuung mit Hund, Katze, Futternapf, Schlüssel, Tasche und Checkliste in einer hellen Wohnung",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum Nähe ein guter Start ist, aber nicht alles",
+        intro:
+          "Wer einen Tiersitter in der Nähe sucht, möchte meistens kurze Wege, schnelle Absprachen und jemanden, der auch bei wiederkehrenden Terminen zuverlässig erreichbar bleibt.",
+        paragraphs: [
+          "Die Entfernung ist aber nur ein Teil der Entscheidung. Ein Betreuer kann zwei Straßen weiter wohnen und trotzdem nicht zu deinem Tier passen. Genauso kann jemand aus dem Nachbarort die bessere Wahl sein, wenn Erfahrung, Ruhe und Verfügbarkeit stimmen.",
+          "Gute lokale Suche bedeutet deshalb: erst den Bedarf klären, dann Profile und Nachrichten vergleichen. So findest du nicht einfach die nächstbeste Person, sondern jemanden, der wirklich zur Situation passt.",
+        ],
+        items: [
+          "Lege fest, ob du Hausbesuche, Gassi, Tagesbetreuung oder Urlaubsbetreuung brauchst.",
+          "Suche mit PLZ und Radius, aber prüfe Erfahrung und Verfügbarkeit genauso sorgfältig.",
+          "Achte darauf, ob Betreuer konkrete Fragen stellen und deinen Bedarf verstanden haben.",
+          "Plane bei neuen Kontakten immer ein kurzes Kennenlernen oder eine klare Übergabe ein.",
+        ],
+      },
+      {
+        title: "Deinen Bedarf verständlich beschreiben",
+        intro:
+          "Je klarer dein Inserat ist, desto leichter können passende Tiersitter einschätzen, ob sie helfen können. Das spart Nachrichten und vermeidet Missverständnisse.",
+        paragraphs: [
+          "Beschreibe nicht nur die Tierart, sondern auch den Alltag: Wie oft soll jemand kommen? Wie lange dauert ein Besuch? Gibt es Medikamente, Schlüsselübergabe, besondere Gewohnheiten oder feste Zeiten?",
+          "Ein guter Text muss nicht lang sein. Er sollte aber die Dinge nennen, die den Aufwand wirklich bestimmen. Bei Tierbetreuung sind das meistens Zeitfenster, Verantwortung, Verhalten des Tieres und der Ort der Betreuung.",
+        ],
+        items: [
+          "Tierart, Anzahl, Alter und besondere Eigenschaften nennen.",
+          "Zeitraum, Häufigkeit, ungefähre Dauer und flexible oder feste Zeiten angeben.",
+          "Aufgaben sauber trennen: füttern, Gassi, spielen, reinigen, kontrollieren, Medikamente.",
+          "Erfahrung wünschen, wenn dein Tier unsicher, krank, sehr jung, alt oder besonders sensibel ist.",
+        ],
+      },
+      {
+        title: "Profile und Nachrichten sinnvoll vergleichen",
+        intro:
+          "Bei mehreren Antworten hilft ein ruhiger Vergleich. Gute Tiersitter wirken nicht nur freundlich, sondern fragen nach den richtigen Details.",
+        paragraphs: [
+          "Achte darauf, ob jemand realistisch auf deinen Bedarf eingeht. Eine knappe Zusage ohne Rückfragen kann bei einfachen Aufgaben ausreichen, bei längerer Betreuung ist ein genaueres Gespräch sinnvoll.",
+          "Verlässlichkeit zeigt sich oft in kleinen Dingen: klare Antwortzeiten, vollständige Angaben, ehrliche Grenzen und die Bereitschaft, vor dem ersten Einsatz eine Übergabe zu machen.",
+        ],
+        items: [
+          "Vergleiche Erfahrung mit deiner Tierart und deiner Betreuungsform.",
+          "Frage nach Verfügbarkeit im konkreten Zeitraum, nicht nur allgemein.",
+          "Sprich an, wie Updates, Fotos oder kurze Rückmeldungen laufen sollen.",
+          "Halte wichtige Absprachen im Chat fest, damit beide Seiten denselben Stand haben.",
+        ],
+      },
+      {
+        title: "Das erste Kennenlernen vorbereiten",
+        intro:
+          "Ein Kennenlernen muss nicht kompliziert sein. Es soll zeigen, ob Mensch, Tier und Ablauf zusammenpassen.",
+        paragraphs: [
+          "Bei Hunden kann ein gemeinsamer kurzer Spaziergang hilfreich sein. Bei Katzen, Kleintieren, Vögeln oder Aquarien ist oft eine ruhige Einweisung zu Hause wichtiger. Der Betreuer sollte sehen, wo Zubehör liegt und was im Alltag normal ist.",
+          "Nutze den Termin auch, um Grenzen klar zu machen: Welche Räume sind tabu? Darf Futter angepasst werden? Was passiert, wenn dein Tier sich versteckt, nicht frisst oder ungewöhnlich reagiert?",
+        ],
+        items: [
+          "Zubehör, Futter, Schlüssel, Notfallkontakte und Tierarztkontakt bereitlegen.",
+          "Normales Verhalten und klare Warnzeichen getrennt erklären.",
+          "Zugang zur Wohnung oder zum Stall erst nach passender Absprache konkret teilen.",
+          "Nach dem Kennenlernen entscheiden, ob ein Probetermin sinnvoll ist.",
+        ],
+      },
+      {
+        title: "So wird aus einem Kontakt eine gute Betreuung",
+        intro:
+          "Wenn ein Tiersitter gut passt, lohnt sich eine einfache Routine. Wiederkehrende Betreuung wird leichter, wenn Informationen aktuell bleiben.",
+        paragraphs: [
+          "Aktualisiere dein Inserat oder deine Übergabe, wenn sich Futter, Medikamente, Verhalten, Adresse, Schlüssel oder Zeiten ändern. Kleine Änderungen können für Betreuer wichtig sein, auch wenn sie für dich selbstverständlich wirken.",
+          "Nach dem ersten Termin ist ein kurzes Feedback wertvoll. Was hat gut funktioniert? Welche Information hat gefehlt? So wird aus einer einmaligen Anfrage ein Kontakt, auf den du später entspannter zurückgreifen kannst.",
+        ],
+        items: [
+          "Nach dem ersten Einsatz kurz auswerten, ob Ablauf und Kommunikation gepasst haben.",
+          "Gute Betreuer frühzeitig für Urlaub, Feiertage oder regelmäßige Termine anfragen.",
+          "Checkliste und Notfallkontakte aktuell halten.",
+          "Bei größeren Änderungen lieber neu einweisen, statt stillschweigend vorauszusetzen.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "hundebetreuung-am-wochenende",
+    title: "Hundebetreuung am Wochenende: entspannte Hilfe für freie Tage planen",
+    categorySlug: "hund",
+    careCategorySlug: "hund",
+    excerpt: "So organisierst du Hundebetreuung am Wochenende mit klaren Zeiten, Gassi-Routinen, Futter, Übernachtung und guter Übergabe.",
+    tags: ["Hundebetreuung Wochenende", "Hundesitter", "Gassi", "Übernachtung"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-hundebetreuung-wochenende.jpg",
+      alt: "Fröhlicher Hund sitzt neben Wochenendtasche, Leine, Decke, Futter und Notizbuch in einem hellen Flur",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum Wochenendbetreuung anders geplant wird",
+        intro:
+          "Am Wochenende geht es oft nicht um eine einzelne Gassi-Runde, sondern um längere Zeitfenster, Ausflüge, Feiern, Kurztrips oder spontane Termine.",
+        paragraphs: [
+          "Für deinen Hund kann das bedeuten: andere Schlafenszeiten, längere Abwesenheit, mehr Besuch oder ein ungewohnter Tagesablauf. Damit die Betreuung trotzdem ruhig bleibt, sollte der Betreuer die wichtigsten Routinen kennen.",
+          "Besonders wichtig ist die Frage, ob dein Hund nur stundenweise betreut wird, den ganzen Tag bleibt oder über Nacht versorgt werden soll. Diese drei Fälle brauchen unterschiedliche Vorbereitung.",
+        ],
+        items: [
+          "Kläre zuerst, ob es um Stundenbetreuung, Tagesbetreuung oder Übernachtung geht.",
+          "Beschreibe Wochenende, Uhrzeiten und Flexibilität konkret.",
+          "Nenne Spaziergänge, Futterzeiten, Ruhephasen und Alleinbleiben realistisch.",
+          "Plane bei längeren Einsätzen vorab ein kurzes Kennenlernen ein.",
+        ],
+      },
+      {
+        title: "Gassi, Auslastung und Ruhe gut dosieren",
+        intro:
+          "Viele Hunde brauchen am Wochenende nicht mehr Programm, sondern einen planbaren Ablauf. Zu viel Aktion kann genauso schwierig sein wie zu wenig Betreuung.",
+        paragraphs: [
+          "Schreibe auf, welche Strecken dein Hund kennt, wie lange Spaziergänge normalerweise dauern und welche Begegnungen vermieden werden sollten. Wenn dein Hund bei Fahrrädern, Kindern, anderen Hunden oder Wild stark reagiert, gehört das unbedingt in die Übergabe.",
+          "Gute Betreuung heißt nicht, den Hund müde zu machen um jeden Preis. Ein ruhiger Spaziergang, Futter, Wasser und ein vertrauter Liegeplatz sind oft die bessere Wochenendlösung.",
+        ],
+        items: [
+          "Normale Gassi-Dauer, Tempo und bevorzugte Strecken notieren.",
+          "Leinenpflicht, Geschirr, Schleppleine oder Maulkorb klar besprechen.",
+          "Hundebegegnungen, Jagdverhalten und Unsicherheiten offen nennen.",
+          "Ruhezeiten fest einplanen, besonders nach Aufregung oder längeren Ausflügen.",
+        ],
+      },
+      {
+        title: "Futter, Tasche und Übergabe vorbereiten",
+        intro:
+          "Eine gut gepackte Hundetasche macht Wochenendbetreuung deutlich einfacher. Der Betreuer muss dann nicht suchen oder raten.",
+        paragraphs: [
+          "Lege Futter portioniert bereit und schreibe dazu, wann gefüttert wird. Auch kleine Dinge wie Kotbeutel, Handtuch, Medikamente, Kauartikel oder ein vertrautes Spielzeug können den Unterschied machen.",
+          "Wenn dein Hund bei jemand anderem bleibt, gehören zusätzlich Schlafplatz, Decke und klare Regeln dazu: Sofa erlaubt oder nicht? Treppen? Türen? Allein im Raum bleiben?",
+        ],
+        items: [
+          "Futterportionen, Napf, Wasserflasche, Leckerlis und Medikamente vorbereiten.",
+          "Leine, Geschirr, Kotbeutel, Handtuch und eventuell Regen- oder Winterausrüstung einpacken.",
+          "Schlafplatz, Decke oder vertrautes Spielzeug mitgeben.",
+          "Regeln für Wohnung, Auto, Garten und Ruheplatz eindeutig erklären.",
+        ],
+      },
+      {
+        title: "Kommunikation ohne Dauerping",
+        intro:
+          "Am Wochenende möchtest du wahrscheinlich wissen, ob alles klappt. Gleichzeitig soll der Betreuer nicht ständig aufs Handy schauen müssen.",
+        paragraphs: [
+          "Vereinbare lieber wenige klare Updates: angekommen, erste Runde erledigt, Futter angenommen, Abend ruhig. Bei kurzen Betreuungen reicht manchmal eine Nachricht zum Abschluss.",
+          "Wichtig ist, dass Auffälligkeiten sofort gemeldet werden. Wenn dein Hund nicht frisst, stark hechelt, humpelt, Durchfall hat oder ungewöhnlich ängstlich wirkt, sollte der Betreuer nicht warten.",
+        ],
+        items: [
+          "Vorher festlegen, wann Updates sinnvoll sind.",
+          "Notfallkontakt und Tierarztkontakt griffbereit teilen.",
+          "Klare Grenze zwischen normaler Rückmeldung und dringender Meldung setzen.",
+          "Nach dem Wochenende kurz besprechen, was für das nächste Mal angepasst wird.",
+        ],
+      },
+      {
+        title: "Früh buchen, wenn Termine beliebt sind",
+        intro:
+          "Wochenenden, Feiertage und Ferien sind bei Hundebetreuung oft schnell gefragt. Wer früh schreibt, bekommt eher passende Antworten.",
+        paragraphs: [
+          "Das gilt besonders, wenn dein Hund spezielle Erfahrung braucht oder wenn Übernachtung geplant ist. Gute Betreuer möchten wissen, ob sie den Hund in ihren Alltag integrieren können, bevor sie zusagen.",
+          "Für regelmäßige Wochenendtermine lohnt sich ein fester Kontakt. Dann muss nicht jedes Mal alles neu erklärt werden, und dein Hund lernt den Ablauf besser kennen.",
+        ],
+        items: [
+          "Bei Feiertagen und Ferien mehrere Wochen vorher anfragen.",
+          "Bei neuen Betreuern erst einen kurzen Testtermin vereinbaren.",
+          "Regelmäßige Wochenenden als wiederkehrenden Bedarf beschreiben.",
+          "Nach guten Erfahrungen denselben Betreuer bevorzugt erneut anfragen.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "aquariumbetreuung-in-der-naehe-finden",
+    title: "Aquariumbetreuung in der Nähe finden: Fütterung, Technik und Wasserwerte",
+    categorySlug: "aquarium",
+    careCategorySlug: "aquarium",
+    excerpt: "Worauf es bei Aquariumbetreuung in deiner Nähe ankommt: Futter portionieren, Technik prüfen, Wasserwerte beobachten und Notfallplan vorbereiten.",
+    tags: ["Aquariumbetreuung in der Nähe", "Aquarium Urlaub", "Fische füttern", "Wasserwerte"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-aquariumbetreuung-in-der-naehe.jpg",
+      alt: "Gepflegtes Aquarium mit gesunden Fischen, vorbereiteten Futterdosen, Teststreifen, Kescher, Handtuch und Checkliste",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum Aquariumbetreuung ruhige Genauigkeit braucht",
+        intro:
+          "Ein Aquarium wirkt stabil, solange Technik, Futter und Wasserwerte im Gleichgewicht bleiben. Genau deshalb braucht Betreuung klare Grenzen.",
+        paragraphs: [
+          "Bei Aquariumbetreuung in der Nähe geht es oft um kurze, regelmäßige Kontrollen. Der Betreuer soll füttern, Technik prüfen und Auffälligkeiten erkennen, aber nicht spontan eingreifen oder größere Änderungen vornehmen.",
+          "Je einfacher die Übergabe ist, desto besser. Vorportioniertes Futter, beschriftete Technik und ein klarer Notfallkontakt verhindern die typischen Fehler, die während Urlaub oder Wochenendbetreuung entstehen.",
+        ],
+        items: [
+          "Aquariumgröße, Besatz, Fütterungsrhythmus und Technik kurz beschreiben.",
+          "Aufgaben auf Fütterung, Sichtkontrolle und einfache Technikprüfung begrenzen.",
+          "PLZ und Radius nutzen, damit regelmäßige kurze Besuche realistisch bleiben.",
+          "Vor dem Urlaub einen gemeinsamen Blick auf Becken, Futter und Geräte machen.",
+        ],
+      },
+      {
+        title: "Futter vorportionieren statt frei dosieren",
+        intro:
+          "Bei Fischen ist zu viel Futter oft riskanter als zu wenig. Deshalb sollte der Betreuer nicht nach Gefühl dosieren müssen.",
+        paragraphs: [
+          "Bereite kleine Portionen für jeden Fütterungstag vor und schreibe dazu, ob es Futterpausen gibt. Unterschiedliche Futtersorten sollten klar getrennt sein, besonders wenn du Bodenfische, Garnelen oder empfindliche Arten hältst.",
+          "Wenn Lebend-, Frost- oder Spezialfutter nötig ist, sollte der Betreuer genau wissen, wie es gelagert und gegeben wird. Bei Unsicherheit ist eine einfachere Urlaubsroutine häufig sicherer.",
+        ],
+        items: [
+          "Futter pro Tag in kleine Dosen oder Beutel vorbereiten.",
+          "Futterfreie Tage ausdrücklich notieren.",
+          "Verschiedene Futtersorten getrennt und eindeutig markieren.",
+          "Keine Zusatzfütterung erlauben, wenn Fische scheinbar noch Hunger haben.",
+        ],
+      },
+      {
+        title: "Technik verständlich erklären",
+        intro:
+          "Filter, Licht, Heizung, CO2 und Pumpe sollen im Normalfall einfach laufen. Der Betreuer muss vor allem wissen, was normal aussieht.",
+        paragraphs: [
+          "Beschreibe, welche Geräusche, Anzeigen oder Lichtzeiten normal sind. Wenn ein Gerät nicht berührt werden soll, schreibe das klar auf. Wenn der Wasserstand sinkt, sollte ebenfalls feststehen, ob und wie nachgefüllt wird.",
+          "Bei technischer Betreuung ist Zurückhaltung wichtig. Ein Betreuer sollte nichts auseinanderbauen müssen, sondern dich oder eine erfahrene Ersatzperson kontaktieren können.",
+        ],
+        items: [
+          "Lichtzeiten, Filterlauf, Heizung, CO2 und Strömung kurz erklären.",
+          "Normalen Wasserstand markieren oder beschreiben.",
+          "Ersatztechnik, Steckdosen und Sicherungen nur erklären, wenn der Betreuer sie nutzen soll.",
+          "Bei Geräuschen, Ausfall oder Stromproblem sofort Rücksprache vereinbaren.",
+        ],
+      },
+      {
+        title: "Wasserwerte und sichtbare Warnzeichen",
+        intro:
+          "Nicht jeder Betreuer muss Wasserwerte messen. Aber er sollte erkennen, wann etwas auffällig wirkt.",
+        paragraphs: [
+          "Trübes Wasser, starkes Hecheln an der Oberfläche, ungewöhnliche Scheu, tote Tiere, Temperaturabweichungen oder ein stehender Filter sind klare Gründe für eine schnelle Meldung. Wenn du Teststreifen nutzen möchtest, erkläre sie vorher sehr einfach.",
+          "Wichtig ist, dass der Betreuer keine Mittel auf Verdacht ins Aquarium gibt. Wasseraufbereiter, Dünger oder Medikamente gehören nur in die Betreuung, wenn die Anwendung eindeutig abgesprochen ist.",
+        ],
+        items: [
+          "Normale Temperatur und sichtbare Wasserqualität beschreiben.",
+          "Warnzeichen wie Oberflächenatmen, Trübung, tote Tiere oder Technikstillstand nennen.",
+          "Testmaterial nur verwenden lassen, wenn Ablauf und Ziel klar sind.",
+          "Keine Chemie, Medikamente oder großen Wasserwechsel ohne Absprache starten.",
+        ],
+      },
+      {
+        title: "Passende Aquariumbetreuer finden",
+        intro:
+          "Nicht jeder Tiersitter hat Erfahrung mit Aquarien. Für kurze Kontrollen reicht manchmal Zuverlässigkeit, für Technik und sensible Becken ist Erfahrung wertvoll.",
+        paragraphs: [
+          "Schreibe im Inserat ehrlich, ob dein Aquarium einfach zu betreuen ist oder ob Erfahrung mit Technik, Pflanzenaquarium, Meerwasser, Garnelen oder empfindlichem Besatz nötig ist. So melden sich eher passende Personen.",
+          "Nach der ersten Betreuung lohnt sich ein kurzer Abgleich: Waren die Futterportionen verständlich? Wurde Technik sicher erkannt? Gab es Fragen? Daraus wird die nächste Übergabe deutlich besser.",
+        ],
+        items: [
+          "Im Inserat Aquarientyp und nötige Erfahrung klar nennen.",
+          "Vor Ort zeigen, was geprüft wird und was unverändert bleibt.",
+          "Notfallkontakt, Händler, erfahrene Person oder Aquaristik-Service hinterlegen.",
+          "Nach dem Einsatz prüfen, ob Futter, Technik und Updates gut funktioniert haben.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "hundebetreuung-ueber-nacht",
     title: "Hundebetreuung über Nacht: so bereitest du Schlafplatz, Routine und Übergabe vor",
     categorySlug: "hund",
