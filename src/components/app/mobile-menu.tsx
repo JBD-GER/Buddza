@@ -14,6 +14,7 @@ import {
   Menu,
   MessageCircle,
   Plus,
+  Search,
   UserRoundPlus,
   X,
 } from "lucide-react";
@@ -22,6 +23,7 @@ import { signOutAction } from "@/app/auth-actions";
 import { Button } from "@/components/ui/button";
 
 const publicLinks = [
+  { href: "/tierbetreuung-finden", label: "Betreuung finden", icon: Search },
   { href: "/inserate", label: "Inserate", icon: ListChecks },
   { href: "/ratgeber", label: "Ratgeber", icon: BookOpen },
   { href: "/ueber-uns", label: "Über uns", icon: HeartHandshake },
@@ -30,6 +32,7 @@ const publicLinks = [
 
 const signedInLinks = [
   { href: "/uebersicht", label: "Übersicht", icon: LayoutDashboard },
+  { href: "/tierbetreuung-finden", label: "Betreuung finden", icon: Search },
   { href: "/inserieren", label: "Inserieren", icon: Plus },
   { href: "/inserate", label: "Inserate", icon: ListChecks },
   { href: "/tierbetreuer", label: "Tierbetreuer", icon: HandHeart },

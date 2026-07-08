@@ -11,6 +11,7 @@ const staticRoutes: Array<{
   includeDefaultImage?: boolean;
 }> = [
   { path: "/", changeFrequency: "weekly", priority: 1, includeDefaultImage: true },
+  { path: "/tierbetreuung-finden", changeFrequency: "weekly", priority: 0.94, includeDefaultImage: true },
   { path: "/inserate", changeFrequency: "daily", priority: 0.92, includeDefaultImage: true },
   { path: "/tierbetreuer", changeFrequency: "daily", priority: 0.9, includeDefaultImage: true },
   { path: "/inserieren", changeFrequency: "monthly", priority: 0.82 },

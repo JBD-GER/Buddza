@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import { BadgeEuro, BookOpen, HandHeart, HeartHandshake, ListChecks, Mail, MapPin } from "lucide-react";
+import { BadgeEuro, BookOpen, HandHeart, HeartHandshake, ListChecks, Mail, MapPin, Search } from "lucide-react";
 import { guideTopics } from "@/lib/ratgeber";
 
 const footerLinks = [
+  { href: "/tierbetreuung-finden", label: "Tierbetreuung finden", icon: Search },
   { href: "/inserate", label: "Inserate", icon: ListChecks },
   { href: "/tierbetreuer", label: "Tierbetreuer", icon: HandHeart },
   { href: "/ratgeber", label: "Ratgeber", icon: BookOpen },
