@@ -8,7 +8,6 @@ import { getUnreadMessageCount } from "@/lib/anfragen";
 import { getUser } from "@/lib/supabase/server";
 
 const publicLinks = [
-  { href: "/tierbetreuung-finden", label: "Betreuung finden" },
   { href: "/inserate", label: "Inserate" },
   { href: "/ratgeber", label: "Ratgeber" },
   { href: "/ueber-uns", label: "Über uns" },
@@ -17,7 +16,6 @@ const publicLinks = [
 
 const signedInLinks = [
   { href: "/uebersicht", label: "Übersicht" },
-  { href: "/tierbetreuung-finden", label: "Betreuung finden" },
   { href: "/inserieren", label: "Inserieren" },
   { href: "/inserate", label: "Inserate" },
   { href: "/tierbetreuer", label: "Tierbetreuer" },
