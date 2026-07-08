@@ -86,6 +86,272 @@ export const guideCategories: GuideCategory[] = [
 
 export const guideTopics: GuideTopic[] = [
   {
+    slug: "hundetagesbetreuung-finden",
+    title: "Hundetagesbetreuung finden: so planst du einen guten Tagesplatz",
+    categorySlug: "hund",
+    careCategorySlug: "hund",
+    excerpt: "Wann Hundetagesbetreuung sinnvoll ist, wie du passende Betreuer vergleichst und welche Routinen in die Übergabe gehören.",
+    tags: ["Hundetagesbetreuung", "Hundebetreuung", "Tagesbetreuung", "Hundesitter"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-hundetagesbetreuung-finden.jpg",
+      alt: "Hund ruht in einem Hundebett neben Homeoffice-Tisch, Leine und Wassernapf für die Tagesbetreuung",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Wann Hundetagesbetreuung die bessere Lösung ist",
+        intro:
+          "Hundetagesbetreuung ist mehr als eine kurze Gassi-Runde. Sie hilft, wenn ein Hund über mehrere Stunden gut begleitet werden soll, während du arbeitest, Termine hast oder einen langen Tag außer Haus bist.",
+        paragraphs: [
+          "Gerade Hunde, die nicht lange allein bleiben können, profitieren von einer verlässlichen Tagesroutine. Wichtig ist aber, dass die Betreuung zum Temperament passt. Ein aktiver Hund braucht Bewegung und Struktur, ein sensibler Hund eher Ruhe, feste Signale und wenig Wechsel.",
+          "Ein guter Tagesplatz fühlt sich für den Hund nicht wie ein dauerndes Abenteuer an. Er sollte Futter, Pausen, kurze Beschäftigung und Rückzug so verbinden, dass dein Hund am Abend zufrieden und nicht völlig überdreht ist.",
+        ],
+        items: [
+          "Hundetagesbetreuung ist sinnvoll bei langen Arbeitstagen, Terminen oder Übergangsphasen.",
+          "Achte auf feste Bring- und Abholzeiten, damit der Tag planbar bleibt.",
+          "Klare Ruhephasen sind genauso wichtig wie Spaziergänge und Spiel.",
+          "Ein Probetag zeigt oft besser als ein langer Chat, ob der Ablauf wirklich passt.",
+        ],
+      },
+      {
+        title: "Betreuer vergleichen: Erfahrung, Alltag und Umfeld",
+        intro:
+          "Bei Tagesbetreuung zählt nicht nur Sympathie. Entscheidend ist, ob der Betreuer den ganzen Ablauf realistisch tragen kann.",
+        paragraphs: [
+          "Frage nach dem normalen Tagesrhythmus. Wo ruht der Hund? Wie oft geht es raus? Gibt es andere Tiere, Kinder, Treppen, Garten oder Bürozeiten? Diese Details entscheiden, ob dein Hund entspannt ankommen kann.",
+        ],
+        items: [
+          "Passt das Umfeld: Wohnung, Haus, Garten, Büro oder Betreuung bei dir zu Hause?",
+          "Gibt es Erfahrung mit Alter, Größe, Energielevel und Verhalten deines Hundes?",
+          "Sind andere Hunde anwesend und wenn ja, wie wird der Kontakt gesteuert?",
+          "Kann der Betreuer Grenzen einhalten, zum Beispiel kein Freilauf, keine Hundewiese oder kein Futter von anderen?",
+        ],
+      },
+      {
+        title: "Was in die Tagesbetreuungs-Übergabe gehört",
+        intro:
+          "Eine Tagesbetreuung braucht mehr Informationen als ein kurzer Spaziergang. Der Betreuer muss den ganzen Tag ruhig entscheiden können.",
+        paragraphs: [
+          "Schreibe Futter, Pausen, Medikamente, Ruheplatz und typische Signale auf. Gerade bei Tagesbetreuung merkt der Betreuer schneller, wenn etwas anders ist als sonst. Dann helfen klare Hinweise: Was ist normal, was soll gemeldet werden?",
+        ],
+        items: [
+          "Futtermenge, Wasser, Leckerlis, Tabus und Fütterungszeiten notieren.",
+          "Ruheplatz, Spielzeug, Decke und vertraute Gegenstände mitgeben.",
+          "Lösezeiten, Spazierdauer, Leinenregeln und Hundebegegnungen erklären.",
+          "Notfallkontakt, Tierarzt und erlaubte Entscheidungen schriftlich festhalten.",
+        ],
+      },
+      {
+        title: "Der erste Probetag",
+        intro:
+          "Ein Probetag sollte kurz und überschaubar starten. So sieht der Hund den Ort, den Menschen und den Ablauf, ohne direkt einen ganzen Tag stemmen zu müssen.",
+        paragraphs: [
+          "Plane nach dem Probetag keine zusätzliche Reizflut. Viele Hunde verarbeiten neue Orte und Menschen erst später. Ein ruhiger Abend zeigt oft, ob die Betreuung zu viel oder genau richtig war.",
+        ],
+        items: [
+          "Beginne mit wenigen Stunden, bevor du volle Arbeitstage buchst.",
+          "Bitte um ein kurzes Update zu Fressen, Ruhe, Spaziergang und Stimmung.",
+          "Prüfe danach, ob dein Hund entspannt, müde oder deutlich gestresst wirkt.",
+          "Passe Dauer, Abholzeit oder Aktivität an, wenn der erste Termin zu intensiv war.",
+        ],
+      },
+      {
+        title: "Regelmäßig buchen ohne Chaos",
+        intro:
+          "Wenn Hundetagesbetreuung regelmäßig wird, lohnt sich ein fester Ablauf. Je weniger du jedes Mal neu erklären musst, desto stabiler wird die Betreuung.",
+        paragraphs: [
+          "Speichere die wichtigsten Absprachen im Chat und aktualisiere sie, wenn sich Futter, Medikamente, Verhalten oder Zeiten ändern. Gute Tagesbetreuung lebt von Verlässlichkeit, aber auch von ehrlicher Rückmeldung.",
+        ],
+        items: [
+          "Feste Wochentage, Bringzeiten und Abholzeiten vereinbaren.",
+          "Änderungen früh ankündigen, besonders bei Medikamenten oder Verhalten.",
+          "Nach einigen Terminen gemeinsam prüfen, ob die Routine noch passt.",
+          "Bei guter Betreuung frühzeitig Urlaubszeiten, Feiertage und Engpässe abstimmen.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "katzenbetreuung-feiertage-planen",
+    title: "Katzenbetreuung an Feiertagen planen: Hausbesuche ohne Stress",
+    categorySlug: "katze",
+    careCategorySlug: "katze",
+    excerpt: "So organisierst du Katzensitting an Feiertagen, Wochenenden und Brückentagen mit klaren Zeiten, Schlüsselübergabe und ruhiger Routine.",
+    tags: ["Katzenbetreuung Feiertage", "Katzensitter", "Hausbesuch", "Wochenende"],
+    readingMinutes: 8,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-katzenbetreuung-feiertage-planen.jpg",
+      alt: "Katze liegt entspannt neben Futternapf, Wassernapf, Katzenklo und Schlüsselablage für Feiertagsbetreuung",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum Feiertage besondere Planung brauchen",
+        intro:
+          "An Feiertagen, langen Wochenenden und Brückentagen sind viele Katzensitter früh ausgebucht. Gleichzeitig sollen Hausbesuche für die Katze möglichst normal wirken.",
+        paragraphs: [
+          "Der wichtigste Punkt ist nicht, ob der Besuch exakt zur Minute passiert. Entscheidend ist, dass Futter, Wasser, Katzenklo und kurze Kontrolle zuverlässig eingeplant sind. Je früher du Zeitraum und Aufgabe beschreibst, desto besser können Betreuer ehrlich zusagen.",
+          "Wenn deine Katze feste Fütterungszeiten braucht oder Medikamente bekommt, solltest du weniger flexibel planen. Bei unkomplizierten Katzen kann ein Zeitfenster reichen, solange die Routine klar bleibt.",
+        ],
+        items: [
+          "Feiertage und Brückentage möglichst früh anfragen.",
+          "Pro Besuch ein realistisches Zeitfenster statt nur eine Wunschminute nennen.",
+          "Bei Medikamenten, Spezialfutter oder Freigang genauer planen.",
+          "Eine Ersatzperson benennen, falls Anfahrt, Krankheit oder Schlüsselproblem dazwischenkommen.",
+        ],
+      },
+      {
+        title: "Hausbesuche kurz, ruhig und vollständig halten",
+        intro:
+          "Katzenbetreuung an Feiertagen soll keine große Veränderung sein. Eine ruhige Reihenfolge hilft dem Katzensitter und der Katze.",
+        paragraphs: [
+          "Viele Katzen bleiben bei fremden Menschen erst einmal auf Abstand. Das ist normal. Der Hausbesuch sollte deshalb nicht erzwingen, dass die Katze Kontakt aufnimmt. Besser ist ein verlässlicher Ablauf, der Futter, Wasser, Klo und Sicherheitscheck abdeckt.",
+        ],
+        items: [
+          "Erst prüfen, ob die Katze sichtbar ist oder ob alles im Raum normal wirkt.",
+          "Futter, Wasser und Katzenklo nach deiner bekannten Routine erledigen.",
+          "Fenster, Balkon, Türen und sensible Räume am Ende kontrollieren.",
+          "Updates kurz halten: gesehen, gefressen, Katzenklo, Auffälligkeiten.",
+        ],
+      },
+      {
+        title: "Schlüsselübergabe und Zugang klären",
+        intro:
+          "Gerade an Feiertagen ist ein Schlüsselproblem besonders ärgerlich. Deshalb gehört die Zugangsklärung früh in die Planung.",
+        paragraphs: [
+          "Besprich nicht nur, wer den Schlüssel bekommt, sondern auch wann er zurückgegeben wird und was passiert, wenn eine Tür klemmt oder der Schlüssel nicht funktioniert. Eine kurze Probe vor der Reise kann viel Stress verhindern.",
+        ],
+        items: [
+          "Schlüsselübergabe mit Datum, Uhrzeit und Rückgabe klar festhalten.",
+          "Hausnummer, Klingel, Etage und besondere Zugangshinweise erst nach passender Absprache teilen.",
+          "Notieren, welche Räume betreten werden dürfen und welche privat bleiben.",
+          "Ersatzkontakt oder Zweitschlüssel nur dann einplanen, wenn das wirklich abgesprochen ist.",
+        ],
+      },
+      {
+        title: "Futter, Katzenklo und Medikamente vorbereiten",
+        intro:
+          "Je voller Feiertage sind, desto wichtiger ist eine einfache Vorbereitung. Alles, was gesucht werden muss, kostet unnötig Zeit und erhöht das Fehlerrisiko.",
+        paragraphs: [
+          "Stelle Futter, Streu, Müllbeutel, Reinigungsmittel und Medikamente sichtbar zusammen. Bei Medikamenten gilt: Dosierung, Uhrzeit und Lagerung sollten schriftlich und eindeutig sein. Bitte keine medizinischen Änderungen ohne tierärztliche Rücksprache verlangen.",
+        ],
+        items: [
+          "Futterportionen vorbereiten oder Mengen klar abmessen.",
+          "Katzenstreu, Schaufel, Müllbeutel und Reinigungsmittel an einem Ort sammeln.",
+          "Medikamente nur mit klarer Anleitung, Uhrzeit und Kontakt für Rückfragen übergeben.",
+          "Bei mehreren Katzen getrennte Futterplätze und Besonderheiten pro Katze notieren.",
+        ],
+      },
+      {
+        title: "Nach Feiertagen kurz auswerten",
+        intro:
+          "Wenn die Betreuung gut lief, lohnt sich ein kurzer Abschluss. So wird der nächste Feiertag leichter planbar.",
+        paragraphs: [
+          "Frage, ob Zeiten, Schlüssel, Futter und Klo gut funktioniert haben. Falls die Katze sehr scheu war, kann beim nächsten Mal ein anderer Ablauf helfen. Solche kleinen Anpassungen machen wiederholte Betreuung viel entspannter.",
+        ],
+        items: [
+          "Prüfen, ob die Besuchszeiten zur Katze und zum Katzensitter gepasst haben.",
+          "Übergabe ergänzen, wenn etwas gesucht oder falsch verstanden wurde.",
+          "Gute Kontakte früh für den nächsten Feiertag anfragen.",
+          "Schlüsselrückgabe und offene Kosten direkt sauber abschließen.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "tierbetreuung-fuer-berufstaetige",
+    title: "Tierbetreuung für Berufstätige: Alltag, Zeiten und Routinen organisieren",
+    categorySlug: "organisation",
+    excerpt: "Wie berufstätige Halter Tierbetreuung rund um Arbeitszeiten, Homeoffice, Pendeln und regelmäßige Routinen planen.",
+    tags: ["Tierbetreuung Berufstätige", "Haustierbetreuung", "Arbeitszeit", "Routine"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-tierbetreuung-berufstaetige.jpg",
+      alt: "Hund wartet ruhig im Flur neben Futternapf und Arbeitsplatz, im Hintergrund sitzt eine Katze",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Betreuung um den Arbeitstag herum denken",
+        intro:
+          "Wer arbeitet, braucht oft keine große Urlaubsbetreuung, sondern kleine verlässliche Bausteine im Alltag: Gassi, Hausbesuch, Fütterung, Tagesbetreuung oder kurze Kontrolle.",
+        paragraphs: [
+          "Der erste Schritt ist ein ehrlicher Blick auf deinen normalen Arbeitstag. Wann bist du wirklich weg? Wie lange ist die Pendelzeit? Was passiert, wenn ein Meeting länger dauert? Aus diesen Antworten entsteht ein Betreuungsmodell, das zu dir und deinem Tier passt.",
+          "Für Hunde kann eine Mittagsrunde reichen oder eine Tagesbetreuung sinnvoll sein. Für Katzen, Kleintiere oder Aquarien geht es eher um regelmäßige Kontrolle, Futter und ruhige Abläufe.",
+        ],
+        items: [
+          "Notiere feste Arbeitszeiten, flexible Tage, Homeoffice und Pendelwege.",
+          "Unterscheide zwischen täglicher Routine und gelegentlicher Hilfe.",
+          "Plane Puffer für Verspätungen, Wetter, Krankheit und spontane Termine.",
+          "Suche lieber früh nach Betreuung, bevor der Arbeitsalltag schon eng ist.",
+        ],
+      },
+      {
+        title: "Welche Betreuungsform passt?",
+        intro:
+          "Nicht jedes Tier braucht dieselbe Lösung. Die passende Betreuungsform hängt von Tierart, Alter, Alleinbleiben, Energielevel und deinem Arbeitsrhythmus ab.",
+        paragraphs: [
+          "Viele berufstätige Halter kombinieren mehrere Lösungen: an Bürotagen eine feste Gassi-Runde, bei langen Tagen Tagesbetreuung und für Reisen eine andere Person. Wichtig ist, dass dein Tier nicht jedes Mal komplett neue Regeln erlebt.",
+        ],
+        items: [
+          "Gassi-Service passt, wenn der Hund zu Hause bleiben kann, aber Bewegung und Lösemöglichkeit braucht.",
+          "Tagesbetreuung passt, wenn Alleinbleiben schwerfällt oder der Tag sehr lang wird.",
+          "Hausbesuche passen für Katzen, Kleintiere und Tiere mit klaren Fütterungsroutinen.",
+          "Regelmäßige Betreuung sollte planbarer sein als reine Notfallhilfe.",
+        ],
+      },
+      {
+        title: "Inserat für berufstätige Halter schreiben",
+        intro:
+          "Ein gutes Inserat spart Rückfragen. Betreuer müssen schnell verstehen, wann Hilfe gebraucht wird und wie zuverlässig der Rhythmus sein soll.",
+        paragraphs: [
+          "Schreibe nicht nur: Ich brauche jemanden wegen Arbeit. Besser ist eine konkrete Beschreibung: Welche Tage, welche Uhrzeit, welcher Ort, welche Aufgabe und wie oft? Dann melden sich eher Menschen, deren Alltag wirklich dazu passt.",
+        ],
+        items: [
+          "Nenne Wochentage, Uhrzeiten, PLZ-Region und gewünschte Dauer.",
+          "Beschreibe, ob Termine fest oder flexibel sind.",
+          "Erkläre, was bei Homeoffice, Krankheit oder spontanen Büroterminen passieren soll.",
+          "Formuliere klar, ob du langfristige Betreuung oder gelegentliche Hilfe suchst.",
+        ],
+      },
+      {
+        title: "Routine und Kommunikation einfach halten",
+        intro:
+          "Alltagsbetreuung funktioniert am besten, wenn sie nicht jedes Mal neu verhandelt wird. Eine einfache Routine entlastet alle Beteiligten.",
+        paragraphs: [
+          "Lege fest, wann Updates nötig sind. Bei regelmäßiger Betreuung reicht oft eine kurze Nachricht bei Auffälligkeiten. Bei neuen Betreuern kann am Anfang ein kurzes Foto oder Status helfen, Vertrauen aufzubauen.",
+        ],
+        items: [
+          "Feste Checkliste für Futter, Wasser, Bewegung, Reinigung und Schlüssel nutzen.",
+          "Updates abhängig von der Betreuung abstimmen: täglich, nur bei Auffälligkeiten oder nach jedem Termin.",
+          "Änderungen an Zeiten, Futter oder Verhalten rechtzeitig mitteilen.",
+          "Nach den ersten Terminen prüfen, ob der Aufwand für beide Seiten realistisch bleibt.",
+        ],
+      },
+      {
+        title: "Plan B für volle Wochen",
+        intro:
+          "Beruflicher Alltag bleibt selten komplett planbar. Deshalb ist ein Plan B kein Misstrauen, sondern gute Organisation.",
+        paragraphs: [
+          "Wenn dein Hauptbetreuer ausfällt oder du kurzfristig länger arbeiten musst, hilft ein zweiter Kontakt. Wichtig ist, dass auch diese Person die wichtigsten Infos kennt und nicht bei null startet.",
+        ],
+        items: [
+          "Einen Ersatzkontakt für Krankheit, Urlaub oder spontane Engpässe aufbauen.",
+          "Übergabe so schreiben, dass auch eine zweite Person sie verstehen kann.",
+          "Schlüssel, Adresse und private Daten nur mit klarer Absprache teilen.",
+          "Regelmäßig prüfen, ob Arbeitszeiten und Betreuungsmodell noch zusammenpassen.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "hundesitter-in-der-naehe-finden",
     title: "Hundesitter in der Nähe finden: worauf du achten solltest",
     categorySlug: "hund",
