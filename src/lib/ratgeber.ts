@@ -86,6 +86,287 @@ export const guideCategories: GuideCategory[] = [
 
 export const guideTopics: GuideTopic[] = [
   {
+    slug: "tierbetreuung-bei-krankenhausaufenthalt",
+    title: "Tierbetreuung bei Krankenhausaufenthalt: schnell und ruhig organisieren",
+    categorySlug: "notfall-und-gesundheit",
+    excerpt:
+      "Wie du Tierbetreuung bei Krankenhausaufenthalt oder plötzlicher Abwesenheit vorbereitest: Notfallkontakte, Schlüssel, Futter, Medikamente und klare Übergabe.",
+    tags: ["Tierbetreuung Krankenhaus", "Notfallbetreuung", "Tiersitter", "Übergabe"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-tierbetreuung-krankenhausaufenthalt.jpg",
+      alt: "Ruhige Übergabe für Tierbetreuung bei plötzlicher Abwesenheit mit Hund, Katze, Schlüsseln, Futter, Unterlagen und Telefon",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum eine Notfallbetreuung vorbereitet sein sollte",
+        intro:
+          "Ein Krankenhausaufenthalt oder eine plötzliche Abwesenheit kommt selten passend. Für Tiere ist dann wichtig, dass schnell jemand verlässlich einspringen kann.",
+        paragraphs: [
+          "Gute Tierbetreuung in solchen Situationen beginnt nicht erst, wenn es dringend ist. Schon eine einfache Notfallnotiz mit Futter, Schlüssel, Tierarzt und Ansprechpartnern kann verhindern, dass Angehörige oder Betreuer unter Zeitdruck raten müssen.",
+          "Der Plan muss nicht perfekt sein. Entscheidend ist, dass die wichtigsten Dinge auffindbar sind und jemand weiß, was täglich passieren muss. So bleibt dein Tier versorgt, auch wenn du selbst gerade nicht alles koordinieren kannst.",
+        ],
+        items: [
+          "Notfallkontakt, Tierarzt und Ersatzperson schriftlich festhalten.",
+          "Futter, Medikamente, Schlüssel und wichtige Unterlagen an festen Orten lagern.",
+          "Für jedes Tier kurz notieren, was täglich erledigt werden muss.",
+          "Schon vorab überlegen, wer bei plötzlicher Abwesenheit angesprochen werden kann.",
+        ],
+      },
+      {
+        title: "Ein Inserat schreiben, wenn es schnell gehen muss",
+        intro:
+          "Wenn Betreuung kurzfristig gebraucht wird, sollte dein Inserat besonders klar sein. Lange Erklärungen helfen weniger als konkrete Angaben.",
+        paragraphs: [
+          "Nenne Tierart, Anzahl, Zeitraum, Ort, Besuchshäufigkeit und Aufgaben direkt am Anfang. Wenn du noch nicht weißt, wie lange die Betreuung nötig ist, schreibe ein realistisches erstes Zeitfenster und dass Verlängerung möglich sein kann.",
+          "Wichtig ist auch, welche Aufgaben nicht verhandelbar sind: Medikamente, Gassi, Katzenklo, Gehegekontrolle, Aquariumtechnik oder Fütterungszeiten. So melden sich eher Menschen, die den Bedarf wirklich übernehmen können.",
+        ],
+        items: [
+          "PLZ, Zeitraum und gewünschte Besuchszeiten zuerst nennen.",
+          "Aufgaben nach Tier trennen, wenn mehrere Tiere im Haushalt leben.",
+          "Kurz schreiben, ob Schlüsselübergabe über Angehörige, Nachbarn oder direkt möglich ist.",
+          "Besondere Erfahrung nennen, wenn Medikamente, Angstverhalten oder Technik relevant sind.",
+        ],
+      },
+      {
+        title: "Schlüssel, Wohnung und Zugang klären",
+        intro:
+          "Bei kurzfristiger Betreuung ist Zugang oft der schwierigste Punkt. Deshalb sollte früh klar sein, wie der Betreuer sicher in die Wohnung kommt.",
+        paragraphs: [
+          "Wenn du selbst nicht vor Ort sein kannst, braucht es eine vertrauenswürdige Person für Schlüsselübergabe und Einweisung. Das können Angehörige, Nachbarn oder eine bereits bekannte Betreuungsperson sein.",
+          "Gleichzeitig sollten private Bereiche geschützt bleiben. Räume, die nicht betreten werden müssen, können geschlossen bleiben. Je klarer der Zugang geregelt ist, desto sicherer fühlt sich die Betreuung für beide Seiten an.",
+        ],
+        items: [
+          "Schlüsselübergabe und Rückgabe mit Datum, Uhrzeit und Person festhalten.",
+          "Haustür, Klingel, Briefkasten, Treppenhaus und Wohnungstür erklären.",
+          "Räume definieren, die für die Betreuung nötig sind.",
+          "Private Unterlagen und Dinge ohne Bezug zur Tierbetreuung wegräumen lassen, wenn möglich.",
+        ],
+      },
+      {
+        title: "Futter, Medikamente und Warnzeichen",
+        intro:
+          "Bei Krankenhausaufenthalt oder Krankheit des Halters darf der Betreuer nicht raten müssen. Besonders Futter und Medikamente brauchen klare Angaben.",
+        paragraphs: [
+          "Schreibe möglichst einfach auf, was wann gegeben wird. Bei Medikamenten sind Name, Dosierung, Uhrzeit und Gabeform wichtig. Wenn eine Dosis vergessen wurde oder das Tier nicht frisst, sollte klar sein, wen der Betreuer kontaktiert.",
+          "Auch Warnzeichen helfen: nicht fressen, Erbrechen, Durchfall, Apathie, Atemprobleme, Humpeln oder ungewöhnliches Verstecken. Der Betreuer muss keine Diagnose stellen, aber er soll wissen, wann schnelle Rückmeldung nötig ist.",
+        ],
+        items: [
+          "Futterportionen und Medikamente getrennt vorbereiten.",
+          "Dosierung und Uhrzeiten ohne Abkürzungen notieren.",
+          "Tierarztkontakt und Erlaubnis zur Rücksprache klären.",
+          "Normales Verhalten und meldepflichtige Warnzeichen getrennt aufschreiben.",
+        ],
+      },
+      {
+        title: "Nach der ersten Hilfe eine stabile Routine finden",
+        intro:
+          "Wenn der Aufenthalt länger dauert, sollte aus der schnellen Lösung eine planbare Betreuung werden.",
+        paragraphs: [
+          "Nach den ersten ein bis zwei Tagen lohnt sich ein kurzer Abgleich: Reichen Futter und Streu? Passt der Besuchsrhythmus? Gibt es neue Infos aus dem Krankenhaus oder von Angehörigen? Muss jemand regelmäßig nachkaufen?",
+          "Eine feste Routine entlastet alle Beteiligten. Der Betreuer weiß, was erwartet wird, dein Tier bekommt verlässliche Abläufe und du musst nicht jede Kleinigkeit einzeln organisieren.",
+        ],
+        items: [
+          "Nach dem ersten Besuch prüfen, ob Informationen fehlen.",
+          "Bei längerer Betreuung Vorräte, Schlüssel und Bezahlung sauber klären.",
+          "Update-Rhythmus vereinbaren, zum Beispiel täglich kurz oder nach jedem Besuch.",
+          "Nach der Rückkehr die Notfallnotiz aktualisieren, solange die Erfahrung frisch ist.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "angsthund-betreuung-finden",
+    title: "Betreuung für Angsthund finden: Sicherheit, Abstand und klare Routinen",
+    categorySlug: "hund",
+    careCategorySlug: "hund",
+    excerpt:
+      "So findest du passende Betreuung für einen Angsthund und erklärst Abstand, Spaziergänge, Geschirr, Auslöser, Rückzug und Updates verständlich.",
+    tags: ["Angsthund Betreuung", "Hundesitter", "Unsicherer Hund", "Gassi"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-angsthund-betreuung-finden.jpg",
+      alt: "Vorsichtiger Hund liegt ruhig auf einer Decke neben sicherem Geschirr, Leine, Napf, Leckerlibeutel und Checkliste",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum Angsthunde andere Betreuung brauchen",
+        intro:
+          "Ein Angsthund braucht keine besonders mutige Betreuung, sondern eine ruhige Person, die Abstand, Sicherheit und kleine Schritte ernst nimmt.",
+        paragraphs: [
+          "Viele Probleme entstehen, wenn Unsicherheit unterschätzt wird. Ein Hund, der fremde Menschen, Geräusche, Treppenhäuser, Fahrräder oder andere Hunde schwierig findet, braucht klare Regeln statt spontaner Experimente.",
+          "Gute Betreuung bedeutet hier: Der Betreuer weiß vorher, was normal ist, welche Auslöser es gibt und was im Zweifel zu tun ist. So muss der Hund nicht beweisen, dass er schon weiter ist, als er wirklich ist.",
+        ],
+        items: [
+          "Beschreibe Unsicherheiten ehrlich, ohne sie zu verharmlosen.",
+          "Suche nach Menschen mit ruhigem Umgang und Erfahrung mit sensiblen Hunden.",
+          "Plane vor der ersten Betreuung ein Kennenlernen ohne Zeitdruck.",
+          "Erkläre, welche Situationen vermieden werden sollen.",
+        ],
+      },
+      {
+        title: "Das Inserat für einen Angsthund formulieren",
+        intro:
+          "Ein gutes Inserat filtert passende Betreuer vor. Dafür muss klar sein, dass nicht jeder Hundesitter automatisch geeignet ist.",
+        paragraphs: [
+          "Schreibe kurz, wie sich die Angst zeigt: Rückzug, Bellen, Einfrieren, Ziehen, Fluchtversuche oder Meiden von Kontakt. Wichtig ist nicht nur das Verhalten, sondern auch der Kontext: zu Hause, draußen, im Treppenhaus oder bei Besuch.",
+          "Gleichzeitig sollte dein Text lösungsorientiert bleiben. Nenne, was hilft: fester Ablauf, Abstand, keine direkten Berührungen, bekannte Strecken, ruhige Stimme oder Leckerlis nur nach Absprache.",
+        ],
+        items: [
+          "Auslöser, Verhalten und hilfreiche Strategien getrennt beschreiben.",
+          "Klar sagen, ob Anfassen, Hochheben oder Spielen erlaubt ist.",
+          "Gassi-Anforderungen realistisch halten und keine neuen Strecken verlangen.",
+          "Erfahrung mit Angsthunden oder sehr ruhigen Hunden ausdrücklich wünschen.",
+        ],
+      },
+      {
+        title: "Sicheres Geschirr und Spaziergänge",
+        intro:
+          "Bei Angsthunden ist Sicherheit auf Spaziergängen zentral. Ein erschrockener Hund kann sich schneller entziehen, als Menschen erwarten.",
+        paragraphs: [
+          "Zeige dem Betreuer genau, welches Geschirr genutzt wird und wie es sitzen muss. Wenn Doppelsicherung sinnvoll ist, gehört auch das in die Übergabe. Neue Ausrüstung sollte nicht erst am Betreuungstag getestet werden.",
+          "Die Spaziergänge selbst sollten kurz, bekannt und vorhersehbar sein. Es ist besser, einen ruhigen Lösegang gut zu schaffen, als eine lange Runde mit zu vielen Reizen zu riskieren.",
+        ],
+        items: [
+          "Sicheres Geschirr, Halsband, Leine und mögliche Doppelsicherung vorführen.",
+          "Bekannte Wege und schwierige Orte aufschreiben.",
+          "Kein Freilauf und keine Hundewiesen bei neuer Betreuung.",
+          "Bei Stress früh umdrehen, statt den Hund durch die Situation zu ziehen.",
+        ],
+      },
+      {
+        title: "Kontakt zu Hause langsam aufbauen",
+        intro:
+          "Manche Angsthunde möchten zu Hause keinen direkten Kontakt. Das ist in Ordnung und sollte respektiert werden.",
+        paragraphs: [
+          "Der Betreuer muss nicht sofort Freundschaft schließen. Oft ist es besser, ruhig im Raum zu sein, Futter oder Wasser zu versorgen und den Hund nicht anzustarren oder zu bedrängen.",
+          "Wenn dein Hund Rückzugsorte hat, sollten diese tabu bleiben. Ein Hund, der nicht aus dem Körbchen kommt, braucht nicht automatisch Animation. Er braucht Sicherheit.",
+        ],
+        items: [
+          "Rückzugsorte nennen und schützen.",
+          "Direkte Ansprache, Anfassen oder Locken nur erlauben, wenn es wirklich passt.",
+          "Futter, Wasser und kurze Kontrolle ohne Druck erledigen.",
+          "Erste Termine lieber kürzer und planbar halten.",
+        ],
+      },
+      {
+        title: "Updates richtig einordnen",
+        intro:
+          "Bei Angsthund-Betreuung sind Updates wertvoll, aber sie sollten nicht nur schöne Fotos liefern. Wichtiger ist ehrliche Beobachtung.",
+        paragraphs: [
+          "Bitte den Betreuer zu melden, ob dein Hund gefressen hat, zur Ruhe kam, draußen lösen konnte und wie er auf typische Auslöser reagiert hat. Ein zurückhaltendes Update ist nicht schlecht, wenn der Hund dadurch weniger gestört wird.",
+          "Nach jedem Termin kannst du den Plan verbessern: Welche Uhrzeit war gut? War die Strecke zu viel? Hat die Übergabe funktioniert? So wächst Vertrauen langsam, ohne den Hund zu überfordern.",
+        ],
+        items: [
+          "Rückmeldung zu Fressen, Ruhe, Gassi und Stresszeichen vereinbaren.",
+          "Fotos nur machen lassen, wenn sie den Hund nicht zusätzlich verunsichern.",
+          "Nach dem Termin gemeinsam anpassen, was zu viel oder hilfreich war.",
+          "Bei guter Erfahrung denselben Betreuer wieder anfragen, statt häufig zu wechseln.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "meerwasser-aquarium-urlaub-betreuung",
+    title: "Meerwasser-Aquarium im Urlaub betreuen lassen: Technik, Futter und Salzgehalt",
+    categorySlug: "aquarium",
+    careCategorySlug: "aquarium",
+    excerpt:
+      "Worauf du bei Urlaubsbetreuung für ein Meerwasser-Aquarium achten solltest: Fütterung, Verdunstung, Technik, Salzgehalt, Korallen und Notfallplan.",
+    tags: ["Meerwasser Aquarium Urlaub", "Aquariumbetreuung", "Fische füttern", "Salzgehalt"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-meerwasser-aquarium-urlaub.jpg",
+      alt: "Meerwasser-Aquarium mit bunten Fischen, vorbereiteten Futterdosen, Teststreifen, Refraktometer, Kescher und Checkliste",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum Meerwasser-Becken besonders genaue Übergaben brauchen",
+        intro:
+          "Ein Meerwasser-Aquarium kann sehr stabil laufen, reagiert aber empfindlich auf zu viel Futter, Technikprobleme, Verdunstung und falsche Eingriffe.",
+        paragraphs: [
+          "Urlaubsbetreuung sollte deshalb nicht bedeuten, dass ein Betreuer spontan optimiert. Besser ist eine klare Routine: füttern, sichtbar kontrollieren, Wasserstand prüfen und bei Auffälligkeiten melden.",
+          "Je komplexer dein Becken ist, desto wichtiger ist Erfahrung. Korallen, empfindliche Fische, Abschäumer, Nachfüllanlage, Strömung und Beleuchtung sollten verständlich erklärt werden, ohne den Betreuer zu überfrachten.",
+        ],
+        items: [
+          "Beckengröße, Besatz, Technik und Betreuungsdauer kurz dokumentieren.",
+          "Aufgaben auf einfache, sichere Routinen begrenzen.",
+          "Vor dem Urlaub einen gemeinsamen Probelauf machen.",
+          "Erfahrung mit Meerwasser-Aquarien ausdrücklich im Inserat nennen, wenn nötig.",
+        ],
+      },
+      {
+        title: "Fütterung lieber vorbereiten als erklären",
+        intro:
+          "Bei Meerwasser-Aquarien ist Überfütterung ein häufiger Fehler. Vorportioniertes Futter ist meist sicherer als freie Dosierung.",
+        paragraphs: [
+          "Bereite Tagesportionen in kleinen Dosen vor und schreibe dazu, welche Tage Futterpause sind. Wenn Frostfutter genutzt wird, sollte Auftauen, Spülen und Menge sehr einfach erklärt sein.",
+          "Auch Korallenfutter, Zusätze oder Spezialfutter gehören nur in die Betreuung, wenn der Ablauf wirklich klar ist. Im Zweifel ist weniger oft sicherer als gut gemeinte Zusatzpflege.",
+        ],
+        items: [
+          "Futtertage und Mengen pro Tag vorportionieren.",
+          "Frostfutter, Granulat, Algenblätter und Korallenfutter getrennt markieren.",
+          "Futterpausen ausdrücklich notieren.",
+          "Keine Zusatzfütterung erlauben, nur weil Fische aktiv betteln.",
+        ],
+      },
+      {
+        title: "Wasserstand, Salzgehalt und Verdunstung",
+        intro:
+          "Verdunstung verändert im Meerwasser-Aquarium die Konzentration. Deshalb sollte der Wasserstand verständlich kontrolliert werden.",
+        paragraphs: [
+          "Wenn du eine Nachfüllanlage nutzt, erkläre dem Betreuer, woran er sieht, dass sie arbeitet. Wenn manuell nachgefüllt werden soll, muss klar sein, welches Wasser verwendet wird und bis zu welcher Markierung aufgefüllt wird.",
+          "Den Salzgehalt sollte nur jemand messen oder anpassen, der den Ablauf kennt. Für viele Urlaubsbetreuungen reicht es, Warnzeichen zu erkennen und bei Abweichungen sofort Rücksprache zu halten.",
+        ],
+        items: [
+          "Normalen Wasserstand markieren oder mit Foto dokumentieren.",
+          "Osmosewasser und Meerwasser eindeutig getrennt erklären.",
+          "Nachfüllanlage, Vorratsbehälter und mögliche Fehlermeldungen zeigen.",
+          "Keine Salzkorrekturen ohne klare Erfahrung und Rücksprache durchführen lassen.",
+        ],
+      },
+      {
+        title: "Technik sichtbar prüfen",
+        intro:
+          "Der Betreuer muss nicht jedes Gerät verstehen. Er sollte aber erkennen, ob etwas offensichtlich nicht läuft.",
+        paragraphs: [
+          "Licht, Strömung, Heizung, Abschäumer, Filter, Dosierpumpe und Nachfüllanlage können in einer kurzen Checkliste stehen. Dazu gehört: Was ist normal, was ist auffällig und wen ruft man an?",
+          "Besonders wichtig ist, dass niemand Geräte auseinanderbaut, wenn das nicht abgesprochen ist. Bei Meerwassertechnik kann ein gut gemeinter Eingriff mehr Schaden machen als eine schnelle Rückfrage.",
+        ],
+        items: [
+          "Normalzustand von Licht, Strömung, Temperatur und Abschäumer beschreiben.",
+          "Steckdosen, Sicherungen und Ersatzteile nur erklären, wenn sie genutzt werden sollen.",
+          "Temperaturbereich und sichtbare Warnzeichen notieren.",
+          "Bei Technikstillstand sofort Kontakt aufnehmen statt selbst zu reparieren.",
+        ],
+      },
+      {
+        title: "Notfallplan für Becken und Tiere",
+        intro:
+          "Ein guter Notfallplan nimmt Druck aus der Betreuung. Er sagt klar, wer entscheidet, wenn etwas anders aussieht als erwartet.",
+        paragraphs: [
+          "Hinterlege eine erfahrene Person, einen Aquaristik-Fachhändler oder einen Servicekontakt. Wenn du selbst nicht erreichbar bist, braucht der Betreuer eine zweite Anlaufstelle.",
+          "Nach dem Urlaub lohnt sich ein kurzer Abgleich: Waren Futterportionen eindeutig? War Technik verständlich? Gab es Momente, in denen der Betreuer unsicher war? Daraus wird die nächste Übergabe deutlich besser.",
+        ],
+        items: [
+          "Aquaristik-Notfallkontakt und bevorzugten Händler hinterlegen.",
+          "Klare Regel setzen, wann Fotos oder Videos geschickt werden sollen.",
+          "Keine Medikamente, Zusätze oder Wasserwechsel ohne Freigabe.",
+          "Nach der Rückkehr Übergabe und Checkliste aktualisieren.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "hundebetreuung-silvester",
     title: "Hundebetreuung an Silvester: ruhig planen, sicher übergeben",
     categorySlug: "hund",
