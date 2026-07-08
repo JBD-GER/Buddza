@@ -86,6 +86,272 @@ export const guideCategories: GuideCategory[] = [
 
 export const guideTopics: GuideTopic[] = [
   {
+    slug: "kleintierbetreuung-in-der-naehe-finden",
+    title: "Kleintierbetreuung in der Nähe finden: Kaninchen, Meerschweinchen und Hamster",
+    categorySlug: "kleintiere",
+    careCategorySlug: "kleintier",
+    excerpt: "So findest du passende Kleintierbetreuung in deiner Nähe und beschreibst Gehege, Fütterung, Reinigung und tägliche Kontrolle klar.",
+    tags: ["Kleintierbetreuung in der Nähe", "Kaninchenbetreuung", "Meerschweinchen", "Hamsterbetreuung"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-kleintierbetreuung-in-der-naehe.jpg",
+      alt: "Zwei Kaninchen in einem hellen, großzügigen Innengehege mit Heu, Wasser, Frischfutter und Notizbuch",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum Kleintiere genaue Betreuung brauchen",
+        intro:
+          "Kleintiere wirken oft unkompliziert, aber gute Betreuung braucht mehr als Futter nachfüllen. Kaninchen, Meerschweinchen und Hamster haben feste Routinen, empfindliche Verdauung und sehr unterschiedliche Tagesrhythmen.",
+        paragraphs: [
+          "Wer Kleintierbetreuung in der Nähe sucht, sollte deshalb nicht nur Tierart und Zeitraum nennen. Entscheidend sind Gehege, Futter, Wasser, Reinigung, Beobachtung und die Frage, woran ein Betreuer merkt, dass etwas nicht stimmt.",
+          "Gerade bei Urlaubsbetreuung oder mehreren Besuchstagen hilft eine schriftliche Übergabe. Sie macht sichtbar, was für dich Alltag ist: Wo liegt das Heu? Wie viel Frischfutter ist normal? Welche Tiere sind scheu, welche kommen zur Hand?",
+        ],
+        items: [
+          "Beschreibe Tierart, Anzahl, Alter und Haltung so konkret wie möglich.",
+          "Nenne, ob tägliche Kontrolle, Fütterung, Reinigung oder längere Anwesenheit nötig ist.",
+          "Erkläre, was normales Verhalten ist und welche Warnzeichen sofort gemeldet werden sollen.",
+          "Nutze PLZ und Radius, damit kurze Wege für tägliche Hausbesuche realistisch bleiben.",
+        ],
+      },
+      {
+        title: "Was im Inserat stehen sollte",
+        intro:
+          "Ein gutes Kleintier-Inserat hilft Betreuern, den Aufwand ehrlich einzuschätzen. Je genauer du den Ablauf beschreibst, desto eher melden sich Menschen, die wirklich passen.",
+        paragraphs: [
+          "Schreibe nicht nur: Kaninchen im Urlaub versorgen. Besser ist ein kurzer Ablauf: morgens Frischfutter und Wasser, abends Sichtkontrolle, alle zwei Tage Teilreinigung. So entsteht ein realistisches Bild der Betreuung.",
+        ],
+        items: [
+          "PLZ-Region, Zeitraum, Besuchshäufigkeit und ungefähre Besuchsdauer angeben.",
+          "Gehegeart, Futterorte, Wasserstellen, Heu, Streu und Reinigungsmaterial beschreiben.",
+          "Bei mehreren Tieren Namen, Aussehen, Futterverhalten und Besonderheiten notieren.",
+          "Erklären, ob der Betreuer Erfahrung mit Kaninchen, Meerschweinchen oder Hamstern haben sollte.",
+        ],
+      },
+      {
+        title: "Futter, Wasser und Reinigung vorbereiten",
+        intro:
+          "Die meisten Fehler passieren nicht aus Unwillen, sondern weil etwas gesucht oder falsch eingeschätzt wird. Vorbereitung macht Kleintierbetreuung deutlich sicherer.",
+        paragraphs: [
+          "Stelle Futter, Heu, Streu, Schaufel, Müllbeutel und Reinigungsmittel sichtbar zusammen. Wenn Frischfutter vorbereitet werden soll, schreibe Mengen und Tabus klar auf. Bei Kleintieren sollte Futterumstellung nicht spontan passieren.",
+        ],
+        items: [
+          "Heu, Frischfutter, Trockenfutter und Leckerlis getrennt und eindeutig markieren.",
+          "Wasserflaschen oder Näpfe zeigen und erklären, wie oft sie gereinigt werden.",
+          "Teilreinigung, Komplettreinigung und Geruchskontrolle unterscheiden.",
+          "Keine neuen Futtersorten ohne Absprache und keine medizinischen Änderungen ohne Tierarztvorgabe.",
+        ],
+      },
+      {
+        title: "Tägliche Kontrolle ohne Stress",
+        intro:
+          "Kleintiere zeigen Unwohlsein oft leise. Deshalb ist Beobachtung ein wichtiger Teil der Betreuung, auch wenn das Tier nicht aktiv Kontakt sucht.",
+        paragraphs: [
+          "Ein guter Betreuer muss nicht jedes Tier anfassen. Oft reicht eine ruhige Sichtkontrolle: Kommt das Tier zum Futter? Wirkt es aufmerksam? Sind Kot, Atmung, Bewegung und Fell unauffällig? Was auffällig ist, sollte sofort gemeldet werden.",
+        ],
+        items: [
+          "Fressverhalten, Trinkmenge, Kot, Bewegung und Atmung beobachten.",
+          "Scheue Tiere nicht bedrängen, sondern aus ruhiger Distanz kontrollieren.",
+          "Verstecke und Lieblingsplätze nennen, damit kein Tier unnötig gesucht wird.",
+          "Tierarzt, Ersatzkontakt und Transportbox griffbereit dokumentieren.",
+        ],
+      },
+      {
+        title: "So wird regelmäßige Kleintierbetreuung einfacher",
+        intro:
+          "Wenn du öfter Betreuung brauchst, lohnt sich eine feste Übergabe. Das spart jedes Mal Zeit und schützt vor Missverständnissen.",
+        paragraphs: [
+          "Aktualisiere die Übergabe, sobald sich Futter, Gehege, Gesundheitszustand oder Tiergruppe verändern. Gerade bei kleinen Tieren können scheinbar kleine Änderungen wichtig sein.",
+        ],
+        items: [
+          "Eine einfache Checkliste für jeden Besuch anlegen.",
+          "Fotos von Futterplatz, Zubehör und Gehegeübersicht ergänzen, wenn das hilft.",
+          "Nach dem ersten Termin fragen, ob Informationen gefehlt haben.",
+          "Gute lokale Kontakte früh für Urlaub, Feiertage oder spontane Engpässe anfragen.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "terrarium-betreuung-im-urlaub",
+    title: "Terrarium-Betreuung im Urlaub: Reptilien sicher versorgen lassen",
+    categorySlug: "reptilien-und-exoten",
+    careCategorySlug: "reptil",
+    excerpt: "Worauf du bei Terrarium, Temperatur, Luftfeuchte, Licht, Futter und Notfallkontakten achten solltest, wenn Reptilien betreut werden.",
+    tags: ["Terrarium Betreuung", "Reptilienbetreuung", "Urlaub", "Bartagame"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-terrarium-betreuung-urlaub.jpg",
+      alt: "Bartagame in einem gepflegten Terrarium mit Wärmelampe, Wasserschale, Messgeräten und Übergabe-Notizbuch",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum Terrarium-Betreuung sehr genaue Angaben braucht",
+        intro:
+          "Bei Reptilien hängt gute Betreuung stark von Haltung, Klima und Routine ab. Ein Betreuer muss nicht nur füttern, sondern auch erkennen, ob Temperatur, Licht und Feuchtigkeit im erwarteten Bereich bleiben.",
+        paragraphs: [
+          "Viele Reptilien zeigen Stress oder Krankheit nicht so deutlich wie Hund oder Katze. Deshalb sollte die Übergabe erklären, welche Werte normal sind, welche Geräte laufen müssen und wann du sofort informiert werden möchtest.",
+          "Terrarium-Betreuung im Urlaub funktioniert am besten, wenn der Betreuer vorab einmal sieht, wie du Licht, Wasser, Futter und Kontrolle erledigst. Ein gemeinsamer kurzer Durchlauf ist hier oft wertvoller als eine lange Nachricht.",
+        ],
+        items: [
+          "Tierart, Anzahl, Alter und Haltungsform genau beschreiben.",
+          "Temperaturzonen, Luftfeuchte, Lichtzeiten und Geräte eindeutig dokumentieren.",
+          "Futterart, Futtertage und Tabus klar notieren.",
+          "Tierarzt oder reptilienkundige Praxis als Kontakt bereitlegen.",
+        ],
+      },
+      {
+        title: "Klima, Licht und Technik übergeben",
+        intro:
+          "Terrarium-Technik sollte für den Betreuer verständlich sein, ohne dass er im Termin experimentieren muss.",
+        paragraphs: [
+          "Beschrifte Schalter und Zeitschaltuhren nicht kompliziert, sondern eindeutig. Wenn Geräte nicht berührt werden sollen, schreibe das ebenfalls auf. Wichtig ist, dass der Betreuer weiß, was er prüfen soll und was unverändert bleibt.",
+        ],
+        items: [
+          "Lichtzeiten, Wärmelampe, UV-Lampe, Thermostat und Nebler erklären.",
+          "Normale Temperatur- und Feuchtigkeitsbereiche in einfachen Worten notieren.",
+          "Sagen, wann Wasser gewechselt, gesprüht oder nachgefüllt werden soll.",
+          "Notfallplan für Stromausfall, defekte Lampe oder ungewöhnliche Werte festlegen.",
+        ],
+      },
+      {
+        title: "Fütterung ohne Experimente",
+        intro:
+          "Bei Reptilien ist Fütterung oft spezieller als bei klassischen Haustieren. Deshalb sollte der Betreuer keine eigenen Anpassungen vornehmen müssen.",
+        paragraphs: [
+          "Schreibe genau auf, ob Lebendfutter, Grünfutter, Frostfutter, Mineralien oder bestimmte Futterzeiten relevant sind. Bitte nur Aufgaben vergeben, die der Betreuer sicher und zuverlässig übernehmen kann.",
+        ],
+        items: [
+          "Futtertage und futterfreie Tage eindeutig unterscheiden.",
+          "Mengen, Futtertiere, Grünfutter und Zusätze klar beschreiben.",
+          "Erklären, was nach der Fütterung entfernt oder kontrolliert werden muss.",
+          "Keine neuen Futterarten und keine Änderung von Ergänzungen ohne Absprache.",
+        ],
+      },
+      {
+        title: "Kontrolle: was normal ist und was nicht",
+        intro:
+          "Reptilienbetreuung bedeutet auch Beobachtung. Der Betreuer sollte wissen, welche Haltung, Aktivität und Reaktion für dein Tier normal sind.",
+        paragraphs: [
+          "Nicht jedes ruhige Verhalten ist ein Problem, aber ungewöhnliche Apathie, Atemgeräusche, auffällige Haut, Futterverweigerung oder Ausbruchversuche sollten ernst genommen werden. Medizinische Einschätzungen gehören zu einer fachkundigen Praxis.",
+        ],
+        items: [
+          "Typisches Aktivitätsfenster und Lieblingsplätze beschreiben.",
+          "Häutung, Kot, Futteraufnahme und Bewegung als Beobachtungspunkte nennen.",
+          "Ausbruchssicherung, Türen und Kabel nach jedem Besuch kontrollieren.",
+          "Bei Unsicherheit lieber früh nachfragen als Geräte oder Haltung selbst verändern.",
+        ],
+      },
+      {
+        title: "Geeignete Betreuer finden",
+        intro:
+          "Für Terrarientiere ist Erfahrung besonders hilfreich. Nicht jeder Tierbetreuer kennt Reptilien, Technik und Futterroutinen.",
+        paragraphs: [
+          "Formuliere im Inserat ehrlich, welche Erfahrung du dir wünschst. Manche Aufgaben sind einfach, andere erfordern Fachwissen. Eine klare Beschreibung schützt dein Tier und hilft Betreuern, nur passende Anfragen zu senden.",
+        ],
+        items: [
+          "Im Inserat Reptilien- oder Terrarium-Erfahrung ausdrücklich nennen.",
+          "Vor längerer Betreuung einen kurzen Testbesuch oder Technikdurchlauf vereinbaren.",
+          "Auf ruhige, konkrete Rückfragen zu Klima, Futter und Notfall achten.",
+          "Alle Absprachen schriftlich festhalten, besonders bei Technik und Fütterung.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "kurzfristige-tierbetreuung-finden",
+    title: "Kurzfristige Tierbetreuung finden: was hilft, wenn es schnell gehen muss",
+    categorySlug: "organisation",
+    excerpt: "So findest du bei Krankheit, Arbeit, Reise oder spontanem Termin schneller passende Tierbetreuung, ohne wichtige Übergaben zu vergessen.",
+    tags: ["Kurzfristige Tierbetreuung", "Tierbetreuung schnell finden", "Notfallbetreuung", "Haustierbetreuung"],
+    readingMinutes: 8,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-kurzfristige-tierbetreuung-finden.jpg",
+      alt: "Vorbereitete kurzfristige Tierbetreuung mit Hund, Leine, Näpfen, Schlüsseln, Telefon und Notizbuch im Eingangsbereich",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Schnell heißt nicht unvorbereitet",
+        intro:
+          "Manchmal muss Tierbetreuung kurzfristig organisiert werden: Krankheit, Arbeit, Reise, Familienfall oder ein Termin, der länger dauert als geplant. Genau dann hilft eine klare, knappe Übergabe.",
+        paragraphs: [
+          "Auch wenn es schnell gehen muss, sollten die wichtigsten Informationen nicht nur mündlich weitergegeben werden. Betreuer brauchen Tierart, Zeitraum, Aufgabe, Ort, Verhalten und Notfallkontakt in einer Form, die sie im Termin wieder nachlesen können.",
+          "Kurzfristige Betreuung funktioniert am besten, wenn du zwischen Muss und Wunsch unterscheidest. Muss: Futter, Wasser, Sicherheit, Medikamente, Lösemöglichkeit. Wunsch: extra Spiel, Foto, längerer Spaziergang oder kleine Zusatzaufgaben.",
+        ],
+        items: [
+          "Schreibe zuerst Tierart, Zeitraum, PLZ-Region und genaue Aufgabe auf.",
+          "Nenne, was zwingend erledigt werden muss und was optional ist.",
+          "Teile private Adresse erst, wenn ein passender Kontakt gefunden ist.",
+          "Halte Notfallkontakt und Tierarzt griffbereit, auch bei kurzen Terminen.",
+        ],
+      },
+      {
+        title: "Ein gutes kurzfristiges Inserat schreiben",
+        intro:
+          "Bei spontanen Anfragen entscheidet der erste Eindruck. Ein klares Inserat spart Rückfragen und erhöht die Chance, dass passende Menschen schnell reagieren.",
+        paragraphs: [
+          "Der Titel sollte direkt sagen, was gebraucht wird: Hund heute Abend ausführen, Katze am Wochenende füttern, Kaninchen morgen kontrollieren. In der Beschreibung folgen Routine, Besonderheiten und gewünschte Kommunikation.",
+        ],
+        items: [
+          "Konkreten Titel mit Tierart, Aufgabe und Zeitraum verwenden.",
+          "PLZ oder Stadtteil nennen, aber keine vollständige Adresse veröffentlichen.",
+          "Kurz erklären, ob Erfahrung, Auto, Schlüsselübergabe oder Medikamente nötig sind.",
+          "Zeitfenster anbieten, wenn die Aufgabe nicht minutengenau passieren muss.",
+        ],
+      },
+      {
+        title: "Weniger erklären, aber das Richtige",
+        intro:
+          "In Eile entsteht oft eine zu lange Nachricht mit zu vielen Details. Besser ist eine klare Reihenfolge, die der Betreuer abarbeiten kann.",
+        paragraphs: [
+          "Eine kompakte Liste reicht häufig aus. Wichtig ist, dass gefährliche oder sensible Punkte nicht untergehen: Türen, Futtertabus, Medikamente, Freigang, Hundebegegnungen, Ausbruchrisiken oder Technik.",
+        ],
+        items: [
+          "Ablauf in Reihenfolge schreiben: ankommen, prüfen, füttern, bewegen, reinigen, abschließen.",
+          "Tabus sichtbar machen: kein Freilauf, kein neues Futter, Fenster geschlossen halten.",
+          "Zubehör an einen Ort legen, damit nichts gesucht werden muss.",
+          "Bei Medikamenten Dosierung, Uhrzeit und Lagerung klar notieren.",
+        ],
+      },
+      {
+        title: "Vertrauen trotz kurzer Zeit aufbauen",
+        intro:
+          "Auch kurzfristig solltest du nicht jedes Detail überspringen. Ein kurzer Check hilft beiden Seiten, sich sicherer zu fühlen.",
+        paragraphs: [
+          "Achte auf konkrete Rückfragen. Wer nach Verhalten, Zugang, Notfallkontakt oder Grenzen fragt, denkt meistens mit. Wenn jemand gar keine Fragen stellt, obwohl die Aufgabe komplex ist, lohnt sich ein genauerer Blick.",
+        ],
+        items: [
+          "Profil, bisherige Angaben und Ton der Nachricht prüfen.",
+          "Bei Wohnungsschlüssel, Medikamenten oder längerer Betreuung lieber kurz telefonieren oder klar im Chat abstimmen.",
+          "Bei Hunden möglichst eine kurze Übergabe oder bekannte Route zeigen.",
+          "Nach dem Termin eine Rückmeldung zu Futter, Verhalten und Auffälligkeiten erbitten.",
+        ],
+      },
+      {
+        title: "Für das nächste Mal vorsorgen",
+        intro:
+          "Kurzfristige Betreuung wird viel leichter, wenn du einmal eine Standardübergabe vorbereitest. Dann musst du beim nächsten Engpass nicht wieder bei null anfangen.",
+        paragraphs: [
+          "Speichere eine einfache Vorlage mit den wichtigsten Tierdaten, Routinen, Notfallkontakten und Tabus. Wenn du gute Betreuer gefunden hast, halte den Kontakt warm und frage bei planbaren Engpässen frühzeitig an.",
+        ],
+        items: [
+          "Eine wiederverwendbare Übergabe für jedes Tier anlegen.",
+          "Fotos von Zubehör, Futterplatz oder Gehege ergänzen, wenn das hilft.",
+          "Zwei bis drei passende Kontakte für Krankheit, Arbeit oder Reise aufbauen.",
+          "Nach jeder spontanen Betreuung prüfen, welche Info beim nächsten Mal fehlen würde.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "hundetagesbetreuung-finden",
     title: "Hundetagesbetreuung finden: so planst du einen guten Tagesplatz",
     categorySlug: "hund",
