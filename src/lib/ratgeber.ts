@@ -86,6 +86,273 @@ export const guideCategories: GuideCategory[] = [
 
 export const guideTopics: GuideTopic[] = [
   {
+    slug: "hundebetreuung-ueber-nacht",
+    title: "Hundebetreuung über Nacht: so bereitest du Schlafplatz, Routine und Übergabe vor",
+    categorySlug: "hund",
+    careCategorySlug: "hund",
+    excerpt: "Was du klären solltest, wenn dein Hund über Nacht betreut wird: Schlafplatz, Abendrunde, Futter, Schlüssel, Updates und Probetermin.",
+    tags: ["Hundebetreuung über Nacht", "Hundesitter", "Übernachtbetreuung", "Hund"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-hundebetreuung-ueber-nacht.jpg",
+      alt: "Hund liegt ruhig im Wohnzimmer neben Hundebett, Decke, Leine, Wassernapf und Tasche für die Übernachtbetreuung",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum Übernachtbetreuung mehr Planung braucht",
+        intro:
+          "Eine Hundebetreuung über Nacht ist persönlicher als eine Gassi-Runde. Der Hund erlebt Abendroutine, Ruhephase, Schlafplatz und Morgenablauf mit einer anderen Person.",
+        paragraphs: [
+          "Damit sich das sicher anfühlt, braucht der Betreuer mehr Kontext: Wo schläft dein Hund normalerweise? Was passiert vor dem Schlafen? Wie reagiert er auf Geräusche im Haus, Klingel, Treppenhaus oder ungewohnte Schatten?",
+          "Je klarer die Nacht vorbereitet ist, desto weniger muss der Hund improvisieren. Gerade sensible Hunde profitieren davon, wenn Abendrunde, Futter, Wasser, Ruheplatz und Aufstehen ähnlich laufen wie zu Hause.",
+        ],
+        items: [
+          "Kläre, ob die Betreuung bei dir, beim Betreuer oder an einem dritten Ort stattfindet.",
+          "Beschreibe Abendroutine, Schlafplatz, Morgenrunde und Fütterung genau.",
+          "Nenne typische Unsicherheiten wie Bellen, Türen, Alleinbleiben oder nächtliches Aufstehen.",
+          "Plane vor einer ganzen Nacht möglichst einen kurzen Probetermin.",
+        ],
+      },
+      {
+        title: "Schlafplatz und Abendroutine vorbereiten",
+        intro:
+          "Ein vertrauter Schlafplatz macht die Nacht oft leichter. Das muss kein großes Setup sein, aber Decke, Körbchen oder vertrautes Spielzeug können helfen.",
+        paragraphs: [
+          "Erkläre, ob dein Hund im Flur, Wohnzimmer, Schlafzimmer oder in einer Box schläft. Wichtig ist auch, was nicht passieren soll: aufs Sofa, ins Bett, Treppen steigen, nachts rausgehen oder Türen öffnen.",
+        ],
+        items: [
+          "Decke, Körbchen, Geschirr, Leine, Handtuch und Kotbeutel bereitlegen.",
+          "Letzte Abendrunde und erste Morgenrunde als Uhrzeit oder Zeitfenster notieren.",
+          "Futter, Wasser und Leckerlis klar dosieren.",
+          "Räume festlegen, die offen bleiben oder geschlossen sein sollen.",
+        ],
+      },
+      {
+        title: "Sicherheit bei Schlüssel, Adresse und Wohnung",
+        intro:
+          "Wenn der Betreuer bei dir übernachtet oder den Hund abholt, gehören Schlüssel, Adresse und private Räume sauber abgesprochen.",
+        paragraphs: [
+          "Teile genaue Adresse und Zugang erst, wenn ein passender Kontakt gefunden ist. Besprich, wo Schlüssel übergeben und zurückgegeben werden, welche Räume genutzt werden dürfen und welche privaten Bereiche tabu bleiben.",
+        ],
+        items: [
+          "Schlüsselübergabe mit Datum, Uhrzeit und Rückgabe festhalten.",
+          "Notieren, welche Türen, Fenster, Balkon oder Gartenbereiche kontrolliert werden müssen.",
+          "Private Dokumente und Dinge ohne Bezug zur Betreuung wegräumen.",
+          "Ersatzkontakt nennen, falls Schlüssel, Tür oder Hund unerwartet Probleme machen.",
+        ],
+      },
+      {
+        title: "Updates ohne Dauerstress",
+        intro:
+          "Bei Übernachtbetreuung wünschen viele Halter mehr Rückmeldung. Trotzdem sollte die Betreuung nicht nur aus Nachrichten und Fotos bestehen.",
+        paragraphs: [
+          "Vereinbare einfache Updates: zum Beispiel nach Ankunft, nach der Abendrunde und am Morgen. So weißt du, dass alles gut läuft, ohne dass der Betreuer den Hund ständig aus der Ruhe holt.",
+        ],
+        items: [
+          "Kurze Nachricht nach Ankunft und vor dem Schlafen vereinbaren.",
+          "Melden lassen, wenn Futter, Ruhe, Verhalten oder Gesundheit auffällig sind.",
+          "Nicht jede Kleinigkeit live kommentieren, wenn der Hund dadurch unruhig wird.",
+          "Nach der Nacht kurz besprechen, ob Schlafplatz, Zeiten und Ablauf gepasst haben.",
+        ],
+      },
+      {
+        title: "Probenacht und regelmäßige Betreuung",
+        intro:
+          "Wenn Übernachtbetreuung öfter gebraucht wird, lohnt sich eine kleine Eingewöhnung. Eine Probenacht oder ein langer Abendtermin nimmt beiden Seiten Druck.",
+        paragraphs: [
+          "Achte nach dem ersten Termin darauf, wie dein Hund wirkt. Ist er müde, aber ruhig? Hat er gefressen? Konnte er schlafen? Solche Eindrücke sagen mehr als ein perfekter Plan auf dem Papier.",
+        ],
+        items: [
+          "Vor längeren Reisen zuerst eine kurze Nacht oder einen Abendtermin testen.",
+          "Schlafplatz, Futter, Morgenroutine und Schlüssel nach dem Test anpassen.",
+          "Bei guter Erfahrung frühzeitig weitere Nächte anfragen.",
+          "Alle Änderungen an Gesundheit, Verhalten oder Medikamenten vor der nächsten Betreuung aktualisieren.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "vogelsitter-in-der-naehe-finden",
+    title: "Vogelsitter in der Nähe finden: Käfig, Voliere und Freiflug richtig übergeben",
+    categorySlug: "voegel",
+    careCategorySlug: "vogel",
+    excerpt: "So findest du passende Vogelbetreuung in deiner Nähe und erklärst Futter, Wasser, Käfig, Voliere, Freiflug und Sicherheitsregeln klar.",
+    tags: ["Vogelsitter in der Nähe", "Vogelbetreuung", "Wellensittich", "Voliere"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-vogelsitter-in-der-naehe.jpg",
+      alt: "Zwei Wellensittiche in einer hellen Vogelvoliere neben Futter, Wasser, frischen Kräutern und Notizbuch",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum Vogelbetreuung genaue Routinen braucht",
+        intro:
+          "Vögel reagieren sensibel auf Veränderungen. Ein Vogelsitter in der Nähe kann Futter, Wasser, Käfigkontrolle und Beobachtung übernehmen, wenn die Routine klar beschrieben ist.",
+        paragraphs: [
+          "Anders als bei vielen anderen Haustieren geht es nicht nur ums Füttern. Licht, Luft, Geräusche, Freiflug, Türen, Fenster und sichere Sitzplätze spielen eine wichtige Rolle. Gute Betreuung schützt deshalb vor kleinen Fehlern, die schnell Stress machen können.",
+          "Wenn du mehrere Vögel hast, sollte der Betreuer außerdem wissen, wer mit wem zusammenlebt, wer scheu ist und welches Verhalten normal ist.",
+        ],
+        items: [
+          "Tierart, Anzahl, Namen und Besonderheiten der Vögel notieren.",
+          "Futter, Wasser, Frischfutter, Sand, Badegelegenheit und Reinigung beschreiben.",
+          "Sicherheitsregeln für Fenster, Türen, Küche, Pflanzen und Freiflug klar machen.",
+          "PLZ und Radius nutzen, damit regelmäßige Hausbesuche realistisch bleiben.",
+        ],
+      },
+      {
+        title: "Käfig oder Voliere sauber übergeben",
+        intro:
+          "Ein Vogelsitter sollte sofort sehen, was er prüfen und was er nicht verändern soll. Beschriftete Vorräte und eine klare Reihenfolge helfen.",
+        paragraphs: [
+          "Lege Futter, Wasserzubehör, Reinigungsmaterial und Müllbeutel an einen festen Ort. Wenn Sitzstangen, Spielzeug oder Näpfe nicht verschoben werden sollen, schreibe das ausdrücklich dazu.",
+        ],
+        items: [
+          "Futtermenge und Fütterungszeit genau angeben.",
+          "Wasserwechsel, Napfreinigung und Frischfutter klar beschreiben.",
+          "Erklären, wie Käfigboden, Kotstellen oder Volierenbereich kontrolliert werden.",
+          "Notieren, welche Türen am Käfig besonders gesichert werden müssen.",
+        ],
+      },
+      {
+        title: "Freiflug nur mit klaren Regeln",
+        intro:
+          "Freiflug kann wichtig sein, ist aber für fremde Betreuer nicht immer sinnvoll. Entscheidend ist, ob der Vogelsitter Erfahrung hat und die Wohnung sicher vorbereitet ist.",
+        paragraphs: [
+          "Wenn Freiflug erlaubt ist, sollte der Ablauf sehr konkret sein: Welche Räume, welche Uhrzeit, welche Fenster, welche Pflanzen, welche Rückkehr in den Käfig? Wenn du unsicher bist, ist kontrollierte Versorgung ohne Freiflug manchmal die bessere Urlaubsregel.",
+        ],
+        items: [
+          "Nur erfahrene Betreuer mit Freiflug beauftragen, wenn die Rückkehr zuverlässig klappt.",
+          "Fenster, Türen, Spiegel, Küche, Kerzen und gefährliche Pflanzen vorher ausschließen.",
+          "Räume nennen, die betreten werden dürfen und Räume, die tabu sind.",
+          "Alternative Beschäftigung planen, wenn Freiflug während kurzer Betreuung nicht geeignet ist.",
+        ],
+      },
+      {
+        title: "Warnzeichen und Notfallkontakte",
+        intro:
+          "Vögel zeigen Unwohlsein oft leise. Deshalb sollte der Betreuer wissen, was normal ist und was sofort gemeldet werden soll.",
+        paragraphs: [
+          "Beschreibe typische Aktivität, Lautstärke, Fressverhalten und Sitzplätze. Wenn ein Vogel aufgeplustert wirkt, ungewöhnlich still ist, schlecht atmet, nicht frisst oder am Boden sitzt, sollte schnell Rücksprache gehalten werden.",
+        ],
+        items: [
+          "Vogelkundigen Tierarzt oder Klinik als Kontakt notieren.",
+          "Normales Verhalten und klare Warnzeichen getrennt aufschreiben.",
+          "Transportbox, Handtuch und wichtige Unterlagen auffindbar bereitlegen.",
+          "Keine Medikamente, Futterumstellungen oder Eingriffe ohne klare Vorgabe starten.",
+        ],
+      },
+      {
+        title: "So findest du passende Vogelsitter",
+        intro:
+          "Nicht jeder Tierbetreuer kennt sich mit Vögeln aus. Für Vogelbetreuung ist ruhiger Umgang, Aufmerksamkeit und Erfahrung mit Käfig- oder Volierenroutinen besonders hilfreich.",
+        paragraphs: [
+          "Achte im ersten Kontakt darauf, ob konkrete Fragen zu Futter, Freiflug, Sicherheit und Verhalten kommen. Das ist meist ein gutes Zeichen, dass die Person nicht nur irgendeinen Hausbesuch anbietet, sondern wirklich mitdenkt.",
+        ],
+        items: [
+          "Im Inserat ausdrücklich nach Erfahrung mit Wellensittichen, Papageien oder Volieren fragen.",
+          "Vor dem ersten Termin eine kurze Einweisung vor Ort machen.",
+          "Freiflug, Reinigung und sensible Aufgaben getrennt besprechen.",
+          "Nach dem ersten Besuch prüfen, ob Updates und Ablauf verständlich genug waren.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "pferdebetreuung-in-der-naehe-finden",
+    title: "Pferdebetreuung in der Nähe finden: Stallroutine, Koppel und Übergabe planen",
+    categorySlug: "pferd-und-hof",
+    careCategorySlug: "pferd",
+    excerpt: "Worauf du achten solltest, wenn du Pferdebetreuung in deiner Nähe suchst: Stallzeiten, Fütterung, Koppel, Ausrüstung und klare Zuständigkeiten.",
+    tags: ["Pferdebetreuung in der Nähe", "Stallhilfe", "Pferd", "Koppel"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-pferdebetreuung-in-der-naehe.jpg",
+      alt: "Pferd schaut ruhig aus einer hellen Stallbox neben Heu, Futtereimer, Führstrick, Bürste und Übergabe-Notizbuch",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum Pferdebetreuung klare Zuständigkeiten braucht",
+        intro:
+          "Pferdebetreuung ist selten nur ein kurzer Blick in die Box. Je nach Stall gehören Füttern, Wasser, Koppel, Decke, Misten, Medikamente, Bewegung oder Absprachen mit dem Hofteam dazu.",
+        paragraphs: [
+          "Darum ist es wichtig, die Aufgabe sauber abzugrenzen. Soll jemand Stallhilfe leisten, dein Pferd versorgen, nur kontrollieren oder auch führen und bewegen? Je genauer das Inserat ist, desto eher melden sich Menschen mit passender Erfahrung.",
+          "Gerade bei Pferden sollte niemand spontan Aufgaben übernehmen, für die Erfahrung oder Erlaubnis fehlt. Gute Betreuung bedeutet auch, Grenzen zu kennen.",
+        ],
+        items: [
+          "Aufgabe klar trennen: Füttern, Misten, Koppel, Kontrolle, Führen oder Bewegung.",
+          "Stallregeln, Ansprechpartner und erlaubte Bereiche nennen.",
+          "Erfahrung mit Pferden, Jungpferden, Senioren oder besonderen Verhaltensweisen angeben.",
+          "PLZ und Stallregion nutzen, ohne genaue Stalladresse öffentlich zu machen.",
+        ],
+      },
+      {
+        title: "Stallroutine und Zeiten beschreiben",
+        intro:
+          "Pferde leben stark von Routinen. Wenn Zeiten, Wege und Reihenfolgen klar sind, kann ein Betreuer viel ruhiger arbeiten.",
+        paragraphs: [
+          "Schreibe auf, wann gefüttert wird, wann Koppel oder Paddock relevant sind und wer im Stall sonst Bescheid weiß. Wenn das Hofteam Aufgaben übernimmt, sollte klar sein, was zusätzlich durch den Betreuer passiert.",
+        ],
+        items: [
+          "Fütterungszeiten, Futtermenge und Sonderfutter eindeutig notieren.",
+          "Koppel-, Paddock- oder Boxenzeiten mit Stallregeln verbinden.",
+          "Wasser, Heu, Einstreu und Decke als einzelne Kontrollpunkte nennen.",
+          "Ansprechpartner im Stall und Erreichbarkeit für Rückfragen festhalten.",
+        ],
+      },
+      {
+        title: "Ausrüstung, Decken und Besonderheiten",
+        intro:
+          "Bei Pferden können kleine Details viel ausmachen: Welche Decke bei welchem Wetter? Welcher Führstrick? Welche Bürste? Welche Hufe müssen besonders kontrolliert werden?",
+        paragraphs: [
+          "Lege Ausrüstung gut sichtbar bereit oder beschreibe den Standort. Wenn bestimmte Dinge nicht genutzt werden sollen, gehört das ebenfalls in die Übergabe. So vermeidest du, dass Betreuer im Stall suchen oder raten müssen.",
+        ],
+        items: [
+          "Standorte von Halfter, Führstrick, Putzzeug, Decken und Futter zeigen.",
+          "Deckenregeln nach Temperatur, Wetter oder Stallvorgabe erklären.",
+          "Hufe, Beine, Fressverhalten und Kot als Kontrollpunkte nennen.",
+          "Besonderheiten wie Scheuen, Beißen, Drängeln oder Trennungsstress offen beschreiben.",
+        ],
+      },
+      {
+        title: "Bewegung und Verantwortung realistisch abgrenzen",
+        intro:
+          "Nicht jede Pferdebetreuung beinhaltet Reiten oder Longieren. Oft ist Versorgung ohne Bewegung die sicherere und klarere Aufgabe.",
+        paragraphs: [
+          "Wenn Bewegung gewünscht ist, sollten Erfahrung, Versicherung, Stallregeln und Erlaubnis sehr genau geklärt werden. Für viele Betreuungen reicht es, Versorgung und Kontrolle sauber zu organisieren.",
+        ],
+        items: [
+          "Reiten, Longieren oder Bodenarbeit nur mit passender Erfahrung und klarer Absprache erlauben.",
+          "Führen zur Koppel oder zum Paddock separat beschreiben.",
+          "Grenzen festlegen: kein Reiten, keine fremden Pferde, keine Ausrüstung wechseln.",
+          "Bei Unsicherheit Aufgaben reduzieren statt riskante Situationen einplanen.",
+        ],
+      },
+      {
+        title: "Passende Pferdebetreuer finden",
+        intro:
+          "Gute Pferdebetreuung erkennt man an konkreten Fragen. Wer nach Stallregeln, Verhalten, Fütterung, Koppel und Notfallkontakt fragt, denkt meist praktisch mit.",
+        paragraphs: [
+          "Plane vor dem ersten Einsatz eine Einweisung im Stall. Dort sieht der Betreuer Wege, Ausrüstung, Ansprechpartner und dein Pferd in Ruhe. Bei längerer Betreuung kann ein kleiner Probetermin sinnvoll sein.",
+        ],
+        items: [
+          "Im Inserat Erfahrung und genaue Aufgaben offen nennen.",
+          "Einweisung vor Ort mit Stallteam oder Ansprechpartner abstimmen.",
+          "Wichtige Absprachen im Chat festhalten, damit nichts nur mündlich bleibt.",
+          "Nach dem ersten Termin prüfen, ob Zeiten, Aufgaben und Verantwortung realistisch waren.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "kleintierbetreuung-in-der-naehe-finden",
     title: "Kleintierbetreuung in der Nähe finden: Kaninchen, Meerschweinchen und Hamster",
     categorySlug: "kleintiere",
