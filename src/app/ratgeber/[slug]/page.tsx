@@ -20,6 +20,16 @@ type GuideArticlePageProps = {
   params: Promise<{ slug: string }>;
 };
 
+const guideDateFormatter = new Intl.DateTimeFormat("de-DE", {
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+});
+
+function formatGuideDate(date: string) {
+  return guideDateFormatter.format(new Date(`${date}T00:00:00`));
+}
+
 export function generateStaticParams() {
   return guideTopics.map((topic) => ({ slug: topic.slug }));
 }
@@ -187,7 +197,7 @@ export default async function GuideArticlePage({ params }: GuideArticlePageProps
               </span>
               <span className="inline-flex items-center gap-1 text-xs font-bold text-[#262C36]/55">
                 <CalendarDays className="size-3.5" />
-                <time dateTime={topic.publishedAt}>06.07.2026</time>
+                <time dateTime={topic.publishedAt}>{formatGuideDate(topic.publishedAt)}</time>
               </span>
             </div>
             <h1 className="mt-4 text-4xl font-black leading-tight tracking-normal [overflow-wrap:anywhere] sm:text-5xl">
@@ -215,6 +225,13 @@ export default async function GuideArticlePage({ params }: GuideArticlePageProps
                   <h2 className="text-2xl font-black tracking-normal [overflow-wrap:anywhere]">{section.title}</h2>
                   {section.intro ? (
                     <p className="mt-3 text-base leading-7 text-[#262C36]/70">{section.intro}</p>
+                  ) : null}
+                  {section.paragraphs?.length ? (
+                    <div className="mt-4 space-y-3 text-base leading-7 text-[#262C36]/72">
+                      {section.paragraphs.map((paragraph) => (
+                        <p key={paragraph}>{paragraph}</p>
+                      ))}
+                    </div>
                   ) : null}
                   <ul className="mt-4 grid gap-3">
                     {section.items.map((item) => (

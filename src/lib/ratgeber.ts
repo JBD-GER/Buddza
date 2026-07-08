@@ -14,6 +14,7 @@ export type GuideTopicImage = {
 export type GuideArticleSection = {
   title: string;
   intro?: string;
+  paragraphs?: string[];
   items: string[];
 };
 
@@ -84,6 +85,272 @@ export const guideCategories: GuideCategory[] = [
 ];
 
 export const guideTopics: GuideTopic[] = [
+  {
+    slug: "hundesitter-in-der-naehe-finden",
+    title: "Hundesitter in der Nähe finden: worauf du achten solltest",
+    categorySlug: "hund",
+    careCategorySlug: "hund",
+    excerpt: "So findest du einen passenden Hundesitter in deiner Nähe und vergleichst Erfahrung, Entfernung, Routine und Vertrauen.",
+    tags: ["Hundesitter in der Nähe", "Hundebetreuung", "Gassi", "PLZ Suche"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-hundesitter-in-der-naehe-finden.jpg",
+      alt: "Hund sitzt ruhig im Eingangsbereich neben Leine, Schuhen und Notizbuch für die Hundesitter-Übergabe",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum Nähe allein nicht reicht",
+        intro:
+          "Ein Hundesitter in der Nähe klingt erst einmal perfekt: kurze Wege, schnelle Absprachen und weniger Stress, wenn ein Termin spontan wird. Trotzdem sollte die Entfernung nicht das einzige Kriterium sein.",
+        paragraphs: [
+          "Wichtiger ist, ob die Person wirklich zum Hund passt. Ein sehr aktiver Junghund braucht andere Betreuung als ein älterer Hund, der lieber langsam läuft und feste Ruhezeiten hat. Auch Leinenverhalten, Verträglichkeit und Unsicherheiten sollten vor dem ersten Termin offen besprochen werden.",
+          "Gute lokale Hundebetreuung fühlt sich nicht wie eine schnelle Notlösung an. Sie ist eine verlässliche Routine, bei der Halter, Hund und Betreuer wissen, was als Nächstes passiert.",
+        ],
+        items: [
+          "Suche nicht nur nach der kürzesten Entfernung, sondern nach passender Erfahrung.",
+          "Achte darauf, ob der Hundesitter konkrete Fragen zu Verhalten, Leine, Futter und Notfallkontakt stellt.",
+          "Nutze PLZ und Radius, um passende Menschen zu finden, ohne deine genaue Adresse öffentlich zu machen.",
+          "Plane ein Kennenlernen ein, bevor regelmäßige Betreuung oder Urlaubsbetreuung startet.",
+        ],
+      },
+      {
+        title: "So vergleichst du lokale Hundesitter",
+        intro:
+          "Wenn mehrere Antworten auf dein Inserat kommen, helfen klare Kriterien. Sympathie ist wichtig, aber für zuverlässige Hundebetreuung zählen auch Ablauf, Kommunikation und Grenzen.",
+        paragraphs: [
+          "Vergleiche nicht nur Preise oder Verfügbarkeit. Lies, ob die Antwort auf dein Tier eingeht oder wie eine Standardnachricht wirkt. Wer Details aus deinem Inserat aufgreift, zeigt meist schon im ersten Kontakt mehr Sorgfalt.",
+        ],
+        items: [
+          "Passt die Erfahrung zur Aufgabe: Gassi-Service, Tagesbetreuung, Hausbesuch oder längere Betreuung?",
+          "Kann die Person deine Wunschzeiten realistisch einhalten, auch mit Anfahrt und Übergabe?",
+          "Spricht sie ruhig über schwierige Situationen wie Hundebegegnungen, Hitze, Dunkelheit oder Stress?",
+          "Sind Updates abgesprochen: Foto nach der Runde, kurze Nachricht oder nur Meldung bei Auffälligkeiten?",
+        ],
+      },
+      {
+        title: "Was in deinem Inserat stehen sollte",
+        intro:
+          "Je besser dein Inserat formuliert ist, desto eher melden sich passende Hundesitter aus deiner Umgebung. Das spart Zeit und verhindert Missverständnisse.",
+        paragraphs: [
+          "Ein guter Titel nennt Tierart, Aufgabe und Ort grob. In der Beschreibung geht es dann um Alltag: Wie läuft eine normale Runde? Was mag dein Hund? Was soll vermieden werden? Genau diese Informationen helfen Betreuern, ehrlich einzuschätzen, ob sie passen.",
+        ],
+        items: [
+          "Nenne PLZ-Region, Zeitraum, Häufigkeit und gewünschten Betreuungsort.",
+          "Beschreibe Alter, Größe, Energielevel, Leinenverhalten und Verträglichkeit.",
+          "Schreibe klar, ob Füttern, Medikamente, Treppen, Auto oder Abholen eine Rolle spielen.",
+          "Formuliere, was dir wichtig ist: Ruhe, Erfahrung, Flexibilität, feste Zeiten oder kurze Wege.",
+        ],
+      },
+      {
+        title: "Erstes Kennenlernen und Probetermin",
+        intro:
+          "Ein Kennenlernen muss nicht kompliziert sein. Oft reichen 20 bis 30 Minuten, um zu sehen, ob Kommunikation, Umgang und Erwartungen zusammenpassen.",
+        paragraphs: [
+          "Lass den Hundesitter den Hund in einer ruhigen Situation erleben. Wenn Gassi geplant ist, kann eine kurze gemeinsame Runde sinnvoll sein. So sieht die Person direkt, wie dein Hund auf Türen, Straßen, andere Hunde oder Geräusche reagiert.",
+        ],
+        items: [
+          "Zeige Geschirr, Leine, Futterplatz, Ruheplatz und wichtige Routinen.",
+          "Besprich, was bei Unsicherheit, Ziehen, Bellen oder Begegnungen passieren soll.",
+          "Starte mit einem kurzen Probetermin, bevor du längere Betreuung buchst.",
+          "Halte wichtige Absprachen im Chat fest, damit später alle dieselbe Grundlage haben.",
+        ],
+      },
+      {
+        title: "Woran du eine gute Entscheidung merkst",
+        intro:
+          "Der richtige Hundesitter gibt dir nicht nur organisatorische Entlastung. Du merkst auch, dass dein Hund nach der Betreuung nicht überdreht, verwirrt oder unnötig gestresst wirkt.",
+        paragraphs: [
+          "Nach den ersten Terminen lohnt sich ein kurzer Rückblick. Passten Zeiten, Strecke und Kommunikation? Wurde etwas vergessen? Gab es Situationen, die beim nächsten Mal anders laufen sollten? Gute Betreuung wird mit jeder klaren Rückmeldung besser.",
+        ],
+        items: [
+          "Dein Hund wirkt nach der Betreuung ähnlich stabil wie nach eurer normalen Routine.",
+          "Der Hundesitter meldet Auffälligkeiten ehrlich und zeitnah.",
+          "Du musst nicht jede Kleinigkeit neu erklären, weil die Übergabe verstanden wurde.",
+          "Beide Seiten können Grenzen ansprechen, ohne dass es unangenehm wird.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "katzensitter-in-der-naehe-finden",
+    title: "Katzensitter in der Nähe finden: Hausbesuche gut planen",
+    categorySlug: "katze",
+    careCategorySlug: "katze",
+    excerpt: "Worauf es bei Katzensittern, Hausbesuchen, Fütterung, Katzenklo, Schlüsselübergabe und Updates wirklich ankommt.",
+    tags: ["Katzensitter in der Nähe", "Katzenbetreuung", "Hausbesuch", "Urlaub"],
+    readingMinutes: 8,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-katzensitter-in-der-naehe-finden.jpg",
+      alt: "Katze sitzt entspannt am Fenster neben Kratzbaum, Futternapf, Wassernapf und Notizbuch",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Warum Katzensitting oft zu Hause am besten funktioniert",
+        intro:
+          "Viele Katzen bleiben lieber in ihrer gewohnten Umgebung. Ein Katzensitter in der Nähe kann Futter, Wasser, Katzenklo und kurze Beschäftigung übernehmen, ohne dass die Katze ihren sicheren Ort verlassen muss.",
+        paragraphs: [
+          "Das klingt einfach, aber gerade bei Katzen zählen Details. Manche Tiere verstecken sich bei fremden Menschen, andere brauchen täglich Spiel, Medikamente oder eine sehr genaue Fütterungsroutine. Je genauer du das beschreibst, desto entspannter läuft der Hausbesuch.",
+          "Ein guter Katzensitter drängt sich nicht auf. Er beobachtet, folgt deiner Routine und respektiert, wenn eine Katze Zeit braucht.",
+        ],
+        items: [
+          "Plane Hausbesuche möglichst zur üblichen Fütterungszeit.",
+          "Beschreibe, ob die Katze Kontakt möchte oder eher Abstand braucht.",
+          "Nenne Verstecke, Lieblingsplätze und typische Signale für Stress oder Wohlbefinden.",
+          "Lege fest, ob Fotos gewünscht sind und wann eine kurze Rückmeldung reicht.",
+        ],
+      },
+      {
+        title: "Diese Infos braucht ein Katzensitter",
+        intro:
+          "Katzensitter können nur zuverlässig handeln, wenn sie die kleinen Routinen kennen. Eine kurze, klare Übergabe verhindert Unsicherheit beim ersten Besuch.",
+        paragraphs: [
+          "Schreibe nicht nur auf, welches Futter die Katze bekommt. Wichtig ist auch, wie viel, wo, in welchem Napf und ob Reste entfernt werden sollen. Gleiches gilt für Wasserstellen, Leckerlis und Räume, die offen oder geschlossen bleiben müssen.",
+        ],
+        items: [
+          "Futtermenge, Fütterungszeiten, Leckerlis und Tabus eindeutig notieren.",
+          "Standorte von Katzenklo, Streu, Müllbeutel, Besen und Reinigungsmitteln zeigen.",
+          "Fenster, Balkon, Türen und Ausbruchrisiken vorab besprechen.",
+          "Tierarzt, Notfallkontakt und Medikamentenhinweise schriftlich bereitlegen.",
+        ],
+      },
+      {
+        title: "Katzenklo, Futter und Wohnung ruhig halten",
+        intro:
+          "Ein Hausbesuch soll für die Katze so normal wie möglich wirken. Deshalb ist es sinnvoll, Aufgaben in derselben Reihenfolge zu erledigen.",
+        paragraphs: [
+          "Viele Katzen beobachten zuerst aus der Distanz. Wenn der Katzensitter ruhig Futter und Katzenklo erledigt, entsteht eher Vertrauen, als wenn direkt Kontakt gesucht wird. Besonders scheue Katzen profitieren von wiederkehrenden Abläufen.",
+        ],
+        items: [
+          "Erst prüfen, ob die Katze sichtbar ist oder ob alles normal wirkt.",
+          "Dann Futter, Wasser und Katzenklo nach deiner Routine erledigen.",
+          "Anschließend kurz lüften oder spielen, wenn das abgesprochen und sicher ist.",
+          "Zum Schluss Türen, Fenster, Herd, Balkon und Schlüsselablage kontrollieren.",
+        ],
+      },
+      {
+        title: "Vertrauen bei Schlüssel und Updates",
+        intro:
+          "Katzensitting bedeutet meistens auch Zugang zur Wohnung. Deshalb sollten Schlüsselübergabe, Datenschutz und Kommunikation nicht beiläufig passieren.",
+        paragraphs: [
+          "Klärt, wann der Schlüssel übergeben und zurückgegeben wird, welche Räume betreten werden dürfen und welche privaten Bereiche tabu sind. Diese Absprachen schaffen Sicherheit für beide Seiten.",
+        ],
+        items: [
+          "Adresse und genaue Etage erst teilen, wenn ein passender Kontakt gefunden ist.",
+          "Schlüsselübergabe mit Datum, Kontakt und Rückgabe klar vereinbaren.",
+          "Keine privaten Dokumente, Medikamente oder Wertgegenstände offen liegen lassen, wenn sie nichts mit der Betreuung zu tun haben.",
+          "Updates kurz halten: Futter, Katzenklo, Verhalten und besondere Auffälligkeiten.",
+        ],
+      },
+      {
+        title: "Mehrere Katzen oder besondere Bedürfnisse",
+        intro:
+          "Bei mehreren Katzen wird die Betreuung nicht automatisch kompliziert, aber sie braucht mehr Übersicht. Jede Katze kann andere Gewohnheiten, Futterplätze oder Grenzen haben.",
+        paragraphs: [
+          "Gerade wenn Medikamente, Spezialfutter oder getrennte Fütterung nötig sind, sollte die Übergabe nicht nur mündlich erfolgen. Bitte bei gesundheitlichen Unsicherheiten immer tierärztliche Vorgaben beachten und nichts eigenständig verändern.",
+        ],
+        items: [
+          "Für jede Katze Name, Aussehen, Futter, Verhalten und Besonderheiten notieren.",
+          "Getrennte Fütterung, Medikamentenzeiten und Kontrollzeichen klar beschreiben.",
+          "Erklären, welche Katze sich versteckt und welche aktiv Kontakt sucht.",
+          "Nach dem ersten Besuch prüfen, ob die Übergabe für den Katzensitter vollständig genug war.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "tierbetreuung-im-urlaub-planen",
+    title: "Tierbetreuung im Urlaub planen: Übergabe, Notfallplan und Kosten",
+    categorySlug: "organisation",
+    excerpt: "So organisierst du Tierbetreuung vor dem Urlaub mit klarer Übergabe, passenden Betreuern, Notfallkontakten und realistischen Kosten.",
+    tags: ["Tierbetreuung Urlaub", "Urlaubsbetreuung", "Übergabe", "Kosten"],
+    readingMinutes: 9,
+    publishedAt: "2026-07-08",
+    image: {
+      src: "/images/generated/guide-tierbetreuung-urlaub-planen.jpg",
+      alt: "Vorbereitete Tierbetreuungsübergabe auf einem Tisch mit Leine, Näpfen, Schlüssel, Tasche und ruhendem Hund",
+      width: 1672,
+      height: 941,
+    },
+    articleSections: [
+      {
+        title: "Früh planen, aber nicht kompliziert machen",
+        intro:
+          "Tierbetreuung im Urlaub sollte nicht erst am Abend vor der Abreise entstehen. Je früher du Zeitraum, Aufgaben und Besonderheiten beschreibst, desto eher findest du jemanden, der wirklich passt.",
+        paragraphs: [
+          "Für viele Tiere ist Verlässlichkeit wichtiger als ein perfekter Plan. Wenn Futter, Bewegung, Ruhezeiten und Notfallkontakte klar sind, kann ein Betreuer auch dann ruhig handeln, wenn etwas anders läuft als erwartet.",
+          "Am besten formulierst du die Betreuung so, dass eine fremde, aber sorgfältige Person den Ablauf verstehen kann. Was für dich selbstverständlich ist, ist für andere oft genau die Information, die fehlt.",
+        ],
+        items: [
+          "Zeitraum, Uhrzeiten, Häufigkeit und Betreuungsort früh festlegen.",
+          "Tierart, Alter, Verhalten, Futter und besondere Bedürfnisse konkret beschreiben.",
+          "Vor längerer Urlaubsbetreuung einen kurzen Probetermin vereinbaren.",
+          "Lieber wenige klare Regeln notieren als viele lose Hinweise verteilen.",
+        ],
+      },
+      {
+        title: "Was in die Urlaubsübergabe gehört",
+        intro:
+          "Eine gute Übergabe ist der wichtigste Teil der Urlaubsbetreuung. Sie sollte nicht nur als Checkliste funktionieren, sondern auch erklären, warum bestimmte Dinge wichtig sind.",
+        paragraphs: [
+          "Wenn dein Hund bei Hitze kürzer laufen soll, deine Katze Medikamente nur mit Futter nimmt oder dein Aquarium täglich dieselbe Futtermenge braucht, gehört dieser Kontext in die Übergabe. So kann der Betreuer Entscheidungen besser einordnen.",
+        ],
+        items: [
+          "Tagesablauf mit Futter, Wasser, Bewegung, Reinigung, Ruhe und Updates.",
+          "Standorte von Zubehör, Futter, Streu, Medikamenten, Handtüchern und Ersatzmaterial.",
+          "Tabus: Räume, Futter, Begegnungen, Freilauf, Balkon, Treppen oder technische Geräte.",
+          "Kontaktwege: Wer ist erreichbar, wann und für welche Entscheidung?",
+        ],
+      },
+      {
+        title: "Notfallplan ohne Panik",
+        intro:
+          "Ein Notfallplan soll niemanden nervös machen. Er sorgt dafür, dass der Betreuer im Zweifel nicht improvisieren muss.",
+        paragraphs: [
+          "Notiere Tierarzt, Tierklinik, Ersatzkontakt und klare Grenzen: Wann soll sofort angerufen werden? Welche Ausgaben sind erlaubt? Wer darf entscheiden, wenn du nicht erreichbar bist? Medizinische Entscheidungen sollten immer nach tierärztlicher Einschätzung getroffen werden.",
+        ],
+        items: [
+          "Tierarzt, Klinik, Versicherungsdaten und Ersatzkontakt auffindbar notieren.",
+          "Normales Verhalten und echte Warnzeichen getrennt beschreiben.",
+          "Medikamente nur mit Dosierung, Uhrzeit, Lagerung und tierärztlicher Vorgabe übergeben.",
+          "Absprechen, ob Taxifahrt, Tierarztbesuch oder zusätzliche Termine im Notfall erlaubt sind.",
+        ],
+      },
+      {
+        title: "Kosten realistisch einschätzen",
+        intro:
+          "Die Kosten für Tierbetreuung im Urlaub hängen nicht nur von der Tierart ab. Entscheidend sind Zeit, Häufigkeit, Verantwortung, Entfernung und Erfahrung.",
+        paragraphs: [
+          "Ein kurzer Katzen-Hausbesuch ist anders zu planen als mehrmals tägliche Hundebetreuung, ein Terrarium mit Klima-Kontrolle oder Stallhilfe. Schreibe deshalb nicht nur, was du zahlen möchtest, sondern was genau zu tun ist.",
+        ],
+        items: [
+          "Mehr Aufwand entsteht durch mehrere Besuche pro Tag, Medikamente, längere Wege oder mehrere Tiere.",
+          "Spezialwissen, flexible Zeiten und Feiertage können den Preis beeinflussen.",
+          "Klare Aufgaben helfen, faire Angebote zu bekommen und Missverständnisse zu vermeiden.",
+          "Halte Zusatzaufgaben wie Pflanzen gießen, Post holen oder Reinigung getrennt von der Tierbetreuung fest.",
+        ],
+      },
+      {
+        title: "Nach dem Urlaub kurz auswerten",
+        intro:
+          "Gute Urlaubsbetreuung endet nicht mit der Schlüsselrückgabe. Ein kurzes Gespräch hilft, die nächste Betreuung noch einfacher zu machen.",
+        paragraphs: [
+          "Frage, was gut funktioniert hat und wo Informationen fehlten. Vielleicht war ein Futterplatz unklar, ein Schlüssel hakte oder ein Tier hat anders reagiert als erwartet. Solche Details sind wertvoll, weil sie die nächste Übergabe besser machen.",
+        ],
+        items: [
+          "Updates, Fotos und besondere Beobachtungen nach dem Urlaub kurz durchgehen.",
+          "Übergabe direkt ergänzen, solange alles frisch im Kopf ist.",
+          "Bei guter Betreuung den Kontakt speichern und früh für den nächsten Urlaub anfragen.",
+          "Falls etwas nicht passte, sachlich festhalten, was beim nächsten Mal anders sein muss.",
+        ],
+      },
+    ],
+  },
   {
     slug: "hundebetreuung-finden-checkliste",
     title: "Hundebetreuung finden: die wichtigste Checkliste",
