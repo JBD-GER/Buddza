@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "sonner";
 import { AppFooter } from "@/components/app/app-footer";
 import { AppHeader } from "@/components/app/app-header";
@@ -98,6 +99,7 @@ export default function RootLayout({
           <AppFooter />
         </div>
         <Toaster richColors closeButton position="top-center" />
+        <Analytics />
       </body>
     </html>
   );
