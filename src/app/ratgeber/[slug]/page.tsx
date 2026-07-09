@@ -142,7 +142,7 @@ export default async function GuideArticlePage({ params }: GuideArticlePageProps
         name: siteName,
         logo: {
           "@type": "ImageObject",
-          url: absoluteUrl("/images/Buddza_Logo.png"),
+          url: absoluteUrl("/images/Buddza_Logo_Header.png"),
         },
       },
       mainEntityOfPage: absoluteUrl(`/ratgeber/${topic.slug}`),

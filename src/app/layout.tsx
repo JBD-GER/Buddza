@@ -79,9 +79,9 @@ export const metadata: Metadata = {
     images: [defaultSeoImage],
   },
   icons: {
-    icon: "/images/Buddza_Favicon.png",
-    shortcut: "/images/Buddza_Favicon.png",
-    apple: "/images/Buddza_Favicon.png",
+    icon: "/images/Buddza_Favicon_512.png",
+    shortcut: "/images/Buddza_Favicon_512.png",
+    apple: "/images/Buddza_Favicon_512.png",
   },
 };
 

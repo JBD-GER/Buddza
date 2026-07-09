@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { LogOut, UserRound } from "lucide-react";
 import { signOutAction } from "@/app/auth-actions";
@@ -31,13 +30,13 @@ export async function AppHeader() {
     <header className="sticky top-0 z-40 border-b border-[#262C36]/10 bg-white/92 backdrop-blur">
       <div className="relative mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-3 px-4 sm:px-6">
         <Link href="/" className="relative block h-10 w-36 overflow-hidden sm:w-40" aria-label="Buddza Startseite">
-          <Image
-            src="/images/Buddza_Logo.png"
+          <img
+            src="/images/Buddza_Logo_Header.png"
             alt="Buddza"
-            fill
-            priority
-            sizes="160px"
-            className="object-contain object-left"
+            width="160"
+            height="56"
+            fetchPriority="high"
+            className="size-full object-contain object-left"
           />
         </Link>
 

@@ -81,10 +81,10 @@ export default async function HomePage() {
   const structuredData = [
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      name: siteName,
-      url: absoluteUrl("/"),
-      logo: absoluteUrl("/images/Buddza_Logo.png"),
+    "@type": "Organization",
+    name: siteName,
+    url: absoluteUrl("/"),
+    logo: absoluteUrl("/images/Buddza_Logo_Header.png"),
       foundingDate: "2026",
       areaServed: "Deutschland",
     },

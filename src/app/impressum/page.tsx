@@ -15,7 +15,7 @@ export default function ImprintPage() {
     "@type": "Organization",
     name: legalCompany.name,
     url: absoluteUrl("/"),
-    logo: absoluteUrl("/images/Buddza_Logo.png"),
+    logo: absoluteUrl("/images/Buddza_Logo_Header.png"),
     email: legalCompany.email,
     telephone: legalCompany.phone,
     address: {

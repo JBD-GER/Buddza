@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import {
   BadgeEuro,
@@ -40,12 +39,13 @@ export function AppFooter() {
       <div className="mx-auto grid w-full max-w-6xl gap-8 px-4 py-10 sm:px-6 lg:grid-cols-[1.05fr_0.72fr_0.9fr_1fr]">
         <div>
           <Link href="/" className="relative block h-10 w-36 overflow-hidden" aria-label="Buddza Startseite">
-            <Image
-              src="/images/Buddza_Logo.png"
+            <img
+              src="/images/Buddza_Logo_Header.png"
               alt="Buddza"
-              fill
-              sizes="144px"
-              className="object-contain object-left brightness-0 invert"
+              width="144"
+              height="50"
+              loading="lazy"
+              className="size-full object-contain object-left brightness-0 invert"
             />
           </Link>
           <p className="mt-4 max-w-md text-sm leading-6 text-white/72">

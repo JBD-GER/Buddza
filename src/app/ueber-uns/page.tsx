@@ -47,7 +47,7 @@ export default function AboutPage() {
         "@type": "Organization",
         name: siteName,
         url: absoluteUrl("/"),
-        logo: absoluteUrl("/images/Buddza_Logo.png"),
+        logo: absoluteUrl("/images/Buddza_Logo_Header.png"),
         foundingDate: "2026",
         areaServed: "Deutschland",
       },
