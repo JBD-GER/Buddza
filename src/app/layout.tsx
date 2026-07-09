@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
 import { Toaster } from "sonner";
+import { ConsentAwareAnalytics } from "@/components/analytics/consent-aware-analytics";
+import { GoogleTag } from "@/components/analytics/google-tag";
 import { AppFooter } from "@/components/app/app-footer";
 import { AppHeader } from "@/components/app/app-header";
+import { CookieConsentBanner } from "@/components/consent/cookie-consent-banner";
+import { GoogleConsentModeScript } from "@/components/consent/google-consent-mode-script";
 import {
   absoluteUrl,
   defaultDescription,
@@ -87,19 +90,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const googleTagId = process.env.NEXT_PUBLIC_GOOGLE_TAG_ID?.trim();
+
   return (
     <html
       lang="de"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full bg-[#fbf8f4] text-[#262C36]">
+        <GoogleConsentModeScript />
         <div className="flex min-h-screen flex-col">
           <AppHeader />
           {children}
           <AppFooter />
         </div>
         <Toaster richColors closeButton position="top-center" />
-        <Analytics />
+        <GoogleTag tagId={googleTagId} />
+        <ConsentAwareAnalytics />
+        <CookieConsentBanner />
       </body>
     </html>
   );

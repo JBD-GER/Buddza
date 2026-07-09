@@ -18,11 +18,14 @@ const staticRoutes: Array<{
   { path: "/preise", changeFrequency: "monthly", priority: 0.72, includeDefaultImage: true },
   { path: "/ueber-uns", changeFrequency: "monthly", priority: 0.7, includeDefaultImage: true },
   { path: "/ratgeber", changeFrequency: "weekly", priority: 0.86, includeDefaultImage: true },
+  { path: "/impressum", changeFrequency: "yearly", priority: 0.32 },
+  { path: "/datenschutz", changeFrequency: "yearly", priority: 0.32 },
+  { path: "/agb", changeFrequency: "yearly", priority: 0.32 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getSiteUrl();
-  const lastModified = new Date("2026-07-07");
+  const lastModified = new Date("2026-07-09");
   const defaultImageUrl = `${siteUrl}${defaultSeoImage}`;
 
   return [
