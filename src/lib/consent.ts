@@ -43,11 +43,11 @@ export function normalizeConsent(value: unknown): ConsentSettings | null {
 }
 
 export function getStoredConsent(storage: Storage): ConsentSettings | null {
-  const storedConsent = storage.getItem(CONSENT_STORAGE_KEY);
-
-  if (!storedConsent) return null;
-
   try {
+    const storedConsent = storage.getItem(CONSENT_STORAGE_KEY);
+
+    if (!storedConsent) return null;
+
     return normalizeConsent(JSON.parse(storedConsent));
   } catch {
     return null;

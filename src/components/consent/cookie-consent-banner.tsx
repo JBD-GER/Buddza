@@ -54,7 +54,11 @@ function applyGoogleConsent(consent: ConsentSettings) {
 }
 
 function persistConsent(consent: ConsentSettings) {
-  window.localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(consent));
+  try {
+    window.localStorage.setItem(CONSENT_STORAGE_KEY, JSON.stringify(consent));
+  } catch {
+    // Some privacy modes block Web Storage. The cookie remains as a fallback.
+  }
   document.cookie = `${CONSENT_COOKIE_NAME}=${encodeURIComponent(
     JSON.stringify({
       version: consent.version,
