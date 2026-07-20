@@ -32,6 +32,14 @@ export async function generateMetadata({ params }: CategoryCarePageProps): Promi
     description: `${page.title}: Betreuung per PLZ suchen, Inserate finden und passende Hilfe für ${page.categoryName.toLowerCase()} organisieren. ${page.intro}`,
     path: `/tierbetreuung/${page.slug}`,
     keywords: [page.title, `${page.categoryName} Betreuung`, "Tierbetreuung finden", "PLZ Suche", "Buddza"],
+    robots: {
+      index: false,
+      follow: true,
+      googleBot: {
+        index: false,
+        follow: true,
+      },
+    },
   });
 }
 

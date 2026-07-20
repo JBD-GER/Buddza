@@ -4,7 +4,7 @@ import { ArrowRight, BookOpen, Clock, FolderOpen, Search } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { guideCategories, guideTopics } from "@/lib/ratgeber";
+import { publishedGuideCategories, publishedGuideTopics } from "@/lib/ratgeber";
 import { absoluteUrl, createSeoMetadata, jsonLdScript } from "@/lib/seo";
 
 export const metadata = createSeoMetadata({
@@ -16,7 +16,7 @@ export const metadata = createSeoMetadata({
 });
 
 export default function GuideIndexPage() {
-  const featuredTopics = guideTopics.slice(0, 8);
+  const featuredTopics = publishedGuideTopics.slice(0, 8);
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Blog",
@@ -24,7 +24,7 @@ export default function GuideIndexPage() {
     url: absoluteUrl("/ratgeber"),
     description:
       "Ratgeber und Checklisten für Tierbetreuung, Betreuungsgesuche, Tierbetreuer-Profile und sichere Übergaben.",
-    blogPost: guideTopics.map((topic) => ({
+    blogPost: publishedGuideTopics.map((topic) => ({
       "@type": "BlogPosting",
       headline: topic.title,
       url: absoluteUrl(`/ratgeber/${topic.slug}`),
@@ -53,11 +53,11 @@ export default function GuideIndexPage() {
           </div>
           <div className="grid gap-2 rounded-lg bg-white/10 p-3 ring-1 ring-white/14 sm:grid-cols-3">
             <div className="rounded-md bg-white/10 p-3">
-              <p className="text-2xl font-black">{guideTopics.length}</p>
+              <p className="text-2xl font-black">{publishedGuideTopics.length}</p>
               <p className="text-xs font-bold uppercase tracking-normal text-white/68">Themen</p>
             </div>
             <div className="rounded-md bg-white/10 p-3">
-              <p className="text-2xl font-black">{guideCategories.length}</p>
+              <p className="text-2xl font-black">{publishedGuideCategories.length}</p>
               <p className="text-xs font-bold uppercase tracking-normal text-white/68">Kategorien</p>
             </div>
             <div className="rounded-md bg-white/10 p-3">
@@ -83,7 +83,7 @@ export default function GuideIndexPage() {
         </div>
 
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-          {guideCategories.map((category) => (
+          {publishedGuideCategories.map((category) => (
             <Link
               key={category.slug}
               href={`/ratgeber/kategorie/${category.slug}`}
@@ -122,7 +122,7 @@ export default function GuideIndexPage() {
                   <CardContent className="p-4">
                     <div className="flex flex-wrap items-center gap-2">
                       <Badge variant="secondary">
-                        {guideCategories.find((category) => category.slug === topic.categorySlug)?.name}
+                        {publishedGuideCategories.find((category) => category.slug === topic.categorySlug)?.name}
                       </Badge>
                       <span className="inline-flex items-center gap-1 text-xs font-bold text-[#262C36]/55">
                         <Clock className="size-3.5" />
@@ -146,7 +146,7 @@ export default function GuideIndexPage() {
             <h2 className="text-2xl font-black tracking-normal">Alle Themen</h2>
           </div>
           <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-            {guideTopics.map((topic) => (
+            {publishedGuideTopics.map((topic) => (
               <Link
                 key={topic.slug}
                 href={`/ratgeber/${topic.slug}`}

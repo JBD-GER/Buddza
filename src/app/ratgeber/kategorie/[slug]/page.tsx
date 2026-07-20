@@ -9,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import {
   getGuideCategory,
   getGuideTopicsByCategory,
-  guideCategories,
+  publishedGuideCategories,
 } from "@/lib/ratgeber";
 import { absoluteUrl, createSeoMetadata, jsonLdScript } from "@/lib/seo";
 
@@ -18,7 +18,7 @@ type GuideCategoryPageProps = {
 };
 
 export function generateStaticParams() {
-  return guideCategories.map((category) => ({ slug: category.slug }));
+  return publishedGuideCategories.map((category) => ({ slug: category.slug }));
 }
 
 export async function generateMetadata({ params }: GuideCategoryPageProps): Promise<Metadata> {

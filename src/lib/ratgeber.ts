@@ -31,6 +31,10 @@ export type GuideTopic = {
   articleSections?: GuideArticleSection[];
 };
 
+export type PublishedGuideTopic = GuideTopic & {
+  articleSections: GuideArticleSection[];
+};
+
 export const guideCategories: GuideCategory[] = [
   {
     slug: "hund",
@@ -4037,18 +4041,30 @@ export const guideTopics: GuideTopic[] = [
   },
 ];
 
+function hasCompleteArticle(topic: GuideTopic): topic is PublishedGuideTopic {
+  return Boolean(topic.articleSections && topic.articleSections.length >= 3);
+}
+
+export const publishedGuideTopics = guideTopics.filter(hasCompleteArticle);
+
+export const publishedGuideCategories = guideCategories.filter((category) =>
+  publishedGuideTopics.some((topic) => topic.categorySlug === category.slug),
+);
+
 export function getGuideCategory(slug: string) {
-  return guideCategories.find((category) => category.slug === slug) ?? null;
+  return publishedGuideCategories.find((category) => category.slug === slug) ?? null;
 }
 
 export function getGuideTopic(slug: string) {
-  return guideTopics.find((topic) => topic.slug === slug) ?? null;
+  return publishedGuideTopics.find((topic) => topic.slug === slug) ?? null;
 }
 
 export function getGuideTopicsByCategory(categorySlug: string) {
-  return guideTopics.filter((topic) => topic.categorySlug === categorySlug);
+  return publishedGuideTopics.filter((topic) => topic.categorySlug === categorySlug);
 }
 
 export function getGuideTopicsByCareCategory(careCategorySlug: string, limit = 4) {
-  return guideTopics.filter((topic) => topic.careCategorySlug === careCategorySlug).slice(0, limit);
+  return publishedGuideTopics
+    .filter((topic) => topic.careCategorySlug === careCategorySlug)
+    .slice(0, limit);
 }

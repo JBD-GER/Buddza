@@ -5,7 +5,7 @@ export const siteName = "Buddza";
 export const defaultSeoImage = "/images/generated/dogs-ages-hero.jpg";
 export const defaultSeoImageAlt = "Hunde in einem Zuhause als Symbol für lokale Tierbetreuung";
 export const defaultDescription =
-  "Buddza ist eine lokale Plattform für Tierbetreuung mit PLZ-basierter Suche, aktuellen Inseraten, Tierbetreuer-Profilen und Ratgeber.";
+  "Buddza ist eine lokale Plattform für Tierbetreuung mit PLZ-basierter Suche, Inseraten, Tierbetreuer-Profilen und Ratgeber.";
 export const defaultKeywords = [
   "Tierbetreuung",
   "Hundebetreuung",

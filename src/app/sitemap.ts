@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getSiteUrl } from "@/lib/config";
-import { categoryPages } from "@/lib/category-pages";
-import { guideCategories, guideTopics } from "@/lib/ratgeber";
+import { publishedGuideCategories, publishedGuideTopics } from "@/lib/ratgeber";
 import { defaultSeoImage } from "@/lib/seo";
 
 const staticRoutes: Array<{
@@ -36,20 +35,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: route.priority,
       images: route.includeDefaultImage ? [defaultImageUrl] : undefined,
     })),
-    ...categoryPages.map((page) => ({
-      url: `${siteUrl}/tierbetreuung/${page.slug}`,
-      lastModified,
-      changeFrequency: "monthly" as const,
-      priority: 0.84,
-      images: [defaultImageUrl],
-    })),
-    ...guideCategories.map((category) => ({
+    ...publishedGuideCategories.map((category) => ({
       url: `${siteUrl}/ratgeber/kategorie/${category.slug}`,
       lastModified,
       changeFrequency: "monthly" as const,
       priority: 0.72,
     })),
-    ...guideTopics.map((topic) => ({
+    ...publishedGuideTopics.map((topic) => ({
       url: `${siteUrl}/ratgeber/${topic.slug}`,
       lastModified: new Date(topic.publishedAt),
       changeFrequency: "monthly" as const,

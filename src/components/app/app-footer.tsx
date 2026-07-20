@@ -14,7 +14,7 @@ import {
   ShieldCheck,
 } from "lucide-react";
 import { CookieSettingsButton } from "@/components/consent/cookie-settings-button";
-import { guideTopics } from "@/lib/ratgeber";
+import { publishedGuideTopics } from "@/lib/ratgeber";
 
 const footerLinks = [
   { href: "/tierbetreuung-finden", label: "Tierbetreuung finden", icon: Search },
@@ -32,7 +32,7 @@ const legalLinks = [
 ];
 
 export function AppFooter() {
-  const footerGuideTopics = guideTopics.slice(0, 4);
+  const footerGuideTopics = publishedGuideTopics.slice(0, 4);
 
   return (
     <footer className="border-t border-[#262C36]/10 bg-[#202833] text-white">

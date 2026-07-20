@@ -7,6 +7,7 @@ import { AppFooter } from "@/components/app/app-footer";
 import { AppHeader } from "@/components/app/app-header";
 import { CookieConsentBanner } from "@/components/consent/cookie-consent-banner";
 import { GoogleConsentModeScript } from "@/components/consent/google-consent-mode-script";
+import { googleAdSenseAccount } from "@/lib/google-adsense";
 import {
   absoluteUrl,
   defaultDescription,
@@ -82,6 +83,9 @@ export const metadata: Metadata = {
     icon: "/images/Buddza_Favicon_512.png",
     shortcut: "/images/Buddza_Favicon_512.png",
     apple: "/images/Buddza_Favicon_512.png",
+  },
+  other: {
+    "google-adsense-account": googleAdSenseAccount,
   },
 };
 

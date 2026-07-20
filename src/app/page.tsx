@@ -19,7 +19,7 @@ import { AnimalCareCategories } from "@/components/marketing/animal-care-categor
 import { ListingMap } from "@/components/marketing/listing-map";
 import { Button } from "@/components/ui/button";
 import { getMapPoints } from "@/lib/inserate";
-import { guideTopics } from "@/lib/ratgeber";
+import { publishedGuideTopics } from "@/lib/ratgeber";
 import { absoluteUrl, jsonLdScript, siteName } from "@/lib/seo";
 import { getUser } from "@/lib/supabase/server";
 
@@ -29,7 +29,7 @@ const trustItems = [
   "Für viele Tierarten gedacht",
 ];
 
-const featuredListings = [
+const exampleListings = [
   {
     title: "Welpe Momo sucht Nachmittagsbetreuung",
     age: "Jung",
@@ -77,7 +77,7 @@ const workflow = [
 export default async function HomePage() {
   const [points, user] = await Promise.all([getMapPoints(), getUser()]);
   const createListingHref = user ? "/inserieren" : "/registrieren?next=/inserieren";
-  const featuredGuideTopics = guideTopics.slice(0, 3);
+  const featuredGuideTopics = publishedGuideTopics.slice(0, 3);
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -234,22 +234,26 @@ export default async function HomePage() {
           <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-sm font-black uppercase tracking-normal text-[#D97863]">
-                Aktuelle Inserate
+                Beispielinserate
               </p>
               <h2 className="mt-2 text-3xl font-black leading-tight tracking-normal text-[#262C36] sm:text-4xl">
-                Drei Hunde suchen Betreuung
+                So kann ein Betreuungsgesuch aussehen
               </h2>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-[#262C36]/64">
+                Diese fiktiven Beispiele zeigen, welche Angaben anderen helfen, den Bedarf
+                schnell zu verstehen. Echte Gesuche findest du in der Inseratsübersicht.
+              </p>
             </div>
             <Button asChild variant="secondary">
               <Link href="/inserate">
-                Inserate ansehen
+                Echte Inserate ansehen
                 <ArrowRight />
               </Link>
             </Button>
           </div>
 
           <div className="mt-7 grid gap-4 md:grid-cols-3">
-            {featuredListings.map((listing) => (
+            {exampleListings.map((listing) => (
               <article
                 key={listing.title}
                 className="overflow-hidden rounded-lg border border-[#262C36]/10 bg-[#FAF7F2] shadow-sm"
@@ -264,6 +268,9 @@ export default async function HomePage() {
                   />
                 </div>
                 <div className="p-4">
+                  <span className="mb-3 inline-flex rounded-md bg-[#F5C86B]/30 px-2.5 py-1 text-xs font-black uppercase text-[#5D4717]">
+                    Fiktives Beispiel
+                  </span>
                   <div className="flex items-center justify-between gap-3">
                     <h3 className="text-lg font-black leading-tight tracking-normal text-[#262C36]">
                       {listing.title}

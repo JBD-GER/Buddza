@@ -6,13 +6,11 @@ import { ArrowLeft, ArrowRight, CalendarDays, CheckCircle2, Clock, ListChecks } 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { categoryPages } from "@/lib/category-pages";
 import {
   getGuideCategory,
   getGuideTopic,
   getGuideTopicsByCategory,
-  guideTopics,
-  type GuideTopic,
+  publishedGuideTopics,
 } from "@/lib/ratgeber";
 import { absoluteUrl, buildTitle, defaultSeoImage, jsonLdScript, siteName } from "@/lib/seo";
 
@@ -31,7 +29,7 @@ function formatGuideDate(date: string) {
 }
 
 export function generateStaticParams() {
-  return guideTopics.map((topic) => ({ slug: topic.slug }));
+  return publishedGuideTopics.map((topic) => ({ slug: topic.slug }));
 }
 
 export async function generateMetadata({ params }: GuideArticlePageProps): Promise<Metadata> {
@@ -76,35 +74,6 @@ export async function generateMetadata({ params }: GuideArticlePageProps): Promi
   };
 }
 
-function getArticleSections(topic: GuideTopic) {
-  return topic.articleSections ?? [
-    {
-      title: "Kurz zusammengefasst",
-      items: [
-        "Gute Betreuung beginnt mit klaren Routinen und ehrlichen Angaben.",
-        "Wichtige Details gehören vor dem ersten Termin schriftlich in die Übergabe.",
-        "Wenn etwas unklar ist, lieber vorab nachfragen statt im Termin improvisieren.",
-      ],
-    },
-    {
-      title: "Vor dem ersten Termin",
-      items: [
-        "Tierart, Alter, Verhalten, Futter, Zeiten und besondere Hinweise notieren.",
-        "Notfallkontakt, Tierarzt und erreichbare Bezugspersonen eindeutig benennen.",
-        "Fotos, PLZ-Region und Zeitraum so konkret wie möglich im Inserat angeben.",
-      ],
-    },
-    {
-      title: `${topic.title} praktisch planen`,
-      items: [
-        "Aufgaben in kleine Schritte teilen: prüfen, füttern, bewegen, reinigen, melden.",
-        "Grenzen festlegen: was darf der Betreuer tun, was soll er unbedingt lassen?",
-        "Nach dem Termin kurz dokumentieren, ob alles wie geplant gelaufen ist.",
-      ],
-    },
-  ];
-}
-
 export default async function GuideArticlePage({ params }: GuideArticlePageProps) {
   const { slug } = await params;
   const topic = getGuideTopic(slug);
@@ -117,10 +86,7 @@ export default async function GuideArticlePage({ params }: GuideArticlePageProps
   const relatedTopics = getGuideTopicsByCategory(topic.categorySlug)
     .filter((relatedTopic) => relatedTopic.slug !== topic.slug)
     .slice(0, 3);
-  const careLanding = topic.careCategorySlug
-    ? categoryPages.find((page) => page.categorySlug === topic.careCategorySlug)
-    : null;
-  const articleSections = getArticleSections(topic);
+  const articleSections = topic.articleSections;
   const articleImage = topic.image?.src ?? defaultSeoImage;
   const articleImageAlt = topic.image?.alt ?? topic.title;
   const structuredData = [
@@ -269,22 +235,6 @@ export default async function GuideArticlePage({ params }: GuideArticlePageProps
           </div>
 
           <aside className="space-y-4 lg:sticky lg:top-24 lg:self-start">
-            {careLanding ? (
-              <Card>
-                <CardContent className="p-4">
-                  <p className="text-xs font-black uppercase tracking-normal text-[#D97863]">Passende Landingpage</p>
-                  <h2 className="mt-2 text-lg font-black">{careLanding.title}</h2>
-                  <p className="mt-2 text-sm leading-6 text-[#262C36]/66">{careLanding.intro}</p>
-                  <Button asChild variant="secondary" className="mt-4 w-full">
-                    <Link href={`/tierbetreuung/${careLanding.slug}`}>
-                      Seite öffnen
-                      <ArrowRight />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
-            ) : null}
-
             <Card>
               <CardContent className="p-4">
                 <p className="text-xs font-black uppercase tracking-normal text-[#2F7A68]">Verwandte Themen</p>

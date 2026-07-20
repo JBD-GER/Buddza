@@ -22,7 +22,7 @@ import { AnimalCareCategories } from "@/components/marketing/animal-care-categor
 import { ListingMap } from "@/components/marketing/listing-map";
 import { Button } from "@/components/ui/button";
 import { getMapPoints } from "@/lib/inserate";
-import { guideTopics } from "@/lib/ratgeber";
+import { publishedGuideTopics } from "@/lib/ratgeber";
 import { absoluteUrl, createSeoMetadata, jsonLdScript, siteName } from "@/lib/seo";
 import { getUser } from "@/lib/supabase/server";
 
@@ -55,14 +55,14 @@ const careTypes = [
     title: "Hundebetreuung",
     description:
       "Gassi-Service, Tagesbetreuung, Übernachtung oder regelmäßige Hilfe für Hunde.",
-    href: "/tierbetreuung/hundebetreuung",
+    href: "/inserate?category=hund",
   },
   {
     icon: Home,
     title: "Katzenbetreuung",
     description:
       "Ruhige Hausbesuche für Futter, Wasser, Katzenklo, Medikamente und kurze Updates.",
-    href: "/tierbetreuung/katzenbetreuung",
+    href: "/inserate?category=katze",
   },
   {
     icon: HandHeart,
@@ -128,7 +128,7 @@ export default async function TierbetreuungFindenPage() {
   const [points, user] = await Promise.all([getMapPoints(), getUser()]);
   const createListingHref = user ? "/inserieren" : "/registrieren?next=/inserieren";
   const becomeSitterHref = user ? "/tierbetreuer/neu" : "/registrieren?next=/tierbetreuer/neu";
-  const featuredGuideTopics = guideTopics.slice(0, 4);
+  const featuredGuideTopics = publishedGuideTopics.slice(0, 4);
   const structuredData = [
     {
       "@context": "https://schema.org",
