@@ -53,14 +53,14 @@ export default async function SitterDetailPage({ params }: SitterDetailPageProps
         </Link>
       </Button>
 
-      <div className="grid gap-6 lg:grid-cols-[1.08fr_0.92fr]">
-        <div className="overflow-hidden rounded-lg border border-[#262C36]/10 bg-slate-200 shadow-sm">
-          <div className="aspect-[4/3]">
+      <div className="grid items-start gap-6 lg:grid-cols-[1.08fr_0.92fr]">
+        <div className="self-start rounded-xl border border-[#262C36]/10 bg-white p-2 shadow-xl shadow-[#262C36]/10 lg:sticky lg:top-24">
+          <div className="aspect-[4/3] overflow-hidden rounded-lg bg-slate-200">
             {sitter.profile_image_url ? (
               <img
                 src={sitter.profile_image_url}
                 alt={`${sitter.profile?.full_name || "Tierbetreuer"} bei Buddza`}
-                className="size-full object-cover"
+                className="size-full object-cover object-center"
               />
             ) : (
               <div className="flex size-full items-center justify-center bg-[#F0917B]/15 text-xl font-black text-[#262C36]">
