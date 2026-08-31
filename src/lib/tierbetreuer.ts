@@ -282,6 +282,31 @@ export async function getUserSitterProfile(userId: string): Promise<SitterProfil
   return data ? normalizeSitter(data as SupabaseRow, supabase) : null;
 }
 
+export async function getSitterProfileById(profileId: string): Promise<SitterProfile | null> {
+  noStore();
+
+  if (!isSupabaseConfigured) {
+    return demoSitters.find((sitter) => sitter.id === profileId) ?? null;
+  }
+
+  const supabase = await createClient();
+  if (!supabase) return null;
+
+  const { data, error } = await supabase
+    .from("sitter_profiles")
+    .select(sitterSelect)
+    .eq("id", profileId)
+    .eq("status", "active")
+    .maybeSingle();
+
+  if (error) {
+    console.error("Failed to load sitter profile", error);
+    return null;
+  }
+
+  return data ? normalizeSitter(data as SupabaseRow, supabase) : null;
+}
+
 export function formatHourlyRate(cents: number) {
   return new Intl.NumberFormat("de-DE", {
     style: "currency",

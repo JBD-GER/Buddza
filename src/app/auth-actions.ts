@@ -14,6 +14,15 @@ function safeNext(value: FormDataEntryValue | null) {
   return next.startsWith("/") && !next.startsWith("//") ? next : "/uebersicht";
 }
 
+function redirectToLoginWithMessage(
+  key: "error" | "message",
+  value: string,
+  next: string,
+): never {
+  const params = new URLSearchParams({ [key]: value, next });
+  redirect(`/einloggen?${params.toString()}`);
+}
+
 export async function signInAction(formData: FormData) {
   if (!isSupabaseConfigured) {
     redirectWithMessage("/einloggen", "error", "Supabase ist noch nicht konfiguriert.");
@@ -31,10 +40,52 @@ export async function signInAction(formData: FormData) {
   const { error } = await supabase.auth.signInWithPassword({ email, password });
 
   if (error) {
-    redirectWithMessage("/einloggen", "error", "E-Mail oder Passwort ist nicht korrekt.");
+    if (error.code === "email_not_confirmed") {
+      redirectToLoginWithMessage(
+        "error",
+        "Deine E-Mail ist noch nicht bestätigt. Fordere unten eine neue Bestätigungsmail an.",
+        next,
+      );
+    }
+
+    redirectToLoginWithMessage("error", "E-Mail oder Passwort ist nicht korrekt.", next);
   }
 
   redirect(next);
+}
+
+export async function resendConfirmationAction(formData: FormData) {
+  if (!isSupabaseConfigured) {
+    redirectWithMessage("/einloggen", "error", "Supabase ist noch nicht konfiguriert.");
+  }
+
+  const supabase = await createClient();
+  if (!supabase) {
+    redirectWithMessage("/einloggen", "error", "Supabase ist noch nicht erreichbar.");
+  }
+
+  const email = String(formData.get("email") ?? "").trim().toLowerCase();
+  const next = safeNext(formData.get("next"));
+  const { error } = await supabase.auth.resend({
+    type: "signup",
+    email,
+    options: {
+      emailRedirectTo: `${getSiteUrl()}/authentifizierung/rueckruf?next=${encodeURIComponent(next)}`,
+    },
+  });
+
+  if (error) {
+    const message = error.code === "over_email_send_rate_limit"
+      ? "Bitte warte kurz, bevor du eine weitere Bestätigungsmail anforderst."
+      : "Die Bestätigungsmail konnte nicht gesendet werden. Bitte versuche es später erneut.";
+    redirectToLoginWithMessage("error", message, next);
+  }
+
+  redirectToLoginWithMessage(
+    "message",
+    "Falls ein unbestätigtes Konto zu dieser Adresse existiert, wurde eine neue Bestätigungsmail angefordert.",
+    next,
+  );
 }
 
 export async function signUpAction(formData: FormData) {

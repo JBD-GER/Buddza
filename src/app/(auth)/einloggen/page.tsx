@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, LogIn, ShieldCheck } from "lucide-react";
 
-import { signInAction } from "@/app/auth-actions";
+import { resendConfirmationAction, signInAction } from "@/app/auth-actions";
 import { ConfigNotice } from "@/components/app/config-notice";
 import { AuthMessage } from "@/components/auth/auth-message";
 import { Button } from "@/components/ui/button";
@@ -80,10 +80,33 @@ export default async function LoginPage({ searchParams }: LoginPageProps) {
                 </div>
               </div>
 
+              <details className="mt-4 rounded-md border border-[#262C36]/10 bg-white p-3">
+                <summary className="cursor-pointer text-sm font-bold text-[#262C36]">
+                  Keine Bestätigungsmail erhalten?
+                </summary>
+                <form action={resendConfirmationAction} className="mt-3 space-y-3">
+                  <input type="hidden" name="next" value={params.next ?? "/uebersicht"} />
+                  <Label htmlFor="confirmationEmail">E-Mail-Adresse</Label>
+                  <Input
+                    id="confirmationEmail"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    placeholder="name@beispiel.de"
+                    required
+                  />
+                  <SubmitButton variant="secondary" className="w-full">
+                    Bestätigung erneut senden
+                  </SubmitButton>
+                </form>
+              </details>
+
               <div className="mt-5 flex items-center justify-center gap-2 text-sm text-[#262C36]/62">
                 Noch kein Konto?
                 <Button asChild variant="ghost" size="sm">
-                  <Link href="/registrieren">Registrieren</Link>
+                  <Link href={params.next ? `/registrieren?next=${encodeURIComponent(params.next)}` : "/registrieren"}>
+                    Registrieren
+                  </Link>
                 </Button>
               </div>
             </CardContent>
